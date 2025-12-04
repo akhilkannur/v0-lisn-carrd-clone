@@ -53,7 +53,7 @@ export default function Home() {
         </section>
 
         {/* Real People Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-yellow-400 text-black px-4 py-16 md:py-24 relative animate-fade-in">
+        <section className="bg-[#FFE500] text-black px-4 py-20 md:py-32 relative animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-full max-w-[360px] shadow-2xl rounded-xl overflow-hidden bg-black hover:scale-[1.02] transition-transform duration-500 ease-out">
                   <script src="https://fast.wistia.com/player.js" async></script>
                   <script src="https://fast.wistia.com/embed/offv7ybu5r.js" async type="module"></script>
                   <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
@@ -82,7 +82,7 @@ export default function Home() {
         </section>
 
         {/* Moments Captured Section (Image Left / Text Right) */}
-        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
+        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image Placeholder */}
@@ -112,7 +112,7 @@ export default function Home() {
         </section>
 
         {/* Marketers Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-yellow-400 text-black px-4 py-16 md:py-24 animate-fade-in">
+        <section className="bg-[#FFE500] text-black px-4 py-20 md:py-32 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-full max-w-[360px] shadow-2xl rounded-xl overflow-hidden bg-black hover:scale-[1.02] transition-transform duration-500 ease-out">
                   <script src="https://fast.wistia.com/player.js" async></script>
                   <script src="https://fast.wistia.com/embed/kederx3rhj.js" async type="module"></script>
                   <style>{`wistia-player[media-id='kederx3rhj']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kederx3rhj/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
@@ -144,11 +144,11 @@ export default function Home() {
         </section>
 
         {/* Human Connections Section (Video Left / Text Right) */}
-        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
+        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center md:justify-start order-2 md:order-1">
-                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-full max-w-[360px] shadow-2xl rounded-xl overflow-hidden bg-black hover:scale-[1.02] transition-transform duration-500 ease-out">
                   <script src="https://fast.wistia.com/player.js" async></script>
                   <script src="https://fast.wistia.com/embed/ae6ks2t7v7.js" async type="module"></script>
                   <style>{`wistia-player[media-id='ae6ks2t7v7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ae6ks2t7v7/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
@@ -174,7 +174,7 @@ export default function Home() {
         </section>
 
         {/* Black Divider - Video Embed Area */}
-        <section className="bg-black px-4 py-16 md:py-24 animate-fade-in-black">
+        <section className="bg-black px-4 py-20 md:py-32 animate-fade-in-black">
           <div className="max-w-6xl mx-auto">
             <div className="bg-zinc-900 border border-zinc-800 aspect-video rounded-lg flex items-center justify-center">
               <span className="text-zinc-500 font-semibold">Video Embed Here</span>
@@ -183,7 +183,7 @@ export default function Home() {
         </section>
 
         {/* Video Package Section (Text Left / Video Right) */}
-        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
+        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
@@ -201,7 +201,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="w-full max-w-[360px] shadow-2xl rounded-xl overflow-hidden bg-black hover:scale-[1.02] transition-transform duration-500 ease-out">
                   <script src="https://fast.wistia.com/player.js" async></script>
                   <script src="https://fast.wistia.com/embed/f77lfm8m7p.js" async type="module"></script>
                   <style>{`wistia-player[media-id='f77lfm8m7p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f77lfm8m7p/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
