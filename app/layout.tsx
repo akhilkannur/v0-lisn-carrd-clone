@@ -1,11 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Dela_Gothic_One } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const _dela_gothic_one = Dela_Gothic_One({
+  weight: "400", // Dela Gothic One only has one weight
+  subsets: ["latin"],
+  variable: "--font-heading",
+})
 
 export const metadata: Metadata = {
   title: "LISN - Event Video Agency",
@@ -36,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${_geist.variable} ${_geistMono.variable} ${_dela_gothic_one.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

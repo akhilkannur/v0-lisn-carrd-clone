@@ -30,7 +30,7 @@ export default function Home() {
             <div className="absolute top-32 right-20 w-2 h-2 bg-white rounded-full"></div>
 
             <div className="flex flex-col items-center justify-center text-center">
-              <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 text-white text-balance">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8 text-white text-balance font-heading">
                 EVENT VIDEO
                 <br />
                 AGENCY
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
-                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
+                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8 font-heading">
                   REAL PEOPLE,
                   <br />
                   REAL STORIES
@@ -91,7 +91,7 @@ export default function Home() {
               </div>
 
               <div className="text-left">
-                <h3 className="text-4xl md:text-5xl font-black mb-6 text-balance">
+                <h3 className="text-4xl md:text-5xl font-black mb-6 text-balance font-heading">
                   MOMENTS.
                   <br />
                   CAPTURED.
@@ -116,7 +116,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
-                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
+                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8 font-heading">
                   MARKETERS,
                   <br />
                   FILMMAKERS,
@@ -157,8 +157,7 @@ export default function Home() {
               </div>
 
               <div className="text-left order-1 md:order-2">
-                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
-                  HUMAN
+                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance font-heading">
                   <br />
                   CONNECTIONS
                 </h3>
@@ -187,7 +186,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
-                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
+                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance font-heading">
                   VIDEO
                   <br />
                   PACKAGE
@@ -219,7 +218,7 @@ export default function Home() {
             <div className="absolute top-10 right-8 w-2 h-2 bg-white rounded-full"></div>
             <div className="absolute bottom-20 left-12 w-3 h-3 bg-yellow-400 rounded-full"></div>
 
-            <h3 className="text-4xl md:text-5xl font-black mb-12 text-white text-balance">
+            <h3 className="text-4xl md:text-5xl font-black mb-12 text-white text-balance font-heading">
               STRATEGY
               <br />
               SESSION
