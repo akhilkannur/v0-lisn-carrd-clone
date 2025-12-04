@@ -52,41 +52,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Real People Section - Yellow */}
-        <section className="bg-yellow-400 text-black px-4 py-20 md:py-32 relative animate-fade-in">
+        {/* Real People Section - Yellow (Text Left / Video Right) */}
+        <section className="bg-yellow-400 text-black px-4 py-16 md:py-24 relative animate-fade-in">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
-              REAL PEOPLE,
-              <br />
-              REAL STORIES
-            </h3>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-left">
+                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
+                  REAL PEOPLE,
+                  <br />
+                  REAL STORIES
+                </h3>
 
-            <p className="text-lg mb-12 max-w-2xl leading-relaxed">
-              We capture the strongest, genuine interactions that make your audience lean in. From Live events,
-              roadshows, conferences to workshops. We find the human story in every frame.
-            </p>
+                <p className="text-lg mb-8 leading-relaxed">
+                  We capture the strongest, genuine interactions that make your audience lean in. From Live events,
+                  roadshows, conferences to workshops. We find the human story in every frame.
+                </p>
+              </div>
 
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/offv7ybu5r.js" async type="module"></script>
-                <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-                <wistia-player media-id="offv7ybu5r" aspect="0.5625"></wistia-player>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                  <script src="https://fast.wistia.com/player.js" async></script>
+                  <script src="https://fast.wistia.com/embed/offv7ybu5r.js" async type="module"></script>
+                  <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                  <wistia-player media-id="offv7ybu5r" aspect="0.5625"></wistia-player>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Moments Captured Section */}
-        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
+        {/* Moments Captured Section (Image Left / Text Right) */}
+        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image Placeholder */}
-              <div className="bg-gray-100 border border-gray-200 aspect-square rounded-lg flex items-center justify-center">
+              <div className="bg-gray-100 border border-gray-200 aspect-square rounded-lg flex items-center justify-center shadow-lg">
                 <span className="text-gray-400 font-semibold">Image Embed</span>
               </div>
 
-              <div>
+              <div className="text-left">
                 <h3 className="text-4xl md:text-5xl font-black mb-6 text-balance">
                   MOMENTS.
                   <br />
@@ -94,7 +98,7 @@ export default function Home() {
                 </h3>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  Through careful observation, we create the perfect environment for authentic, unscripted interactions.
+                  Through careful observation, we create the perfect environment for authentic, unscripted interactions
                   that let their true selves shine. And that inspires people confident on camera, sharing the stories
                   that matter most to your audience.
                 </p>
@@ -107,62 +111,70 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Marketers Section - Yellow */}
-        <section className="bg-yellow-400 text-black px-4 py-20 md:py-32 animate-fade-in">
+        {/* Marketers Section - Yellow (Text Left / Video Right) */}
+        <section className="bg-yellow-400 text-black px-4 py-16 md:py-24 animate-fade-in">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
-              MARKETERS,
-              <br />
-              FILMMAKERS,
-              <br />
-              STORYTELLERS
-            </h3>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-left">
+                <h3 className="text-5xl md:text-6xl font-black leading-tight text-balance mb-8">
+                  MARKETERS,
+                  <br />
+                  FILMMAKERS,
+                  <br />
+                  STORYTELLERS
+                </h3>
 
-            <p className="text-lg mb-12 max-w-2xl leading-relaxed">
-              We are not just videographers. Our team combines marketing strategy with cinematic experience and
-              editorial expertise. From feature film backgrounds to viral social content, we know how to edit, adapt,
-              and repurpose content for the exact platform it needs.
-            </p>
+                <p className="text-lg mb-8 leading-relaxed">
+                  We are not just videographers. Our team combines marketing strategy with cinematic experience and
+                  editorial expertise. From feature film backgrounds to viral social content, we know how to edit, adapt,
+                  and repurpose content for the exact platform it needs.
+                </p>
+              </div>
 
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/kederx3rhj.js" async type="module"></script>
-                <style>{`wistia-player[media-id='kederx3rhj']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kederx3rhj/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-                <wistia-player media-id="kederx3rhj" aspect="0.5625"></wistia-player>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                  <script src="https://fast.wistia.com/player.js" async></script>
+                  <script src="https://fast.wistia.com/embed/kederx3rhj.js" async type="module"></script>
+                  <style>{`wistia-player[media-id='kederx3rhj']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kederx3rhj/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                  <wistia-player media-id="kederx3rhj" aspect="0.5625"></wistia-player>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Human Connections Section */}
-        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
-          <div className="max-w-6xl mx-auto text-center">
-            <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
-              HUMAN
-              <br />
-              CONNECTIONS
-            </h3>
+        {/* Human Connections Section (Video Left / Text Right) */}
+        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center md:justify-start order-2 md:order-1">
+                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                  <script src="https://fast.wistia.com/player.js" async></script>
+                  <script src="https://fast.wistia.com/embed/ae6ks2t7v7.js" async type="module"></script>
+                  <style>{`wistia-player[media-id='ae6ks2t7v7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ae6ks2t7v7/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                  <wistia-player media-id="ae6ks2t7v7" aspect="0.5625"></wistia-player>
+                </div>
+              </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-2xl mx-auto">
-              The nervous laugh before a big presentation. The genuine smile when strangers become friends. The moment
-              when someone's story moves the entire room. We live for the real soul. Organized storytelling that feels
-              authentic, the connection when someone's story meets the entire room.
-            </p>
+              <div className="text-left order-1 md:order-2">
+                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
+                  HUMAN
+                  <br />
+                  CONNECTIONS
+                </h3>
 
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/ae6ks2t7v7.js" async type="module"></script>
-                <style>{`wistia-player[media-id='ae6ks2t7v7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ae6ks2t7v7/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-                <wistia-player media-id="ae6ks2t7v7" aspect="0.5625"></wistia-player>
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  The nervous laugh before a big presentation. The genuine smile when strangers become friends. The moment
+                  when someone's story moves the entire room. We live for the real soul. Organized storytelling that feels
+                  authentic, the connection when someone's story meets the entire room.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Black Divider - Video Embed Area */}
-        <section className="bg-black px-4 py-20 md:py-32 animate-fade-in-black">
+        <section className="bg-black px-4 py-16 md:py-24 animate-fade-in-black">
           <div className="max-w-6xl mx-auto">
             <div className="bg-zinc-900 border border-zinc-800 aspect-video rounded-lg flex items-center justify-center">
               <span className="text-zinc-500 font-semibold">Video Embed Here</span>
@@ -170,27 +182,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Video Package Section */}
-        <section className="bg-white px-4 py-20 md:py-32 animate-fade-in">
-          <div className="max-w-6xl mx-auto text-center">
-            <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
-              VIDEO
-              <br />
-              PACKAGE
-            </h3>
+        {/* Video Package Section (Text Left / Video Right) */}
+        <section className="bg-white px-4 py-16 md:py-24 animate-fade-in">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-left">
+                <h3 className="text-4xl md:text-5xl font-black mb-8 text-balance">
+                  VIDEO
+                  <br />
+                  PACKAGE
+                </h3>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-2xl mx-auto">
-              Full event documentation with multiple camera angles. Edited highlights reels for social media, individual
-              interview segments, ready for your website. Behind the scenes content for authentic storytelling.
-              Conversational transcripts required into title page creatives. Cinematic recap footage for social.
-            </p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  Full event documentation with multiple camera angles. Edited highlights reels for social media, individual
+                  interview segments, ready for your website. Behind the scenes content for authentic storytelling.
+                  Conversational transcripts required into title page creatives. Cinematic recap footage for social.
+                </p>
+              </div>
 
-            <div className="flex justify-center">
-              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/f77lfm8m7p.js" async type="module"></script>
-                <style>{`wistia-player[media-id='f77lfm8m7p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f77lfm8m7p/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-                <wistia-player media-id="f77lfm8m7p" aspect="0.5625"></wistia-player>
+              <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-[320px] shadow-2xl rounded-xl overflow-hidden bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                  <script src="https://fast.wistia.com/player.js" async></script>
+                  <script src="https://fast.wistia.com/embed/f77lfm8m7p.js" async type="module"></script>
+                  <style>{`wistia-player[media-id='f77lfm8m7p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f77lfm8m7p/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                  <wistia-player media-id="f77lfm8m7p" aspect="0.5625"></wistia-player>
+                </div>
               </div>
             </div>
           </div>
