@@ -16,8 +16,8 @@ export default function Home() {
             <div className="absolute top-20 right-12 w-3 h-3 bg-white rounded-full"></div>
 
             {/* Logo/Image Grid - Placeholder for embed */}
-            <div className="w-full md:w-96 h-20 bg-blue-300 rounded flex items-center justify-center">
-              <span className="text-black font-bold text-2xl">LISN Logo</span>
+            <div className="w-full md:w-96 h-20 bg-zinc-800 rounded flex items-center justify-center border border-zinc-700">
+              <span className="text-white font-bold text-2xl">LISN Logo</span>
             </div>
           </div>
         </section>
@@ -41,7 +41,7 @@ export default function Home() {
                 clips and versatile content assets. Get maximum value from every recording.
               </p>
 
-              <button className="bg-yellow-400 text-black px-8 py-4 font-bold text-lg hover:bg-yellow-300 transition-colors mb-12">
+              <button className="bg-yellow-400 text-black px-8 py-4 font-bold text-lg hover:bg-yellow-300 transition-colors mb-12 rounded-sm">
                 WATCH OUR WORK →
               </button>
             </div>
@@ -67,10 +67,12 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mb-8">
-              <script src="https://fast.wistia.com/player.js" async></script>
-              <script src="https://fast.wistia.com/embed/offv7ybu5r.js" async type="module"></script>
-              <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-              <wistia-player media-id="offv7ybu5r" aspect="0.5625"></wistia-player>
+              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/offv7ybu5r.js" async type="module"></script>
+                <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                <wistia-player media-id="offv7ybu5r" aspect="0.5625"></wistia-player>
+              </div>
             </div>
           </div>
         </section>
@@ -80,8 +82,8 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image Placeholder */}
-              <div className="bg-gray-300 aspect-square rounded-lg flex items-center justify-center">
-                <span className="text-gray-600 font-semibold">Image Embed</span>
+              <div className="bg-gray-100 border border-gray-200 aspect-square rounded-lg flex items-center justify-center">
+                <span className="text-gray-400 font-semibold">Image Embed</span>
               </div>
 
               <div>
@@ -123,10 +125,12 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mb-8">
-              <script src="https://fast.wistia.com/player.js" async></script>
-              <script src="https://fast.wistia.com/embed/kederx3rhj.js" async type="module"></script>
-              <style>{`wistia-player[media-id='kederx3rhj']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kederx3rhj/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-              <wistia-player media-id="kederx3rhj" aspect="0.5625"></wistia-player>
+              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/kederx3rhj.js" async type="module"></script>
+                <style>{`wistia-player[media-id='kederx3rhj']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kederx3rhj/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                <wistia-player media-id="kederx3rhj" aspect="0.5625"></wistia-player>
+              </div>
             </div>
           </div>
         </section>
@@ -147,10 +151,12 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mb-8">
-              <script src="https://fast.wistia.com/player.js" async></script>
-              <script src="https://fast.wistia.com/embed/ae6ks2t7v7.js" async type="module"></script>
-              <style>{`wistia-player[media-id='ae6ks2t7v7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ae6ks2t7v7/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-              <wistia-player media-id="ae6ks2t7v7" aspect="0.5625"></wistia-player>
+              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/ae6ks2t7v7.js" async type="module"></script>
+                <style>{`wistia-player[media-id='ae6ks2t7v7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ae6ks2t7v7/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                <wistia-player media-id="ae6ks2t7v7" aspect="0.5625"></wistia-player>
+              </div>
             </div>
           </div>
         </section>
@@ -158,8 +164,8 @@ export default function Home() {
         {/* Black Divider - Video Embed Area */}
         <section className="bg-black px-4 py-20 md:py-32 animate-fade-in-black">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900 aspect-video rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 font-semibold">Video Embed Here</span>
+            <div className="bg-zinc-900 border border-zinc-800 aspect-video rounded-lg flex items-center justify-center">
+              <span className="text-zinc-500 font-semibold">Video Embed Here</span>
             </div>
           </div>
         </section>
@@ -180,10 +186,12 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center">
-              <script src="https://fast.wistia.com/player.js" async></script>
-              <script src="https://fast.wistia.com/embed/f77lfm8m7p.js" async type="module"></script>
-              <style>{`wistia-player[media-id='f77lfm8m7p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f77lfm8m7p/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
-              <wistia-player media-id="f77lfm8m7p" aspect="0.5625"></wistia-player>
+              <div className="w-full max-w-[320px] mx-auto shadow-2xl rounded-xl overflow-hidden bg-black">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/f77lfm8m7p.js" async type="module"></script>
+                <style>{`wistia-player[media-id='f77lfm8m7p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f77lfm8m7p/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
+                <wistia-player media-id="f77lfm8m7p" aspect="0.5625"></wistia-player>
+              </div>
             </div>
           </div>
         </section>
