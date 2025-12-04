@@ -8,38 +8,97 @@ export default function Home() {
     <>
       <Header />
       <main className="overflow-hidden font-sans">
-        {/* Header/Logo Section */}
-        <section className="bg-black px-4 py-16 relative border-b border-zinc-800">
-          <div className="max-w-7xl mx-auto flex justify-center">
-            {/* Decorative elements */}
-            <div className="absolute top-12 left-12 w-4 h-4 bg-[#FFE500] rounded-full animate-pulse"></div>
-            <div className="absolute top-24 right-20 w-6 h-6 border-4 border-white rounded-full"></div>
+"use client"
 
-            {/* Logo/Image Grid - Placeholder for embed */}
-            <div className="w-full max-w-lg h-32 bg-[#151515] border-4 border-[#FFE500] flex items-center justify-center shadow-[8px_8px_0px_0px_#FFE500]">
-              <span className="text-white font-heading text-4xl uppercase tracking-wider">LISN.AGENCY</span>
+import { Header } from "@/components/header"
+import { Play, Phone, MessageCircle } from "lucide-react"
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main className="overflow-hidden font-sans">
+        {/* First Fold Section - Hero */}
+        <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden border-b-4 border-black">
+          {/* Scattered Yellow Dots Atmosphere */}
+          <div className="absolute top-1/4 left-[5%] w-3 h-3 bg-[#FFE500] rounded-full opacity-70 animate-pulse-slow"></div>
+          <div className="absolute top-[10%] right-[10%] w-2 h-2 bg-white rounded-full opacity-60"></div>
+          <div className="absolute bottom-1/4 right-[7%] w-4 h-4 bg-[#FFE500] rounded-full opacity-80 animate-pulse-slow delay-500"></div>
+          <div className="absolute bottom-[5%] left-[20%] w-2 h-2 bg-white rounded-full opacity-50"></div>
+          <div className="absolute top-[60%] left-[15%] w-3 h-3 bg-[#FFE500] rounded-full opacity-75"></div>
+          <div className="absolute top-[20%] right-[30%] w-2 h-2 bg-white rounded-full opacity-65 delay-1000"></div>
+
+          <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
+            {/* LISN Logo Treatment - Image-filled Text */}
+            <div className="flex justify-center mb-8 md:mb-12">
+              <style jsx>{`
+                .logo-text-L {
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-image: url('https://images.unsplash.com/photo-1543791244-b0e2716ef5ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ocean water texture */
+                  background-size: cover;
+                  background-position: center;
+                  display: inline-block;
+                }
+                .logo-text-I {
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-image: url('https://images.unsplash.com/photo-1502476579848-f6828574677e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Waves crashing */
+                  background-size: cover;
+                  background-position: center;
+                  display: inline-block;
+                }
+                .logo-text-S {
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-image: url('https://images.unsplash.com/photo-1533682570081-3c58d2050414?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Coastal landscape */
+                  background-size: cover;
+                  background-position: center;
+                  display: inline-block;
+                }
+                .logo-text-N {
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-image: url('https://images.unsplash.com/photo-1542385150-137b01d234a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Aerial ocean */
+                  background-size: cover;
+                  background-position: center;
+                  display: inline-block;
+                }
+                @keyframes pulse-slow {
+                  0%, 100% { opacity: 0.7; }
+                  50% { opacity: 1; }
+                }
+                .animate-pulse-slow {
+                  animation: pulse-slow 3s infinite ease-in-out;
+                }
+              `}</style>
+              <h1 className="font-heading text-[10rem] md:text-[14rem] leading-none tracking-tight">
+                <span className="logo-text-L">L</span>
+                <span className="logo-text-I">I</span>
+                <span className="logo-text-S">S</span>
+                <span className="logo-text-N">N</span>
+              </h1>
             </div>
-          </div>
-        </section>
 
-        {/* Hero Section */}
-        <section className="bg-black px-4 py-24 md:py-40 relative animate-fade-in border-b border-zinc-800">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col items-center justify-center text-center">
-              <h2 className="font-heading text-7xl md:text-9xl text-white mb-12 uppercase tracking-tighter leading-[0.85]">
-                EVENT VIDEO
-                <br />
-                <span className="text-[#FFE500]">AGENCY</span>
-              </h2>
+            {/* Main Heading */}
+            <h2 className="font-heading text-6xl md:text-8xl text-white mb-10 uppercase tracking-tight leading-[0.85]">
+              EVENT VIDEO <span className="text-[#FFE500]">AGENCY</span>
+            </h2>
 
-              <p className="text-gray-300 text-2xl md:text-3xl mb-12 max-w-4xl font-medium leading-snug">
-                We capture your live events and interviews, then transform them into a <span className="text-white font-bold underline decoration-[#FFE500] decoration-4">video series</span>, engaging clips, and versatile assets.
-              </p>
+            {/* Body Copy */}
+            <p className="font-sans text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl leading-relaxed">
+              We capture your live events and interviews, then transform them into a video series, engaging short-form
+              clips and versatile content assets. Get maximum return from every recording.
+            </p>
 
-              <button className="bg-[#FFE500] text-black px-12 py-6 font-black text-2xl uppercase tracking-widest hover:bg-white hover:scale-105 transition-all duration-300 border-4 border-transparent hover:border-[#FFE500] shadow-[8px_8px_0px_0px_#ffffff] hover:shadow-[12px_12px_0px_0px_#ffffff]">
-                WATCH OUR WORK →
-              </button>
-            </div>
+            {/* Call-to-Action */}
+            <button className="bg-[#FFE500] text-black px-12 py-6 font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg">
+              WATCH OUR WORK ↓
+            </button>
           </div>
         </section>
 
