@@ -53,7 +53,7 @@ export default function Home() {
         </section>
 
         {/* Real People Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-black px-4 py-20 md:py-32 relative animate-fade-in">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-20 md:py-32 relative animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
@@ -112,7 +112,7 @@ export default function Home() {
         </section>
 
         {/* Marketers Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-black px-4 py-20 md:py-32 animate-fade-in">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-20 md:py-32 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="text-left">
