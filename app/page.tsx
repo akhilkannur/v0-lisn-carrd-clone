@@ -49,8 +49,17 @@ export default function Home() {
       <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
         <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 pt-8 md:pt-20 pb-16 md:pb-24 overflow-hidden border-b-4 border-black">
+          {/* Deep Space Background Layers */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900/20 via-black to-black z-0"></div>
+          
+          {/* Nebulae / Cosmic Dust */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+             <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-purple-900/20 blur-[120px] rounded-full animate-pulse-slow"></div>
+             <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[120px] rounded-full animate-pulse-slow delay-[2000ms]"></div>
+          </div>
+
           {/* Realistic Night Sky Starfield */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
             {stars.map((style, i) => (
               <div
                 key={`star-${i}`}
