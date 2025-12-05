@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
-import { Play, Phone, MessageCircle } from "lucide-react"
+import { Play, Phone, MessageCircle, ArrowDown } from "lucide-react"
 
 export default function Home() {
   const [stars, setStars] = useState<Array<any>>([])
@@ -136,8 +136,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               {/* Image Placeholder */}
-              <div className="w-full aspect-square bg-gray-100 border-4 border-black flex items-center justify-center shadow-[12px_12px_0px_0px_#000000]">
-                <span className="text-gray-400 font-black text-3xl uppercase">Image Embed</span>
+              <div className="w-full aspect-square border-4 border-black shadow-[12px_12px_0px_0px_#000000] relative">
+                <Image
+                  src="/momentscaptured.jpg"
+                  alt="Moments Captured - Candid event photography"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
               </div>
 
               <div className="text-left">
@@ -153,7 +159,7 @@ export default function Home() {
                 </p>
 
                 <button className="w-24 h-24 bg-black hover:bg-[#FFE500] transition-colors flex items-center justify-center border-4 border-black shadow-[8px_8px_0px_0px_#000000] group">
-                  <Play className="w-10 h-10 text-white group-hover:text-black fill-current transition-colors" />
+                  <ArrowDown className="w-10 h-10 text-white group-hover:text-black transition-colors animate-bounce" />
                 </button>
               </div>
             </div>
