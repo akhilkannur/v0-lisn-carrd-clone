@@ -1,12 +1,36 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { Play, Phone, MessageCircle } from "lucide-react"
 
 export default function Home() {
+  const [stars, setStars] = useState<Array<any>>([])
+  const [whiteStars, setWhiteStars] = useState<Array<any>>([])
+
   useEffect(() => {
+    // Generate stars on client-side only to avoid hydration mismatch
+    const generatedStars = [...Array(25)].map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      width: `${Math.random() * 4 + 2}px`,
+      height: `${Math.random() * 4 + 2}px`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${Math.random() * 3 + 3}s`,
+    }))
+    setStars(generatedStars)
+
+    const generatedWhiteStars = [...Array(15)].map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      width: `${Math.random() * 3 + 1}px`,
+      height: `${Math.random() * 3 + 1}px`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${Math.random() * 4 + 4}s`,
+    }))
+    setWhiteStars(generatedWhiteStars)
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,13 +58,23 @@ export default function Home() {
       <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
         <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden border-b-4 border-black">
-          {/* Scattered Yellow Dots Atmosphere */}
-          <div className="absolute top-1/4 left-[5%] w-3 h-3 bg-[#FFE500] rounded-full opacity-70 animate-pulse-slow"></div>
-          <div className="absolute top-[10%] right-[10%] w-2 h-2 bg-white rounded-full opacity-60"></div>
-          <div className="absolute bottom-1/4 right-[7%] w-4 h-4 bg-[#FFE500] rounded-full opacity-80 animate-pulse-slow delay-500"></div>
-          <div className="absolute bottom-[5%] left-[20%] w-2 h-2 bg-white rounded-full opacity-50"></div>
-          <div className="absolute top-[60%] left-[15%] w-3 h-3 bg-[#FFE500] rounded-full opacity-75"></div>
-          <div className="absolute top-[20%] right-[30%] w-2 h-2 bg-white rounded-full opacity-65 delay-1000"></div>
+          {/* Scattered Yellow Dots Atmosphere (Starfield) */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {stars.map((style, i) => (
+              <div
+                key={`yellow-${i}`}
+                className="absolute rounded-full bg-[#FFE500] opacity-0 animate-twinkle"
+                style={style}
+              ></div>
+            ))}
+            {whiteStars.map((style, i) => (
+              <div
+                key={`white-${i}`}
+                className="absolute rounded-full bg-white opacity-0 animate-twinkle"
+                style={style}
+              ></div>
+            ))}
+          </div>
 
           <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
             {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}

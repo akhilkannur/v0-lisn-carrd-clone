@@ -163,4 +163,14 @@
   .animate-float-delay-1 { animation-delay: 0.5s; }
   .animate-float-delay-2 { animation-delay: 1.0s; }
   .animate-float-delay-3 { animation-delay: 1.5s; }
+
+  /* Twinkle/Starfield Animation */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  .animate-twinkle {
+    animation: twinkle 4s ease-in-out infinite;
+  }
 }
