@@ -281,41 +281,6 @@ export default function Home() {
               <button className="w-16 h-16 md:w-20 md:h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[4px_4px_0px_0px_#ffffff] md:shadow-[8px_8px_0px_0px_#ffffff]">
                 <Phone className="w-6 h-6 md:w-8 md:h-8 text-black" />
               </button>
-              <button className="w-16 h-16 md:w-20 md:h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[4px_4px_0px_0px_#ffffff] md:shadow-[8px_8px_0px_0px_#ffffff]">
-                <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-black" />
-              </button>
-            </div>
-
-            {/* Contact Info */}
-            <div className="text-white mb-10 md:mb-16">
-              <p className="mb-2 md:mb-4 text-lg md:text-2xl font-bold font-mono">
-                <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a> / <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
-              </p>
-              <p className="text-lg md:text-2xl font-bold font-mono text-[#FFE500]">
-                <a href="mailto:akhil@lisnagency.online" className="hover:text-white transition-colors">akhil@lisnagency.online</a>
-              </p>
-            </div>
-
-            {/* Divider */}
-            <div className="w-full h-1 bg-zinc-800 mb-8 md:mb-12"></div>
-
-            {/* Copyright */}
-            <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
-          </div>
-        </section>
-        <section className="bg-black px-4 py-16 md:py-40 relative">
-          <div className="max-w-5xl mx-auto text-center reveal-hidden">
-            <h3 className="font-heading text-4xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
-              STRATEGY
-              <br />
-              <span className="text-[#FFE500]">SESSION</span>
-            </h3>
-
-            {/* Contact Icons */}
-            <div className="flex items-center justify-center gap-6 md:gap-8 mb-8 md:mb-12">
-              <button className="w-16 h-16 md:w-20 md:h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[4px_4px_0px_0px_#ffffff] md:shadow-[8px_8px_0px_0px_#ffffff]">
-                <Phone className="w-6 h-6 md:w-8 md:h-8 text-black" />
-              </button>
               <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="w-16 h-16 md:w-20 md:h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[4px_4px_0px_0px_#ffffff] md:shadow-[8px_8px_0px_0px_#ffffff]">
                 <MessageSquareText className="w-6 h-6 md:w-8 md:h-8 text-black" />
               </a>
@@ -338,10 +303,6 @@ export default function Home() {
             <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
           </div>
         </section>
-      </main>
-    </>
-  )
-}
       </main>
     </>
   )
