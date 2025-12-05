@@ -161,6 +161,9 @@ export default function UGCPage() {
                 </ol>
               </div>
             </div>
+            <p className="text-sm text-gray-500 italic mt-10">
+              *Note: We also provide English-speaking interview creatives upon request for brands targeting all of India, not just Kerala.
+            </p>
           </div>
         </section>
 
