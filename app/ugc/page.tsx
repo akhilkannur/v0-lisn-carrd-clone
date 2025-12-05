@@ -1,159 +1,188 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
+import { Marquee } from "@/components/marquee"
 import { Phone, MessageCircle } from "lucide-react"
 
 export default function UGCPage() {
+  const [stars, setStars] = useState<Array<any>>([])
+
+  useEffect(() => {
+    // Generate realistic night sky stars
+    const generatedStars = [...Array(80)].map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      width: `${Math.random() * 3 + 1}px`,
+      height: `${Math.random() * 3 + 1}px`,
+      opacity: Math.random(),
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${Math.random() * 3 + 2}s`,
+    }))
+    setStars(generatedStars)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible")
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+    )
+
+    const hiddenElements = document.querySelectorAll(".reveal-hidden")
+    hiddenElements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <Header />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden font-sans bg-black text-white">
         {/* Hero Section */}
-        <section className="bg-black px-4 py-20 md:py-32 relative animate-fade-in">
-          <div className="max-w-6xl mx-auto">
-            <div className="absolute top-8 right-12 w-3 h-3 bg-yellow-400 rounded-full"></div>
-            <div className="absolute top-32 left-8 w-2 h-2 bg-white rounded-full opacity-50"></div>
+        <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-24 md:py-40 overflow-hidden border-b-4 border-white">
+          {/* Starfield */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {stars.map((style, i) => (
+              <div
+                key={`star-${i}`}
+                className="absolute rounded-full bg-white animate-twinkle"
+                style={style}
+              ></div>
+            ))}
+          </div>
 
-            <div className="flex flex-col items-center justify-center text-center">
-              <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8 text-white text-balance">
-                UGC THAT
-                <br />
-                SPEAKS
-                <br />
-                KERALA'S
-                <br />
-                LANGUAGE
-              </h1>
+          <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center">
+            <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
+              UGC THAT
+              <br />
+              SPEAKS
+              <br />
+              <span className="text-[#FFE500]">KERALA'S</span>
+              <br />
+              LANGUAGE
+            </h1>
 
-              <p className="text-yellow-400 text-base md:text-lg font-bold uppercase tracking-wider mb-12 max-w-3xl">
-                STREET REACTION AD CREATIVES. BECAUSE ONE LOCALISED AD CAN CHANGE YOUR BRAND'S TRAJECTORY IN KERALA.
-              </p>
-            </div>
-
-            <div className="absolute bottom-10 left-10 w-2 h-2 bg-white rounded-full"></div>
+            <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-16 max-w-4xl leading-relaxed reveal-hidden delay-100">
+              Street reaction ad creatives. Because one localised ad can change your brand's trajectory.
+            </p>
           </div>
         </section>
 
+        <Marquee text="UGC THAT CONVERTS • REAL REACTIONS • VIRAL CONTENT" />
+
         {/* Gallery Section */}
-        <section className="bg-black px-4 py-16 md:py-24 animate-fade-in">
-          <div className="max-w-6xl mx-auto">
+        <section className="bg-black px-4 py-24 md:py-40 border-b-4 border-white">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="flex justify-center">
-              <img
-                src="/images/screenshot-202025-12-04-2023.png"
-                alt="UGC Street Reaction Gallery - Real customer reactions to products across different locations"
-                className="w-full max-w-3xl rounded-lg"
-              />
+              <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300">
+                <img
+                  src="/images/screenshot-202025-12-04-2023.png"
+                  alt="UGC Street Reaction Gallery"
+                  className="w-full max-w-4xl"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Description Section */}
-        <section className="bg-black px-4 py-16 md:py-24 text-white animate-fade-in">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg leading-relaxed mb-8">
+        <section className="bg-white text-black px-4 py-24 md:py-40 border-b-4 border-black">
+          <div className="max-w-5xl mx-auto reveal-hidden">
+            <p className="text-2xl md:text-4xl font-medium leading-tight mb-20">
               We take your product straight to real people, put it in their hands, and capture their unfiltered
-              reactions. What you get back is a library of ad creatives that feel raw, relatable, and built to convert
-              on social.{" "}
-              <a href="#" className="text-yellow-400 underline">
-                See real examples on Instagram
-              </a>
+              reactions. What you get back is a library of ad creatives that feel{" "}
+              <span className="bg-[#FFE500] px-2">raw, relatable, and built to convert.</span>
             </p>
 
-            <div className="mb-12">
-              <h3 className="text-yellow-400 font-bold uppercase tracking-wider mb-6 text-base">Why Brands Use Us:</h3>
-              <ul className="space-y-4 text-base leading-relaxed">
-                <li>
-                  <span className="text-yellow-400 font-bold">Real reactions = instant trust:</span> People scroll past
-                  ads. They stop for other people.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">Demos that actually demo:</span> Your product doing its
-                  thing in real hands, not sitting pretty on a white backdrop.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">Built for the feed:</span> Snappy, thumb-stopping edits
-                  made for META and IG—where UGC actually converts.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">Never run the same ad twice:</span> Every street shoot =
-                  fresh content. Ad fatigue? Not here.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">Zero work on your end:</span> We hit the streets, capture
-                  the chaos, edit the gold. You just collect the content.
-                </li>
-              </ul>
-            </div>
+            <div className="grid md:grid-cols-2 gap-20">
+              <div>
+                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight">
+                  Why Brands
+                  <br />
+                  Use Us
+                </h3>
+                <ul className="space-y-8 text-xl md:text-2xl font-medium">
+                  {[
+                    "Real reactions = instant trust",
+                    "Demos that actually demo",
+                    "Built for the feed (Meta/IG)",
+                    "Never run the same ad twice",
+                    "Zero work on your end",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <span className="min-w-[20px] h-[20px] mt-2 bg-black"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div>
-              <h3 className="text-yellow-400 font-bold uppercase tracking-wider mb-6 text-base">How it Works:</h3>
-              <ol className="space-y-4 text-base leading-relaxed">
-                <li>
-                  <span className="text-yellow-400 font-bold">1. Kickoff call:</span> We dig into your product, your
-                  goals, and what makes your audience tick.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">2. Ship it:</span> Send us your product. We'll take it
-                  from there.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">3. Hit the streets:</span> We hand it to real people, film
-                  their reactions, and let them tell us what they really think.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">4. Edit & deliver:</span> You get a content library that's
-                  polished enough to post, raw enough to feel real.
-                </li>
-                <li>
-                  <span className="text-yellow-400 font-bold">5. Optimize & repeat:</span> We track what lands, tweak
-                  what doesn't, and keep your content engine running.
-                </li>
-              </ol>
+              <div>
+                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight">
+                  How it
+                  <br />
+                  Works
+                </h3>
+                <ol className="space-y-8 text-xl md:text-2xl font-medium">
+                  {[
+                    "1. Kickoff call",
+                    "2. Ship your product",
+                    "3. We hit the streets",
+                    "4. Edit & deliver",
+                    "5. Optimize & repeat",
+                  ].map((item, i) => (
+                    <li key={i} className="border-b-4 border-black pb-4">
+                      {item}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-black px-4 py-16 md:py-24 text-center text-white animate-fade-in">
-          <div className="max-w-6xl mx-auto">
-            <p className="text-2xl md:text-3xl font-black text-yellow-400 mb-8">
-              🔥 Put your product in their hands—and all over your customers' feeds.
+        <section className="bg-[#FFE500] px-4 py-32 md:py-48 text-center border-b-4 border-black">
+          <div className="max-w-6xl mx-auto reveal-hidden">
+            <p className="font-heading text-6xl md:text-8xl text-black uppercase leading-[0.9] mb-12">
+              🔥 Put your product in their hands.
             </p>
+            <button className="bg-black text-white px-16 py-8 font-heading text-3xl uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 border-4 border-black shadow-[12px_12px_0px_0px_#ffffff] hover:shadow-[16px_16px_0px_0px_#000000]">
+              Start Your Campaign
+            </button>
           </div>
         </section>
 
-        {/* Footer - Black */}
-        <section className="bg-black px-4 py-16 md:py-24 relative animate-fade-in-black border-t border-gray-800">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="absolute top-12 right-8 w-2 h-2 bg-white rounded-full"></div>
-            <div className="absolute bottom-16 left-12 w-3 h-3 bg-yellow-400 rounded-full"></div>
+        {/* Footer */}
+        <section className="bg-black px-4 py-24 md:py-40 relative">
+          <div className="max-w-5xl mx-auto text-center reveal-hidden">
+            <h3 className="font-heading text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter">
+              READY TO
+              <br />
+              <span className="text-[#FFE500]">GO VIRAL?</span>
+            </h3>
 
-            {/* Contact Icons */}
-            <div className="flex items-center justify-center gap-8 mb-8">
-              <button className="w-12 h-12 rounded-full border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-colors flex items-center justify-center">
-                <Phone className="w-5 h-5 text-yellow-400 hover:text-black" />
+            <div className="flex items-center justify-center gap-8 mb-12">
+              <button className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
+                <Phone className="w-8 h-8 text-black" />
               </button>
-              <button className="w-12 h-12 rounded-full border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition-colors flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-yellow-400 hover:text-black" />
+              <button className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
+                <MessageCircle className="w-8 h-8 text-black" />
               </button>
             </div>
 
-            {/* Contact Info */}
-            <div className="text-gray-400 mb-8">
-              <p className="mb-2">Contact: 9741832393 / 8893317488</p>
-              <p>Email: akhil@lisn.agency.online</p>
+            <div className="text-white mb-16">
+              <p className="mb-4 text-2xl font-bold font-mono">9741832393 / 8893317488</p>
+              <p className="text-2xl font-bold font-mono text-[#FFE500]">akhil@lisn.agency.online</p>
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-gray-700 my-8"></div>
-
-            {/* Yellow Accent Circle */}
-            <div className="flex justify-center mb-8">
-              <div className="w-8 h-8 bg-yellow-400 rounded-full"></div>
-            </div>
-
-            {/* Copyright */}
-            <p className="text-gray-600 text-sm">© All rights reserved</p>
+            <div className="w-full h-1 bg-zinc-800 mb-12"></div>
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
           </div>
         </section>
       </main>
