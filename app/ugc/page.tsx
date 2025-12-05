@@ -44,7 +44,7 @@ export default function UGCPage() {
       <Header />
       <main className="overflow-hidden font-sans bg-black text-white">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-24 md:py-40 overflow-hidden border-b-4 border-white">
+        <section className="relative min-h-screen flex items-center justify-center text-center px-4 pt-12 pb-24 md:pt-32 md:pb-40 overflow-hidden border-b-4 border-white">
           {/* Starfield */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {stars.map((style, i) => (
@@ -56,7 +56,10 @@ export default function UGCPage() {
             ))}
           </div>
 
-          <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center">
+          <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center relative">
+            {/* Readability Backdrop */}
+            <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
+
             <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
               UGC THAT
               <br />

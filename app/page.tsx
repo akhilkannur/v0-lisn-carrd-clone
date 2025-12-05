@@ -48,7 +48,7 @@ export default function Home() {
       <Header />
       <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
-        <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 pt-12 md:pt-24 pb-16 md:pb-24 overflow-hidden border-b-4 border-black">
+        <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 pt-8 md:pt-20 pb-16 md:pb-24 overflow-hidden border-b-4 border-black">
           {/* Realistic Night Sky Starfield */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {stars.map((style, i) => (
