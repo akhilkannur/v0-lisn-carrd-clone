@@ -229,14 +229,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Black Divider - Video Embed Area */}
-        <section className="bg-black px-4 py-16 md:py-40 border-b border-zinc-800">
-          <div className="max-w-7xl mx-auto reveal-hidden">
-            <div className="bg-[#151515] border-4 border-[#FFE500] aspect-video flex items-center justify-center shadow-[8px_8px_0px_0px_#FFE500] md:shadow-[12px_12px_0px_0px_#FFE500]">
-              <span className="text-[#FFE500] font-heading text-3xl md:text-6xl uppercase">Video Embed Here</span>
-            </div>
-          </div>
-        </section>
+
 
         {/* Video Package Section (Text Left / Video Right) */}
         <section className="bg-white px-4 py-16 md:py-40 border-b-4 border-black">
