@@ -19,7 +19,7 @@ export function Header() {
           href="/ugc"
           className={`text-lg font-bold transition-colors ${pathname === "/ugc" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >
-          UGC
+          UGC Street Interviews
         </Link>
       </div>
     </header>
