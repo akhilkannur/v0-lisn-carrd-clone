@@ -1,9 +1,33 @@
 "use client"
 
+import { useEffect } from "react"
 import { Header } from "@/components/header"
+import { Marquee } from "@/components/marquee"
 import { Play, Phone, MessageCircle } from "lucide-react"
 
 export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible")
+            observer.unobserve(entry.target) // Only animate once
+          }
+        })
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: "0px 0px -50px 0px", // Offset slightly so it doesn't trigger too early
+      },
+    )
+
+    const hiddenElements = document.querySelectorAll(".reveal-hidden")
+    hiddenElements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <Header />
@@ -19,14 +43,14 @@ export default function Home() {
           <div className="absolute top-[20%] right-[30%] w-2 h-2 bg-white rounded-full opacity-65 delay-1000"></div>
 
           <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
-            {/* LISN Logo Treatment - Image-filled Text */}
+            {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}
             <div className="flex justify-center mb-8 md:mb-12">
               <style jsx>{`
                 .logo-text-L {
                   -webkit-background-clip: text;
                   background-clip: text;
                   color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1543791244-b0e2716ef5ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ocean water texture */
+                  background-image: url('https://images.unsplash.com/photo-1543791244-b0e2716ef5ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
                   background-size: cover;
                   background-position: center;
                   display: inline-block;
@@ -35,7 +59,7 @@ export default function Home() {
                   -webkit-background-clip: text;
                   background-clip: text;
                   color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1502476579848-f6828574677e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Waves crashing */
+                  background-image: url('https://images.unsplash.com/photo-1502476579848-f6828574677e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
                   background-size: cover;
                   background-position: center;
                   display: inline-block;
@@ -44,7 +68,7 @@ export default function Home() {
                   -webkit-background-clip: text;
                   background-clip: text;
                   color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1533682570081-3c58d2050414?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Coastal landscape */
+                  background-image: url('https://images.unsplash.com/photo-1533682570081-3c58d2050414?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
                   background-size: cover;
                   background-position: center;
                   display: inline-block;
@@ -53,7 +77,7 @@ export default function Home() {
                   -webkit-background-clip: text;
                   background-clip: text;
                   color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1542385150-137b01d234a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Aerial ocean */
+                  background-image: url('https://images.unsplash.com/photo-1542385150-137b01d234a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
                   background-size: cover;
                   background-position: center;
                   display: inline-block;
@@ -66,35 +90,38 @@ export default function Home() {
                   animation: pulse-slow 3s infinite ease-in-out;
                 }
               `}</style>
-              <h1 className="font-heading text-[10rem] md:text-[14rem] leading-none tracking-tight">
-                <span className="logo-text-L">L</span>
-                <span className="logo-text-I">I</span>
-                <span className="logo-text-S">S</span>
-                <span className="logo-text-N">N</span>
+              <h1 className="font-heading text-[10rem] md:text-[14rem] leading-none tracking-tight flex gap-2">
+                <span className="logo-text-L animate-float">L</span>
+                <span className="logo-text-I animate-float animate-float-delay-1">I</span>
+                <span className="logo-text-S animate-float animate-float-delay-2">S</span>
+                <span className="logo-text-N animate-float animate-float-delay-3">N</span>
               </h1>
             </div>
 
             {/* Main Heading */}
-            <h2 className="font-heading text-6xl md:text-8xl text-white mb-10 uppercase tracking-tight leading-[0.85]">
+            <h2 className="font-heading text-6xl md:text-8xl text-white mb-10 uppercase tracking-tight leading-[0.85] reveal-hidden">
               EVENT VIDEO <span className="text-[#FFE500]">AGENCY</span>
             </h2>
 
             {/* Body Copy */}
-            <p className="font-sans text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl leading-relaxed">
+            <p className="font-sans text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl leading-relaxed reveal-hidden delay-100">
               We capture your live events and interviews, then transform them into a video series, engaging short-form
               clips and versatile content assets. Get maximum return from every recording.
             </p>
 
             {/* Call-to-Action */}
-            <button className="bg-[#FFE500] text-black px-12 py-6 font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg">
+            <button className="bg-[#FFE500] text-black px-12 py-6 font-bold text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg reveal-hidden delay-200">
               WATCH OUR WORK ↓
             </button>
           </div>
         </section>
 
+        {/* Marquee Separator */}
+        <Marquee text="EVENT VIDEO AGENCY" />
+
         {/* Real People Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-[#151515] px-4 py-24 md:py-40 relative animate-fade-in border-b-4 border-black">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-24 md:py-40 relative border-b-4 border-black">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <div className="text-left">
                 <h3 className="font-heading text-6xl md:text-8xl mb-10 leading-[0.9] uppercase tracking-tight">
@@ -122,8 +149,8 @@ export default function Home() {
         </section>
 
         {/* Moments Captured Section (Image Left / Text Right) */}
-        <section className="bg-white px-4 py-24 md:py-40 animate-fade-in border-b-4 border-black">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-white px-4 py-24 md:py-40 border-b-4 border-black">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               {/* Image Placeholder */}
               <div className="w-full aspect-square bg-gray-100 border-4 border-black flex items-center justify-center shadow-[12px_12px_0px_0px_#000000]">
@@ -150,9 +177,12 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Marquee Separator */}
+        <Marquee text="REAL PEOPLE • REAL STORIES" className="bg-[#151515]" />
+
         {/* Marketers Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-[#151515] px-4 py-24 md:py-40 animate-fade-in border-b-4 border-black">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-24 md:py-40 border-b-4 border-black">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <div className="text-left">
                 <h3 className="font-heading text-6xl md:text-8xl mb-10 leading-[0.9] uppercase tracking-tight">
@@ -182,8 +212,8 @@ export default function Home() {
         </section>
 
         {/* Human Connections Section (Video Left / Text Right) */}
-        <section className="bg-white px-4 py-24 md:py-40 animate-fade-in border-b-4 border-black">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-white px-4 py-24 md:py-40 border-b-4 border-black">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <div className="flex justify-center md:justify-start order-2 md:order-1">
                 <div className="w-full max-w-[400px] bg-black border-4 border-black shadow-[12px_12px_0px_0px_#000000]">
@@ -211,8 +241,8 @@ export default function Home() {
         </section>
 
         {/* Black Divider - Video Embed Area */}
-        <section className="bg-black px-4 py-24 md:py-40 animate-fade-in-black border-b border-zinc-800">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-black px-4 py-24 md:py-40 border-b border-zinc-800">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="bg-[#151515] border-4 border-[#FFE500] aspect-video flex items-center justify-center shadow-[12px_12px_0px_0px_#FFE500]">
               <span className="text-[#FFE500] font-heading text-4xl md:text-6xl uppercase">Video Embed Here</span>
             </div>
@@ -220,8 +250,8 @@ export default function Home() {
         </section>
 
         {/* Video Package Section (Text Left / Video Right) */}
-        <section className="bg-white px-4 py-24 md:py-40 animate-fade-in border-b-4 border-black">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-white px-4 py-24 md:py-40 border-b-4 border-black">
+          <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <div className="text-left">
                 <h3 className="font-heading text-6xl md:text-8xl mb-10 leading-[0.9] uppercase tracking-tight text-black">
@@ -249,8 +279,8 @@ export default function Home() {
         </section>
 
         {/* Strategy Session Footer - Black */}
-        <section className="bg-black px-4 py-24 md:py-40 relative animate-fade-in-black">
-          <div className="max-w-5xl mx-auto text-center">
+        <section className="bg-black px-4 py-24 md:py-40 relative">
+          <div className="max-w-5xl mx-auto text-center reveal-hidden">
             <h3 className="font-heading text-6xl md:text-9xl mb-16 text-white leading-[0.85] uppercase tracking-tighter">
               STRATEGY
               <br />
