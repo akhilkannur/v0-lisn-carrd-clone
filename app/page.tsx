@@ -103,7 +103,7 @@ export default function Home() {
         <Marquee text="EVENT VIDEO AGENCY" />
 
         {/* Real People Section - Yellow (Text Left / Video Right) */}
-        <section id="real-people-section" className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 relative border-b-4 border-black">
+        <section id="real-people-section" className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-24 relative border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* Moments Captured Section (Image Left / Text Right) */}
-        <section className="bg-white px-4 py-16 md:py-40 border-b-4 border-black">
+        <section className="bg-white px-4 py-16 md:py-24 border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               {/* Image Placeholder */}
@@ -170,7 +170,7 @@ export default function Home() {
         <Marquee text="REAL PEOPLE • REAL STORIES" className="bg-[#151515]" />
 
         {/* Marketers Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 border-b-4 border-black">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-24 border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
@@ -201,7 +201,7 @@ export default function Home() {
         </section>
 
         {/* Human Connections Section (Video Left / Text Right) */}
-        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 border-b-4 border-black">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-24 border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="flex justify-center md:justify-start order-2 md:order-1 w-full">
@@ -232,7 +232,7 @@ export default function Home() {
 
 
         {/* Video Package Section (Text Left / Video Right) */}
-        <section className="bg-white px-4 py-16 md:py-40 border-b-4 border-black">
+        <section className="bg-white px-4 py-16 md:py-24 border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
@@ -261,7 +261,7 @@ export default function Home() {
         </section>
 
         {/* Strategy Session Footer - Black */}
-        <section className="bg-black px-4 py-16 md:py-40 relative">
+        <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
             <h3 className="font-heading text-4xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
               STRATEGY

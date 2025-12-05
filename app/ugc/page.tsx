@@ -79,7 +79,7 @@ export default function UGCPage() {
         <Marquee text="UGC THAT CONVERTS • REAL REACTIONS • VIRAL CONTENT" />
 
         {/* Gallery Section */}
-        <section className="bg-black px-4 py-24 md:py-40 border-b-4 border-white">
+        <section className="bg-black px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="flex justify-center">
               <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300">
@@ -94,22 +94,25 @@ export default function UGCPage() {
         </section>
 
         {/* Description Section */}
-        <section className="bg-white text-black px-4 py-24 md:py-40 border-b-4 border-black">
+        <section className="bg-white text-black px-4 py-16 md:py-24 border-b-4 border-black">
           <div className="max-w-5xl mx-auto reveal-hidden">
-            <p className="text-2xl md:text-4xl font-medium leading-tight mb-20">
+            <p className="text-2xl md:text-4xl font-medium leading-tight mb-12">
               We take your product straight to real people, put it in their hands, and capture their unfiltered
               reactions. What you get back is a library of ad creatives that feel{" "}
-              <span className="bg-[#FFE500] px-2">raw, relatable, and built to convert.</span>
+              <span className="bg-[#FFE500] px-2">raw, relatable, and built to convert.</span>{" "}
+              <a href="https://www.instagram.com/yousaypeople/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#FFE500] transition-colors block mt-4 text-xl">
+                See real examples on Instagram →
+              </a>
             </p>
 
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight">
                   Why Brands
                   <br />
                   Use Us
                 </h3>
-                <ul className="space-y-8 text-xl md:text-2xl font-medium">
+                <ul className="space-y-6 text-xl md:text-2xl font-medium">
                   {[
                     "Real reactions = instant trust",
                     "Demos that actually demo",
@@ -131,7 +134,7 @@ export default function UGCPage() {
                   <br />
                   Works
                 </h3>
-                <ol className="space-y-8 text-xl md:text-2xl font-medium">
+                <ol className="space-y-6 text-xl md:text-2xl font-medium">
                   {[
                     "1. Kickoff call",
                     "2. Ship your product",
@@ -150,7 +153,7 @@ export default function UGCPage() {
         </section>
 
         {/* Footer */}
-        <section className="bg-black px-4 py-24 md:py-40 relative">
+        <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
             <h3 className="font-heading text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter">
               READY TO
