@@ -53,15 +53,7 @@ export default function UGCPage() {
               <br />
               SPEAKS
               <br />
-              <span
-                className="text-transparent bg-clip-text bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2532&auto=format&fit=crop')",
-                }}
-              >
-                KERALA'S
-              </span>
+              <span className="text-[#FFE500]">KERALA'S</span>
               <br />
               LANGUAGE
             </h1>
