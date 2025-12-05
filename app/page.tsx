@@ -48,7 +48,7 @@ export default function Home() {
       <Header />
       <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
-        <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden border-b-4 border-black">
+        <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 pt-12 md:pt-24 pb-16 md:pb-24 overflow-hidden border-b-4 border-black">
           {/* Realistic Night Sky Starfield */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {stars.map((style, i) => (
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black/90 via-black/50 to-transparent blur-3xl -z-10 scale-125"></div>
 
             {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}
-            <div className="flex justify-center mb-8 md:mb-12 w-full">
+            <div className="flex justify-center mb-6 md:mb-8 w-full">
               <Image
                 src="/lisn-logo.gif"
                 alt="LISN Agency Logo"
@@ -82,7 +82,7 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="font-heading text-5xl md:text-8xl text-white mb-8 md:mb-10 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
+            <h2 className="font-heading text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
               EVENT VIDEO <br className="hidden md:block" /><span className="text-[#FFE500]">AGENCY</span>
             </h2>
 
@@ -93,9 +93,9 @@ export default function Home() {
             </p>
 
             {/* Call-to-Action */}
-            <button className="bg-[#FFE500] text-black px-8 py-4 md:px-12 md:py-6 font-bold text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg reveal-hidden delay-200 border-2 border-transparent">
+            <a href="#real-people-section" className="bg-[#FFE500] text-black px-8 py-4 md:px-12 md:py-6 font-bold text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg reveal-hidden delay-200 border-2 border-transparent">
               WATCH OUR WORK ↓
-            </button>
+            </a>
           </div>
         </section>
 
@@ -103,7 +103,7 @@ export default function Home() {
         <Marquee text="EVENT VIDEO AGENCY" />
 
         {/* Real People Section - Yellow (Text Left / Video Right) */}
-        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 relative border-b-4 border-black">
+        <section id="real-people-section" className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 relative border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
