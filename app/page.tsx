@@ -8,16 +8,6 @@ export default function Home() {
     <>
       <Header />
       <main className="overflow-hidden font-sans">
-"use client"
-
-import { Header } from "@/components/header"
-import { Play, Phone, MessageCircle } from "lucide-react"
-
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
         <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden border-b-4 border-black">
           {/* Scattered Yellow Dots Atmosphere */}
