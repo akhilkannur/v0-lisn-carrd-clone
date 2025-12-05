@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { Play, Phone, MessageCircle } from "lucide-react"
@@ -79,7 +80,14 @@ export default function Home() {
           <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
             {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}
             <div className="flex justify-center mb-8 md:mb-12">
-              <img src="/image01.gif" alt="LISN Agency Logo" className="max-w-[400px] w-full h-auto border-4 border-black shadow-[12px_12px_0px_0px_#000000]" />
+              <Image
+                src="/lisn-logo.gif"
+                alt="LISN Agency Logo"
+                width={500}
+                height={300}
+                className="max-w-[400px] w-full h-auto border-4 border-black shadow-[12px_12px_0px_0px_#000000]"
+                unoptimized
+              />
             </div>
 
             {/* Main Heading */}
