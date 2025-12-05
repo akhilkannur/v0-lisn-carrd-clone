@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
-import { Play, Phone, MessageCircle, ArrowDown, MessageSquareText } from "lucide-react"
+import { Play, Phone, MessageCircle, ArrowDown, MessageSquare } from "lucide-react"
 
 export default function Home() {
   const [stars, setStars] = useState<Array<any>>([])
@@ -275,7 +275,7 @@ export default function Home() {
                 <Phone className="w-6 h-6 md:w-8 md:h-8 text-black" />
               </button>
               <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="w-16 h-16 md:w-20 md:h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[4px_4px_0px_0px_#ffffff] md:shadow-[8px_8px_0px_0px_#ffffff]">
-                <MessageSquareText className="w-6 h-6 md:w-8 md:h-8 text-black" />
+                <MessageSquare className="w-6 h-6 md:w-8 md:h-8 text-black" />
               </a>
             </div>
 

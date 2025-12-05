@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
-import { Phone, MessageCircle, MessageSquareText } from "lucide-react"
+import { Phone, MessageCircle, MessageSquare } from "lucide-react"
 
 export default function UGCPage() {
   const [stars, setStars] = useState<Array<any>>([])
@@ -163,7 +163,7 @@ export default function UGCPage() {
                 <Phone className="w-8 h-8 text-black" />
               </button>
               <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
-                <MessageSquareText className="w-8 h-8 text-black" />
+                <MessageSquare className="w-8 h-8 text-black" />
               </a>
             </div>
 
