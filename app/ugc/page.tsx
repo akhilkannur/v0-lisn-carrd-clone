@@ -1,26 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { Phone, MessageCircle, MessageSquare, ArrowDown } from "lucide-react"
 
 export default function UGCPage() {
-  const [stars, setStars] = useState<Array<any>>([])
-
   useEffect(() => {
-    // Generate realistic night sky stars
-    const generatedStars = [...Array(80)].map(() => ({
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 3 + 1}px`,
-      height: `${Math.random() * 3 + 1}px`,
-      opacity: Math.random(),
-      animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${Math.random() * 3 + 2}s`,
-    }))
-    setStars(generatedStars)
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -45,20 +31,22 @@ export default function UGCPage() {
       <main className="overflow-hidden font-sans bg-black text-white">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center text-center px-4 pt-12 pb-24 md:pt-32 md:pb-40 overflow-hidden border-b-4 border-white">
-          {/* Starfield */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            {stars.map((style, i) => (
-              <div
-                key={`star-${i}`}
-                className="absolute rounded-full bg-white animate-twinkle"
-                style={style}
-              ></div>
-            ))}
+          {/* Kerala Background Image */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?q=80&w=2069&auto=format&fit=crop')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* Heavy Dark Overlay */}
+            <div className="absolute inset-0 bg-black/80"></div>
           </div>
 
           <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center relative">
-            {/* Readability Backdrop */}
-            <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
+            {/* Readability Backdrop (Optional, keeping subtle) */}
+            <div className="absolute inset-0 bg-black/40 blur-3xl -z-10 scale-110"></div>
 
             <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
               UGC THAT
