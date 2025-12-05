@@ -45,57 +45,7 @@ export default function Home() {
           <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
             {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}
             <div className="flex justify-center mb-8 md:mb-12">
-              <style jsx>{`
-                .logo-text-L {
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1543791244-b0e2716ef5ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-                  background-size: cover;
-                  background-position: center;
-                  display: inline-block;
-                }
-                .logo-text-I {
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1502476579848-f6828574677e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-                  background-size: cover;
-                  background-position: center;
-                  display: inline-block;
-                }
-                .logo-text-S {
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1533682570081-3c58d2050414?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-                  background-size: cover;
-                  background-position: center;
-                  display: inline-block;
-                }
-                .logo-text-N {
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-                  background-image: url('https://images.unsplash.com/photo-1542385150-137b01d234a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-                  background-size: cover;
-                  background-position: center;
-                  display: inline-block;
-                }
-                @keyframes pulse-slow {
-                  0%, 100% { opacity: 0.7; }
-                  50% { opacity: 1; }
-                }
-                .animate-pulse-slow {
-                  animation: pulse-slow 3s infinite ease-in-out;
-                }
-              `}</style>
-              <h1 className="font-heading text-[10rem] md:text-[14rem] leading-none tracking-tight flex gap-2">
-                <span className="logo-text-L animate-float">L</span>
-                <span className="logo-text-I animate-float animate-float-delay-1">I</span>
-                <span className="logo-text-S animate-float animate-float-delay-2">S</span>
-                <span className="logo-text-N animate-float animate-float-delay-3">N</span>
-              </h1>
+              <img src="/image01.gif" alt="LISN Agency Logo" className="max-w-[400px] w-full h-auto border-4 border-black shadow-[12px_12px_0px_0px_#000000]" />
             </div>
 
             {/* Main Heading */}
