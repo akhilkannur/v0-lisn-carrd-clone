@@ -42,7 +42,7 @@ export default function UGCPage() {
             }}
           >
             {/* Heavy Dark Overlay */}
-            <div className="absolute inset-0 bg-black/80"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
           </div>
 
           {/* Absolutely positioned graphic - subtle and non-intrusive */}
