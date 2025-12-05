@@ -201,7 +201,7 @@ export default function Home() {
         </section>
 
         {/* Human Connections Section (Video Left / Text Right) */}
-        <section className="bg-white px-4 py-16 md:py-40 border-b-4 border-black">
+        <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-40 border-b-4 border-black">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="flex justify-center md:justify-start order-2 md:order-1 w-full">
@@ -220,7 +220,7 @@ export default function Home() {
                   CONNECTIONS
                 </h3>
 
-                <p className="text-lg md:text-2xl text-gray-800 font-medium leading-relaxed mb-8 md:mb-10">
+                <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6">
                   The nervous laugh before a big presentation. The genuine smile when strangers become friends. We live
                   for the real soul.
                 </p>
