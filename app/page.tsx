@@ -8,29 +8,19 @@ import { Play, Phone, MessageCircle } from "lucide-react"
 
 export default function Home() {
   const [stars, setStars] = useState<Array<any>>([])
-  const [whiteStars, setWhiteStars] = useState<Array<any>>([])
 
   useEffect(() => {
-    // Generate stars on client-side only to avoid hydration mismatch
-    const generatedStars = [...Array(30)].map(() => ({
+    // Generate realistic night sky stars
+    const generatedStars = [...Array(100)].map(() => ({
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 8 + 4}px`, // Bigger yellow stars
-      height: `${Math.random() * 8 + 4}px`,
+      width: `${Math.random() * 2 + 1}px`, // Tiny stars: 1px to 3px
+      height: `${Math.random() * 2 + 1}px`,
+      opacity: Math.random(),
       animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${Math.random() * 3 + 3}s`,
+      animationDuration: `${Math.random() * 3 + 2}s`,
     }))
     setStars(generatedStars)
-
-    const generatedWhiteStars = [...Array(20)].map(() => ({
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 5 + 2}px`, // Bigger white stars
-      height: `${Math.random() * 5 + 2}px`,
-      animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${Math.random() * 4 + 4}s`,
-    }))
-    setWhiteStars(generatedWhiteStars)
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,25 +49,26 @@ export default function Home() {
       <main className="overflow-hidden font-sans">
         {/* First Fold Section - Hero */}
         <section className="relative bg-black min-h-screen flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden border-b-4 border-black">
-          {/* Scattered Yellow Dots Atmosphere (Starfield) */}
+          {/* Realistic Night Sky Starfield */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {stars.map((style, i) => (
               <div
-                key={`yellow-${i}`}
-                className="absolute rounded-full bg-[#FFE500] opacity-0 animate-twinkle"
+                key={`star-${i}`}
+                className="absolute rounded-full bg-white animate-twinkle"
                 style={style}
               ></div>
             ))}
-            {whiteStars.map((style, i) => (
-              <div
-                key={`white-${i}`}
-                className="absolute rounded-full bg-white opacity-0 animate-twinkle"
-                style={style}
-              ></div>
-            ))}
+            
+            {/* Shooting Stars */}
+            <div className="animate-shooting-star" style={{ top: '10%', right: '10%', animationDelay: '5s' }}></div>
+            <div className="animate-shooting-star" style={{ top: '25%', right: '25%', animationDelay: '12s' }}></div>
+            <div className="animate-shooting-star" style={{ top: '15%', right: '40%', animationDelay: '19s' }}></div>
           </div>
 
-          <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center">
+          <div className="z-10 max-w-6xl mx-auto flex flex-col items-center justify-center relative">
+            {/* Radial Gradient for Readability */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black/90 via-black/50 to-transparent blur-3xl -z-10 scale-125"></div>
+
             {/* LISN Logo Treatment - Image-filled Text with Floating Animation */}
             <div className="flex justify-center mb-8 md:mb-12">
               <Image
