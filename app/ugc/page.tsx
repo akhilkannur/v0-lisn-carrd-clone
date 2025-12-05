@@ -45,11 +45,17 @@ export default function UGCPage() {
             <div className="absolute inset-0 bg-black/80"></div>
           </div>
 
+          {/* Absolutely positioned graphic - subtle and non-intrusive */}
+          <div className="absolute bottom-[-5%] left-[-5%] z-0 opacity-20 transform rotate-12 scale-75 hidden md:block">
+            <StreetInterviewGraphic />
+          </div>
+          <div className="absolute top-[-5%] right-[-5%] z-0 opacity-20 transform -rotate-12 scale-75 hidden md:block">
+            <StreetInterviewGraphic />
+          </div>
+
           <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center relative">
             {/* Readability Backdrop */}
             <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
-
-            <StreetInterviewGraphic />
 
             <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
               UGC THAT
