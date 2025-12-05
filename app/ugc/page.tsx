@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
-import { Phone, MessageCircle, MessageSquare } from "lucide-react"
+import { Phone, MessageCircle, MessageSquare, ArrowDown } from "lucide-react"
 
 export default function UGCPage() {
   const [stars, setStars] = useState<Array<any>>([])
@@ -65,21 +65,33 @@ export default function UGCPage() {
               <br />
               SPEAKS
               <br />
-              <span className="text-[#FFE500]">KERALA'S</span>
+              <span
+                className="text-transparent bg-clip-text bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=2532&auto=format&fit=crop')",
+                }}
+              >
+                KERALA'S
+              </span>
               <br />
               LANGUAGE
             </h1>
 
-            <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-16 max-w-4xl leading-relaxed reveal-hidden delay-100">
+            <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100">
               Street reaction ad creatives. Because one localised ad can change your brand's trajectory.
             </p>
+
+            <a href="#gallery-section" className="reveal-hidden delay-200 inline-block">
+              <ArrowDown className="w-12 h-12 text-white animate-bounce hover:text-[#FFE500] transition-colors cursor-pointer" />
+            </a>
           </div>
         </section>
 
         <Marquee text="UGC THAT CONVERTS • REAL REACTIONS • VIRAL CONTENT" />
 
         {/* Gallery Section */}
-        <section className="bg-black px-4 py-16 md:py-24 border-b-4 border-white">
+        <section id="gallery-section" className="bg-black px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="flex justify-center">
               <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300">
