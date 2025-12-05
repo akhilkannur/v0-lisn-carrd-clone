@@ -102,7 +102,7 @@ export default function Home() {
             </p>
 
             {/* Call-to-Action */}
-            <a href="#real-people-section" className="bg-[#FFE500] text-black px-8 py-4 md:px-12 md:py-6 font-bold text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg reveal-hidden delay-200 border-2 border-transparent">
+            <a href="#real-people-section" className="bg-[#FFE500] text-black px-8 py-4 md:px-12 md:py-6 font-bold text-lg md:text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 transform hover:-translate-y-1 shadow-lg border-2 border-transparent animate-fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
               WATCH OUR WORK ↓
             </a>
           </div>
