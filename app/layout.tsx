@@ -15,20 +15,20 @@ const _dela_gothic_one = Dela_Gothic_One({
 export const metadata: Metadata = {
   title: "LISN - Event Video Agency | Kerala & India",
   description:
-    "Real people, real stories. Professional event video production and UGC street interviews. We turn live events into viral content.",
+    "Real people, real stories. Professional event video production and UGC street interviews. We turn live events into impactful content.",
   metadataBase: new URL("https://lisn.agency"),
   keywords: [
     "Event Video Agency",
     "UGC India",
     "Street Interviews Kerala",
     "Video Production Kerala",
-    "Viral Content Marketing",
+    "Content Marketing",
     "Corporate Event Video",
   ],
   openGraph: {
     title: "LISN - Event Video Agency",
     description:
-      "Real people, real stories. We capture your live events and street interviews to create viral content.",
+      "Real people, real stories. We capture your live events and street interviews to create impactful content.",
     url: "https://lisn.agency",
     siteName: "LISN Agency",
     locale: "en_US",

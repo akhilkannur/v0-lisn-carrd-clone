@@ -77,7 +77,7 @@ export default function UGCPage() {
           </div>
         </section>
 
-        <Marquee text="UGC THAT CONVERTS • REAL REACTIONS • VIRAL CONTENT" />
+        <Marquee text="UGC THAT CONVERTS • REAL REACTIONS • AUTHENTIC CONTENT" />
 
         {/* Gallery Section */}
         <section id="gallery-section" className="bg-black px-4 py-16 md:py-24 border-b-4 border-white">

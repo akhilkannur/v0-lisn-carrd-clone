@@ -193,7 +193,7 @@ export default function Home() {
 
                 <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6">
                   We are not just videographers. Our team combines marketing strategy with cinematic experience and
-                  editorial expertise. From feature film backgrounds to viral social content.
+                  editorial expertise. From feature film backgrounds to high-performing social content.
                 </p>
               </div>
 
