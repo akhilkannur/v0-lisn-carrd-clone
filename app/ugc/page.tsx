@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone, MessageCircle, MessageSquareText } from "lucide-react"
 
 export default function UGCPage() {
   const [stars, setStars] = useState<Array<any>>([])
@@ -171,14 +171,18 @@ export default function UGCPage() {
               <button className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
                 <Phone className="w-8 h-8 text-black" />
               </button>
-              <button className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
-                <MessageCircle className="w-8 h-8 text-black" />
-              </button>
+              <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-[#FFE500] hover:bg-white transition-all duration-300 flex items-center justify-center border-4 border-transparent shadow-[8px_8px_0px_0px_#ffffff]">
+                <MessageSquareText className="w-8 h-8 text-black" />
+              </a>
             </div>
 
             <div className="text-white mb-16">
-              <p className="mb-4 text-2xl font-bold font-mono">9741832393 / 8893317488</p>
-              <p className="text-2xl font-bold font-mono text-[#FFE500]">akhil@lisn.agency.online</p>
+              <p className="mb-4 text-2xl font-bold font-mono">
+                <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a> / <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
+              </p>
+              <p className="text-2xl font-bold font-mono text-[#FFE500]">
+                <a href="mailto:akhil@lisnagency.online" className="hover:text-white transition-colors">akhil@lisnagency.online</a>
+              </p>
             </div>
 
             <div className="w-full h-1 bg-zinc-800 mb-12"></div>
