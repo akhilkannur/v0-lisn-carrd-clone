@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
+import { StreetInterviewGraphic } from "@/components/street-interview-graphic"
 import { Phone, MessageCircle, MessageSquare, ArrowDown } from "lucide-react"
 
 export default function UGCPage() {
@@ -45,8 +46,10 @@ export default function UGCPage() {
           </div>
 
           <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center relative">
-            {/* Readability Backdrop (Optional, keeping subtle) */}
-            <div className="absolute inset-0 bg-black/40 blur-3xl -z-10 scale-110"></div>
+            {/* Readability Backdrop */}
+            <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
+
+            <StreetInterviewGraphic />
 
             <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
               UGC THAT
