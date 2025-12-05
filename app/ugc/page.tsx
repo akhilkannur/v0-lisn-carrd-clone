@@ -146,25 +146,13 @@ export default function UGCPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-[#FFE500] px-4 py-32 md:py-48 text-center border-b-4 border-black">
-          <div className="max-w-6xl mx-auto reveal-hidden">
-            <p className="font-heading text-6xl md:text-8xl text-black uppercase leading-[0.9] mb-12">
-              🔥 Put your product in their hands.
-            </p>
-            <button className="bg-black text-white px-16 py-8 font-heading text-3xl uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 border-4 border-black shadow-[12px_12px_0px_0px_#ffffff] hover:shadow-[16px_16px_0px_0px_#000000]">
-              Start Your Campaign
-            </button>
-          </div>
-        </section>
-
         {/* Footer */}
         <section className="bg-black px-4 py-24 md:py-40 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
             <h3 className="font-heading text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter">
               READY TO
               <br />
-              <span className="text-[#FFE500]">GO VIRAL?</span>
+              <span className="text-[#FFE500]">HIT THE STREETS?</span>
             </h3>
 
             <div className="flex items-center justify-center gap-8 mb-12">
