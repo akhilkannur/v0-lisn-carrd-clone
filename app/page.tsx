@@ -12,21 +12,21 @@ export default function Home() {
 
   useEffect(() => {
     // Generate stars on client-side only to avoid hydration mismatch
-    const generatedStars = [...Array(25)].map(() => ({
+    const generatedStars = [...Array(30)].map(() => ({
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 4 + 2}px`,
-      height: `${Math.random() * 4 + 2}px`,
+      width: `${Math.random() * 8 + 4}px`, // Bigger yellow stars
+      height: `${Math.random() * 8 + 4}px`,
       animationDelay: `${Math.random() * 5}s`,
       animationDuration: `${Math.random() * 3 + 3}s`,
     }))
     setStars(generatedStars)
 
-    const generatedWhiteStars = [...Array(15)].map(() => ({
+    const generatedWhiteStars = [...Array(20)].map(() => ({
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 3 + 1}px`,
-      height: `${Math.random() * 3 + 1}px`,
+      width: `${Math.random() * 5 + 2}px`, // Bigger white stars
+      height: `${Math.random() * 5 + 2}px`,
       animationDelay: `${Math.random() * 5}s`,
       animationDuration: `${Math.random() * 4 + 4}s`,
     }))
