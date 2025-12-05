@@ -173,4 +173,42 @@
   .animate-twinkle {
     animation: twinkle 4s ease-in-out infinite;
   }
+
+  /* Shooting Star Animation */
+  @keyframes shooting-star {
+    0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 1; }
+    100% { transform: translateX(-500px) translateY(500px) rotate(-45deg); opacity: 0; }
+  }
+
+  .animate-shooting-star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    animation: shooting-star 2s linear infinite;
+    opacity: 0;
+  }
+
+  .animate-shooting-star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), transparent);
+  }
+
+  /* Simple Fade In Up Animation */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out both;
+  }
 }

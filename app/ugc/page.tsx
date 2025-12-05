@@ -71,7 +71,7 @@ export default function UGCPage() {
               Street reaction ad creatives. Because one localised ad can change your brand's trajectory.
             </p>
 
-            <a href="#gallery-section" className="reveal-hidden delay-200 inline-block">
+            <a href="#gallery-section" className="inline-block animate-fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
               <ArrowDown className="w-12 h-12 text-white animate-bounce hover:text-[#FFE500] transition-colors cursor-pointer" />
             </a>
           </div>
