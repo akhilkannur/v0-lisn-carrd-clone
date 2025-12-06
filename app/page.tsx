@@ -183,7 +183,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight break-words">
+                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight">
                   MARKETERS,
                   <br />
                   FILMMAKERS,
@@ -223,7 +223,7 @@ export default function Home() {
               </div>
 
               <div className="text-left order-1 md:order-2">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
+                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black">
                   HUMAN
                   <br />
                   CONNECTIONS

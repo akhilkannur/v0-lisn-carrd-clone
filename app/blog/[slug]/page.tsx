@@ -1,37 +1,80 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import Link from "next/link"
-import { notFound, useParams } from "next/navigation"
+import { notFound } from "next/navigation"
 import { Header } from "@/components/header"
 import { blogPosts } from "@/lib/blog-data"
 import { ArrowLeft, ArrowRight, Phone, MessageSquare } from "lucide-react"
+import type { Metadata } from "next"
 
-export default function BlogPostPage() {
-  const params = useParams()
-  const [post, setPost] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+// Define proper types for Next.js 15+ Page Props
+interface PageProps {
+  params: Promise<{ slug: string }>
+}
 
-  useEffect(() => {
-    if (!params?.slug) return
+// Generate Metadata for SEO
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
-    const slug = params.slug as string
-    // Simulate finding the post (in a real app this might be an API call)
-    const foundPost = blogPosts.find((p) => p.slug === slug)
-    setPost(foundPost || null)
-    setLoading(false)
-  }, [params])
+  if (!post) {
+    return {
+      title: "Post Not Found | LISN Agency",
+    }
+  }
 
-  if (loading) return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>
+  return {
+    title: `${post.title} | LISN Agency Blog`,
+    description: post.subtitle,
+    openGraph: {
+      title: post.title,
+      description: post.subtitle,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["LISN Agency"],
+    },
+  }
+}
+
+// Server Component
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
+
   if (!post) return notFound()
+
+  // JSON-LD Structured Data for SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.subtitle,
+    "datePublished": post.date, // Note: In a real app, convert this to ISO 8601 format
+    "author": {
+      "@type": "Organization",
+      "name": "LISN Agency"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LISN Agency",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lisn.agency/lisn-logo.gif" 
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://lisn.agency/blog/${slug}`
+    }
+  }
 
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="min-h-screen bg-black text-white font-sans selection:bg-[#FFE500] selection:text-black">
         
-        {/* Progress Bar (Optional nice-to-have, maybe later) */}
-
         <article className="pt-32 pb-16 px-4">
           <div className="max-w-4xl mx-auto">
             {/* Back Link */}
