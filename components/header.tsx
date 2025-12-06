@@ -21,6 +21,12 @@ export function Header() {
         >
           UGC
         </Link>
+        <Link
+          href="/blog"
+          className={`text-lg font-bold transition-colors ${pathname.startsWith("/blog") ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
+        >
+          Insights
+        </Link>
       </div>
     </header>
   )
