@@ -156,6 +156,69 @@ export default function UGCPage() {
           </div>
         </section>
 
+        {/* Creative Velocity Methodology Section */}
+        <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
+          <div className="max-w-5xl mx-auto reveal-hidden">
+            <h2 className="font-heading text-6xl md:text-8xl mb-16 uppercase tracking-tighter text-center">
+              THE CREATIVE <br /><span className="text-[#FFE500]">VELOCITY</span> METHODOLOGY
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <div>
+                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500]">
+                  The Old Way
+                </h3>
+                <ul className="space-y-6 text-xl md:text-2xl font-medium">
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Betting big on one "perfect" ad.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Months of production, hoping it sticks.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Scripted reactions that feel fake.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Paying for certainty, getting disappointment.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500]">
+                  The Lisn Way
+                </h3>
+                <ul className="space-y-6 text-xl md:text-2xl font-medium">
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Rapid experimentation with diverse creatives.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Weekly drops of authentic market reactions.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Unfiltered street truth that builds trust.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="min-w-[20px] h-[20px] mt-2 bg-white"></span>
+                    <span>Selling velocity, not just views.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-center text-xl md:text-3xl font-bold max-w-3xl mx-auto reveal-hidden delay-200">
+              Stop guessing. Start testing. We don&apos;t promise viral; we promise volume, authenticity, and the data to prove what truly resonates.
+            </p>
+          </div>
+        </section>
+
         {/* Footer */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
