@@ -148,6 +148,16 @@ export default function UGCPage() {
                     </li>
                   ))}
                 </ol>
+
+                <div className="mt-12 p-6 bg-gray-100 border-l-4 border-[#FFE500] rounded-r-lg">
+                  <h4 className="font-bold text-2xl mb-4 text-black">What About "Bad" Reactions?</h4>
+                  <p className="text-lg text-gray-800 leading-relaxed">
+                    We don't guarantee only positive reactions. Authenticity is our goal. If the street doesn't love your product, we don't hide it. Those "indifferent" moments are critical feedback. We capture the reality, then our editors craft compelling narratives that utilize every reaction – turning confusion into curiosity, and indifference into engagement. Think of it as market research on camera, providing insights far beyond just testimonials.
+                  </p>
+                  <p className="text-lg text-gray-800 leading-relaxed mt-4 font-bold">
+                    Typical delivery for one street session: 5-10 high-performing ad variations from ~50 approaches.
+                  </p>
+                </div>
               </div>
             </div>
             <p className="text-sm text-gray-500 italic mt-10">
