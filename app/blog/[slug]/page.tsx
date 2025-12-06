@@ -2,27 +2,25 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { notFound } from "next/navigation"
+import { notFound, useParams } from "next/navigation"
 import { Header } from "@/components/header"
 import { blogPosts } from "@/lib/blog-data"
 import { ArrowLeft, ArrowRight, Phone, MessageSquare } from "lucide-react"
 
-interface BlogPostPageProps {
-  params: {
-    slug: string
-  }
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function BlogPostPage() {
+  const params = useParams()
   const [post, setPost] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    if (!params?.slug) return
+
+    const slug = params.slug as string
     // Simulate finding the post (in a real app this might be an API call)
-    const foundPost = blogPosts.find((p) => p.slug === params.slug)
+    const foundPost = blogPosts.find((p) => p.slug === slug)
     setPost(foundPost || null)
     setLoading(false)
-  }, [params.slug])
+  }, [params])
 
   if (loading) return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>
   if (!post) return notFound()
