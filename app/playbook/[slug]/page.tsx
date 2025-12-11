@@ -11,8 +11,8 @@ export function generateStaticParams() {
   }))
 }
 
-export default async function PlaybookPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug
+export default async function PlaybookPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const industry = industryPlaybooks.find((i) => i.slug === slug)
 
   if (!industry) {
