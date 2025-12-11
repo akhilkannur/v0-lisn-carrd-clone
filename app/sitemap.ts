@@ -9,17 +9,13 @@ export default function sitemap() {
     '',
     '/ugc',
     '/blog',
+    '/hooks', // Added new route
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
  
   // Dynamic blog routes
-  // Note: In a real app, you'd import this from the data source. 
-  // For now, I'm hardcoding based on the known slugs in lib/blog-data.ts
-  // to avoid importing the large data file here if not strictly necessary, 
-  // but importing is better for maintenance.
-  
   const blogSlugs = [
     "why-your-ads-fail-in-kerala",
     "selling-sensory-products-online",
