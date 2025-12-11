@@ -5,6 +5,12 @@ import { Header } from "@/components/header"
 import { blogPosts } from "@/lib/blog-data"
 import { industryPlaybooks } from "@/lib/industry-data"
 import { ArrowUpRight, Phone, MessageSquare } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "DTC Marketing Insights & Strategy | LISN Agency",
+  description: "Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India. Featuring industry-specific ad playbooks.",
+}
 
 export default function BlogIndex() {
   return (

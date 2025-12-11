@@ -4,6 +4,23 @@ import { Marquee } from "@/components/marquee"
 import { ArrowDown, Phone, MessageSquare, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const industry = industryPlaybooks.find((i) => i.slug === slug)
+
+  if (!industry) return {}
+
+  return {
+    title: `${industry.name} Marketing Strategy India | UGC Video Ideas`,
+    description: `How to market ${industry.name.toLowerCase()} brands in India. Why traditional ads fail and how Street Interviews solve the '${industry.painPoint}' problem.`,
+    openGraph: {
+      title: `${industry.name} Ad Strategy: Why Studio Shoots Fail`,
+      description: `The playbook for scaling ${industry.name} brands in India using Street Interviews.`,
+    }
+  }
+}
 
 export function generateStaticParams() {
   return industryPlaybooks.map((industry) => ({
