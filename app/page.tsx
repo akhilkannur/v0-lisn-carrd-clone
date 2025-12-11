@@ -269,39 +269,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Industry Selector Section - New */}
-        <section className="bg-[#FFE500] text-black px-4 py-16 md:py-24 border-b-4 border-black">
-          <div className="max-w-7xl mx-auto reveal-hidden">
-            <h3 className="font-heading text-4xl md:text-6xl mb-12 uppercase tracking-tight text-center">
-              SPECIALIZED PLAYBOOKS
-            </h3>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-              {[
-                { name: "Skincare", emoji: "✨", slug: "skincare" },
-                { name: "Coffee", emoji: "☕", slug: "coffee" },
-                { name: "Jewellery", emoji: "💎", slug: "jewellery" },
-                { name: "Athleisure", emoji: "🏃", slug: "athleisure" },
-                { name: "Healthy Snacks", emoji: "🥨", slug: "healthy-snacks" },
-                { name: "Perfume", emoji: "👃", slug: "perfume" },
-                { name: "Haircare", emoji: "💇‍♀️", slug: "haircare" },
-                { name: "Home Decor", emoji: "🏠", slug: "home-decor" },
-                { name: "Sneakers", emoji: "👟", slug: "sneakers" },
-                { name: "Ayurveda", emoji: "🌿", slug: "ayurveda" },
-              ].map((industry) => (
-                <a 
-                  key={industry.slug} 
-                  href={`/playbook/${industry.slug}`}
-                  className="bg-black text-white p-6 md:p-8 flex flex-col items-center justify-center gap-4 border-4 border-black hover:bg-white hover:text-black hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 group"
-                >
-                  <span className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">{industry.emoji}</span>
-                  <span className="font-bold text-lg md:text-xl uppercase tracking-widest text-center">{industry.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Strategy Session Footer - Black */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
@@ -333,18 +300,6 @@ export default function Home() {
 
             {/* Divider */}
             <div className="w-full h-1 bg-zinc-800 mb-8 md:mb-12"></div>
-
-            {/* SEO Footer Links */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8 text-zinc-600 text-sm font-mono uppercase">
-               {[
-                "Skincare", "Coffee", "Jewellery", "Athleisure", "Healthy Snacks", 
-                "Perfume", "Haircare", "Home Decor", "Sneakers", "Ayurveda"
-               ].map((name, i) => (
-                 <a key={i} href={`/playbook/${name.toLowerCase().replace(' ', '-')}`} className="hover:text-[#FFE500] transition-colors">
-                    {name} Marketing
-                 </a>
-               ))}
-            </div>
 
             {/* Copyright */}
             <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>

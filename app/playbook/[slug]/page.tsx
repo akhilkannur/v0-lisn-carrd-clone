@@ -11,8 +11,6 @@ export function generateStaticParams() {
   }))
 }
 
-export const dynamicParams = false
-
 export default async function PlaybookPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
   const industry = industryPlaybooks.find((i) => i.slug === slug)

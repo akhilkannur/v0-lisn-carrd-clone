@@ -24,6 +24,39 @@ export default function BlogIndex() {
           </div>
         </section>
 
+        {/* Specialized Playbooks Section - New */}
+        <section className="px-4 py-16 md:py-24 border-b-4 border-white bg-zinc-900">
+          <div className="max-w-7xl mx-auto">
+            <h3 className="font-heading text-4xl md:text-5xl mb-12 uppercase tracking-tight text-white">
+              Industry Playbooks
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { name: "Skincare", emoji: "✨", slug: "skincare" },
+                { name: "Coffee", emoji: "☕", slug: "coffee" },
+                { name: "Jewellery", emoji: "💎", slug: "jewellery" },
+                { name: "Athleisure", emoji: "🏃", slug: "athleisure" },
+                { name: "Healthy Snacks", emoji: "🥨", slug: "healthy-snacks" },
+                { name: "Perfume", emoji: "👃", slug: "perfume" },
+                { name: "Haircare", emoji: "💇‍♀️", slug: "haircare" },
+                { name: "Home Decor", emoji: "🏠", slug: "home-decor" },
+                { name: "Sneakers", emoji: "👟", slug: "sneakers" },
+                { name: "Ayurveda", emoji: "🌿", slug: "ayurveda" },
+              ].map((industry) => (
+                <a 
+                  key={industry.slug} 
+                  href={`/playbook/${industry.slug}`}
+                  className="bg-black text-white p-6 border-2 border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-all duration-300 group flex flex-col items-center gap-2"
+                >
+                  <span className="text-3xl group-hover:scale-110 transition-transform">{industry.emoji}</span>
+                  <span className="font-bold text-sm uppercase tracking-widest text-center">{industry.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Blog Grid */}
         <section className="px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-7xl mx-auto">
