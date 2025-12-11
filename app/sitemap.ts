@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { industryPlaybooks } from '@/lib/industry-data'
  
 export default function sitemap() {
   const baseUrl = 'https://lisn.agency'
@@ -33,5 +34,11 @@ export default function sitemap() {
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogRoutes]
+  // Dynamic Industry Playbook routes
+  const playbookRoutes = industryPlaybooks.map((industry) => ({
+    url: `${baseUrl}/playbook/${industry.slug}`,
+    lastModified: new Date().toISOString().split('T')[0],
+  }))
+
+  return [...routes, ...blogRoutes, ...playbookRoutes]
 }
