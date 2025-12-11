@@ -11,10 +11,12 @@ import { notFound } from "next/navigation"
 //   }))
 // }
 
-export default function PlaybookPage({ params }: { params: { slug: string } }) {
-  const industry = industryPlaybooks.find((i) => i.slug === params.slug)
+export default async function PlaybookPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const industry = industryPlaybooks.find((i) => i.slug === slug)
 
   if (!industry) {
+    console.error(`Playbook not found for slug: ${slug}`)
     notFound()
   }
 
