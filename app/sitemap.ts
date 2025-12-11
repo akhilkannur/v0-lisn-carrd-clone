@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { industryPlaybooks } from '@/lib/industry-data'
  
 export default function sitemap() {
-  const baseUrl = 'https://lisn.agency'
+  const baseUrl = 'https://lisnagency.online'
   
   // Static routes
   const routes = [
