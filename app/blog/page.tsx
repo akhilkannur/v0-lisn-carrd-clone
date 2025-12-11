@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { blogPosts } from "@/lib/blog-data"
+import { industryPlaybooks } from "@/lib/industry-data"
 import { ArrowUpRight, Phone, MessageSquare } from "lucide-react"
 
 export default function BlogIndex() {
@@ -31,27 +32,16 @@ export default function BlogIndex() {
               Industry Playbooks
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { name: "Skincare", emoji: "✨", slug: "skincare" },
-                { name: "Coffee", emoji: "☕", slug: "coffee" },
-                { name: "Jewellery", emoji: "💎", slug: "jewellery" },
-                { name: "Athleisure", emoji: "🏃", slug: "athleisure" },
-                { name: "Healthy Snacks", emoji: "🥨", slug: "healthy-snacks" },
-                { name: "Perfume", emoji: "👃", slug: "perfume" },
-                { name: "Haircare", emoji: "💇‍♀️", slug: "haircare" },
-                { name: "Home Decor", emoji: "🏠", slug: "home-decor" },
-                { name: "Sneakers", emoji: "👟", slug: "sneakers" },
-                { name: "Ayurveda", emoji: "🌿", slug: "ayurveda" },
-              ].map((industry) => (
-                <a 
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {industryPlaybooks.map((industry) => (
+                <Link 
                   key={industry.slug} 
                   href={`/playbook/${industry.slug}`}
                   className="bg-black text-white p-6 border-2 border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-all duration-300 group flex flex-col items-center gap-2"
                 >
                   <span className="text-3xl group-hover:scale-110 transition-transform">{industry.emoji}</span>
                   <span className="font-bold text-sm uppercase tracking-widest text-center">{industry.name}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

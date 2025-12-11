@@ -109,5 +109,105 @@ export const industryPlaybooks: IndustryPlaybook[] = [
     streetConcept: "The 'Modern vs Ancient' Quiz",
     hookExample: "\"This drink helps with stress. Read the ingredients. Can you believe this is 100% Ayurvedic?\"",
     trustFactor: "Breaking the stereotype that Ayurveda is just bitter powders for old people."
+  },
+  {
+    slug: "pet-care",
+    name: "Pet Care",
+    emoji: "🐶",
+    painPoint: "Picky Eaters & Trust",
+    whyAdsFail: "Owners don't trust ads. They trust their dog's reaction. If a dog ignores the food in an ad, it's game over.",
+    streetConcept: "The 'Picky Eater' Test",
+    hookExample: "\"Put this bowl next to your current food. Let's see which one he chooses first.\"",
+    trustFactor: "Animals don't lie. A wagging tail is the ultimate social proof."
+  },
+  {
+    slug: "baby-care",
+    name: "Baby Care",
+    emoji: "👶",
+    painPoint: "Safety & Sensitivity",
+    whyAdsFail: "Moms are terrified of chemicals. Studio ads claiming 'safe' mean nothing without proof.",
+    streetConcept: "The 'Chemical Free' Wipes Test",
+    hookExample: "\"Clean this marker off your hand. Now smell it. Notice no alcohol smell?\"",
+    trustFactor: "Real moms reacting to the gentleness and lack of harsh chemical odors."
+  },
+  {
+    slug: "mens-grooming",
+    name: "Men's Grooming",
+    emoji: "🧔",
+    painPoint: "Softness & Smell",
+    whyAdsFail: "Men buy what their partners like. Ads targeting men often miss the 'partner approval' factor.",
+    streetConcept: "The 'Partner Approval' Test",
+    hookExample: "\"Smell this beard oil. Would you want your boyfriend to smell like this?\"",
+    trustFactor: "Validation from the opposite sex is the strongest buying trigger for men's grooming."
+  },
+  {
+    slug: "sustainable-fashion",
+    name: "Sustainable Fashion",
+    emoji: "🌱",
+    painPoint: "Greenwashing Skepticism",
+    whyAdsFail: "Everyone claims to be 'organic'. Customers are cynical about green claims.",
+    streetConcept: "The 'Plastic vs Cotton' Burn Test",
+    hookExample: "\"We are going to burn a thread from this shirt. If it melts, it's plastic. If it turns to ash, it's organic.\"",
+    trustFactor: "A radical, physical demonstration of product truth that cannot be faked."
+  },
+  {
+    slug: "sexual-wellness",
+    name: "Sexual Wellness",
+    emoji: "🔥",
+    painPoint: "Stigma & Awkwardness",
+    whyAdsFail: "Too clinical or too vulgar. Ads fail to find the middle ground of 'normal conversation'.",
+    streetConcept: "The 'Awkward Question' Box",
+    hookExample: "\"Pick a question from the box. 'When was the last time you bought...?'. Let's normalize this.\"",
+    trustFactor: "Breaking the ice publicly makes the brand feel approachable and modern."
+  },
+  {
+    slug: "tea",
+    name: "Tea (Chai)",
+    emoji: "🫖",
+    painPoint: "Taste & Strength (Kadak)",
+    whyAdsFail: "Tea drinkers are fiercely loyal. They believe new brands are weak or watery.",
+    streetConcept: "The 'Tapri vs Premium' Taste Test",
+    hookExample: "\"This cup is your regular brand. This cup is ours. Tell me which one has more 'kick'.\"",
+    trustFactor: "The immediate facial reaction to the strength (Kadak) of the tea."
+  },
+  {
+    slug: "smartwatches",
+    name: "Smartwatches",
+    emoji: "⌚",
+    painPoint: "Build Quality & Screen",
+    whyAdsFail: "They all look like Apple Watch clones online. People worry they look cheap in real life.",
+    streetConcept: "The 'Sunlight Visibility' Test",
+    hookExample: "\"Stand in direct sunlight. Can you read this screen? Now try ours.\"",
+    trustFactor: "Testing the product in the harshest real-world condition (bright Indian sun)."
+  },
+  {
+    slug: "handbags",
+    name: "Handbags",
+    emoji: "👜",
+    painPoint: "Capacity & Finish",
+    whyAdsFail: "Does it fit a laptop? Is the zipper smooth? Photos don't show 'life-proof' utility.",
+    streetConcept: "The 'Stuff It' Challenge",
+    hookExample: "\"Here is a laptop, a water bottle, and a makeup kit. See if you can close the zip.\"",
+    trustFactor: "Visual proof of capacity and zipper durability in a chaotic street setting."
+  },
+  {
+    slug: "eyewear",
+    name: "Eyewear",
+    emoji: "👓",
+    painPoint: "Fit & Face Shape",
+    whyAdsFail: "Will this look good on MY face? Models have perfect oval faces.",
+    streetConcept: "The 'Stranger Styling' Session",
+    hookExample: "\"I think these frames would look better on you than your current ones. Try them.\"",
+    trustFactor: "Seeing the transformation on a regular person's face, not a model's."
+  },
+  {
+    slug: "mattress",
+    name: "Mattress",
+    emoji: "🛏️",
+    painPoint: "Comfort & Motion Transfer",
+    whyAdsFail: "You can't sit on a website. 'Memory Foam' is just a buzzword until you feel it.",
+    streetConcept: "The 'Jump Test'",
+    hookExample: "\"I'm going to jump on this side of the bed. If this wine glass spills, you win ₹5000.\"",
+    trustFactor: "High-stakes physical demonstration of motion isolation."
   }
 ];
