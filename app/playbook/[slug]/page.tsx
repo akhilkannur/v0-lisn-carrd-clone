@@ -5,11 +5,11 @@ import { ArrowDown, Phone, MessageSquare, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-export function generateStaticParams() {
-  return industryPlaybooks.map((industry) => ({
-    slug: industry.slug,
-  }))
-}
+// export function generateStaticParams() {
+//   return industryPlaybooks.map((industry) => ({
+//     slug: industry.slug,
+//   }))
+// }
 
 export default function PlaybookPage({ params }: { params: { slug: string } }) {
   const industry = industryPlaybooks.find((i) => i.slug === params.slug)
