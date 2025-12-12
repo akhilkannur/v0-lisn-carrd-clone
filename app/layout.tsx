@@ -33,28 +33,25 @@ export const metadata: Metadata = {
     siteName: "LISN Agency",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/lisn-logo.gif",
+        width: 500,
+        height: 300,
+        alt: "LISN Agency Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "LISN - Event Video Agency",
     description: "Professional event video production and UGC street interviews.",
+    images: ["/lisn-logo.gif"],
   },
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/lisn-logo.gif",
+    shortcut: "/lisn-logo.gif",
+    apple: "/lisn-logo.gif",
   },
 }
 
