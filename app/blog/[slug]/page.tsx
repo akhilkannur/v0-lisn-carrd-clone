@@ -41,13 +41,16 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   if (!post) return notFound()
 
+  // Convert "December 6, 2025" to ISO format
+  const isoDate = new Date(post.date).toISOString()
+
   // JSON-LD Structured Data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.subtitle,
-    "datePublished": post.date, // Note: In a real app, convert this to ISO 8601 format
+    "datePublished": isoDate,
     "author": {
       "@type": "Organization",
       "name": "LISN Agency"
@@ -57,12 +60,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       "name": "LISN Agency",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://lisn.agency/lisn-logo.gif" 
+        "url": "https://lisnagency.online/lisn-logo.gif" 
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://lisn.agency/blog/${slug}`
+      "@id": `https://lisnagency.online/blog/${slug}`
     }
   }
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://lisn.agency/sitemap.xml',
+    sitemap: 'https://lisnagency.online/sitemap.xml',
   }
 }

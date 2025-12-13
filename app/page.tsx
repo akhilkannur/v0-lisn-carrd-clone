@@ -91,9 +91,9 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="font-heading text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
+            <h1 className="font-heading text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
               EVENT VIDEO <br className="hidden md:block" /><span className="text-[#FFE500]">AGENCY</span>
-            </h2>
+            </h1>
 
             {/* Body Copy */}
             <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-3xl leading-relaxed reveal-hidden delay-100 px-2">

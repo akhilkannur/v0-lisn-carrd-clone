@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "LISN - Event Video Agency | Kerala & India",
   description:
     "Real people, real stories. Professional event video production and UGC street interviews. We turn live events into impactful content.",
-  metadataBase: new URL("https://lisn.agency"),
+  metadataBase: new URL("https://lisnagency.online"),
   keywords: [
     "Event Video Agency",
     "UGC India",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "LISN - Event Video Agency",
     description:
       "Real people, real stories. We capture your live events and street interviews to create impactful content.",
-    url: "https://lisn.agency",
+    url: "https://lisnagency.online",
     siteName: "LISN Agency",
     locale: "en_US",
     type: "website",
