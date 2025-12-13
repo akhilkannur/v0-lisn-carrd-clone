@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "street-interviews-vs-focus-groups",
+    title: "WHY 'STREET INTERVIEWS' ARE THE NEW FOCUS GROUPS",
+    subtitle: "Focus groups are expensive, slow, and biased. Street interviews are cheap, fast, and brutally honest.",
+    date: "December 14, 2025",
+    category: "Market Research",
+    readTime: "5 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">The traditional Focus Group is dying. And it should.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">You pay an agency ₹2 Lakhs. They recruit 10 people who are \"professional participants.\" These people sit in a sterile room, eat free biscuits, and tell you what they think you want to hear because they want to get paid and go home.</p>\n      <p class=\"mb-6 text-xl leading-relaxed font-bold\">This is not data. This is performance art.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Street Doesn't Lie</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Compare that to a Street Interview.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">We stop a random guy on Brigade Road. He is late for a meeting. We hand him your new energy drink. He takes a sip.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">If he makes a face, <strong>that is true data.</strong></p>\n      <p class=\"mb-6 text-xl leading-relaxed\">If he says, \"Bro, this tastes like cough syrup,\" you just saved yourself ₹50 Crores in a failed launch.</p>\n\n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">Content + Insight = The Double Win</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">The best part? You aren't just getting research. You are getting content.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">If the person <em>loves</em> the drink, you have a viral testimonial video ready to run as an ad. If they hate it, you have internal feedback to fix the product.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Stop paying for polite lies in a conference room. Start paying for raw truth on the street.</p>\n    "
+  },
+  {
     slug: "national-brands-fail-kerala",
     title: "THE 'MADRAS' MISTAKE: WHY NATIONAL BRANDS FAIL IN KERALA",
     subtitle: "Treating South India as one homogenous block is your biggest ROI killer. Here is the nuance you are missing.",

@@ -15,7 +15,7 @@ const _dela_gothic_one = Dela_Gothic_One({
 export const metadata: Metadata = {
   title: "LISN - Event Video Agency | Kerala & India",
   description:
-    "Real people, real stories. Professional event video production and UGC street interviews. We turn live events into impactful content.",
+    "Stop boring your audience. LISN is the premier Event Video & UGC Agency in Kerala. We capture real street interviews and authentic moments that go viral.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
     "Event Video Agency",
@@ -24,29 +24,30 @@ export const metadata: Metadata = {
     "Video Production Kerala",
     "Content Marketing",
     "Corporate Event Video",
+    "Viral Marketing India",
   ],
   openGraph: {
-    title: "LISN - Event Video Agency",
+    title: "LISN - Event Video Agency | Real People, Real Stories",
     description:
-      "Real people, real stories. We capture your live events and street interviews to create impactful content.",
+      "We don't just film events; we capture the energy. From high-impact street interviews to cinematic event documentation, we turn your brand activations into viral content assets.",
     url: "https://lisnagency.online",
     siteName: "LISN Agency",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/lisn-logo.gif",
-        width: 500,
-        height: 300,
-        alt: "LISN Agency Logo",
+        url: "/momentscaptured.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LISN Agency - Real Moments Captured",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "LISN - Event Video Agency",
-    description: "Professional event video production and UGC street interviews.",
-    images: ["/lisn-logo.gif"],
+    description: "Stop boring your audience. We capture real street interviews and authentic moments that go viral.",
+    images: ["/momentscaptured.jpg"],
   },
   icons: {
     icon: "/lisn-logo.gif",
