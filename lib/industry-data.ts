@@ -11,6 +11,16 @@ export interface IndustryPlaybook {
 
 export const industryPlaybooks: IndustryPlaybook[] = [
   {
+    slug: "kerala-market-entry",
+    name: "Non-Kerala Brands",
+    emoji: "🌴",
+    painPoint: "The 'North Indian' Label",
+    whyAdsFail: "Hindi dubbed ads feel like an insult. Translating text isn't enough; you need to translate the 'Vibe'. Kerala consumers have a high BS radar for outsiders.",
+    streetConcept: "The 'Dialect Challenge'",
+    hookExample: "\"We asked 50 Malayalis to watch this popular Hindi ad. Watch their honest reaction to the dubbing.\"",
+    trustFactor: "Acknowledging the cultural gap instantly wins respect. Showing you care enough to get the local nuances right."
+  },
+  {
     slug: "skincare",
     name: "Skincare",
     emoji: "✨",

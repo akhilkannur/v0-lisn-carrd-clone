@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { industryPlaybooks } from '@/lib/industry-data'
+import { blogPosts } from '@/lib/blog-data'
  
 export default function sitemap() {
   const baseUrl = 'https://lisnagency.online'
@@ -16,17 +17,8 @@ export default function sitemap() {
   }))
  
   // Dynamic blog routes
-  const blogSlugs = [
-    "why-your-ads-fail-in-kerala",
-    "selling-sensory-products-online",
-    "stop-hiring-influencers",
-    "scale-or-die-creative-volume",
-    "market-research-hack",
-    "why-ugly-ads-win"
-  ]
-
-  const blogRoutes = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  const blogRoutes = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
 

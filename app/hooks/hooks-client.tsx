@@ -42,7 +42,7 @@ export default function HooksPage() {
         </section>
 
         {/* Filter Section */}
-        <section className="sticky top-[80px] z-40 bg-black/90 backdrop-blur-md border-b-4 border-zinc-800 py-4 px-4 overflow-x-auto">
+        <section className="sticky top-[80px] z-40 bg-black/90 backdrop-blur-md border-b-4 border-zinc-800 py-4 px-4 overflow-x-auto custom-scrollbar">
           <div className="max-w-7xl mx-auto flex gap-4 min-w-max">
             {categories.map((cat) => (
               <button
