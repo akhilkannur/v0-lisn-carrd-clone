@@ -316,5 +316,31 @@ export const viralHooks: AdHook[] = [
     category: "Founder",
     hook: "The harsh truth about running a business in India.",
     explanation: "Authenticity: Showing the struggle behind the glamour."
+  },
+
+  // --- TRUST & SCAMS (4 Hooks) ---
+  {
+    id: "trust-1",
+    category: "Trust & Scams",
+    hook: "I bought this from a random Instagram ad so you don't have to get scammed.",
+    explanation: "Safety Net: Positioning the creator as the 'guinea pig' who takes the risk for the viewer."
+  },
+  {
+    id: "trust-2",
+    category: "Trust & Scams",
+    hook: "Why does this brand offer 'Cash on Delivery' for a ₹10,000 product?",
+    explanation: "Confidence Signal: COD is the ultimate trust badge in India. Highlighting it upfront kills doubt."
+  },
+  {
+    id: "trust-3",
+    category: "Trust & Scams",
+    hook: "Is this website fake? We went to their warehouse to check.",
+    explanation: "Investigation: A physical 'site visit' format that proves legitimacy beyond a doubt."
+  },
+  {
+    id: "trust-4",
+    category: "Trust & Scams",
+    hook: "3 Signs a D2C Brand is actually a Dropshipping Scam.",
+    explanation: "Education: Teaching the viewer how to spot fakes implicitly positions *your* brand as the honest alternative."
   }
 ];

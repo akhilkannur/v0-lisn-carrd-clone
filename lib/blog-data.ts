@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "death-of-unboxing",
+    title: "THE 'UNBOXING' IS DEAD. LONG LIVE THE 'STREET TEST'.",
+    subtitle: "Why watching a rich influencer open a free box is boring, and watching a stranger struggle with a product is addictive.",
+    date: "December 17, 2025",
+    category: "Content Strategy",
+    readTime: "5 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">For the last 5 years, the 'Unboxing Video' was the holy grail of UGC.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">It followed a predictable script: aesthetic background, ASMR packaging sounds, and a gasp of delight. It was perfect. It was polished.</p>\n      <p class=\"mb-6 text-xl leading-relaxed font-bold\">And that is exactly why it stopped working.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">Perfection is Boring</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">The human brain is wired to ignore predictability. Once you've seen one unboxing, you've seen them all. There is no tension. You know the influencer is going to like it.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Enter the <strong>'Street Test'</strong>.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Element of Chaos</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">A street test has tension. Will the stranger like it? Will they drop it? Will they guess the price wrong?</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">We recently ran a test for a luggage brand. <br><strong>Ad A:</strong> Influencer unboxing the suitcase in a hotel room. <br><strong>Ad B:</strong> Us throwing the suitcase down a flight of stairs in front of shocked bystanders.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Ad B had a 400% higher Click-Through Rate. Why? Because it proved <em>durability</em> in the real world, not just <em>aesthetics</em> in a fake one.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Stop unboxing. Start stress-testing.</p>\n    "
+  },
+  {
+    slug: "roi-of-rejection",
+    title: "WHY WE LOVE IT WHEN THEY SAY \"NO\"",
+    subtitle: "We don't hide the rejections. We use them. Here is why showing a customer disliking your product might be your most profitable move.",
+    date: "December 17, 2025",
+    category: "Consumer Psychology",
+    readTime: "4 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">There is a moment in every street interview shoot that most agencies dread.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">We hand someone the product. They try it. And they shrug.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Or worse, they say, \"It's okay, but I wouldn't buy it.\"</p>\n      <p class=\"mb-6 text-xl leading-relaxed font-bold\">Most editors cut this immediately. We highlight it.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The \"Too Good To Be True\" Filter</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Indian consumers have been burned by \"magic products\" for decades. When they see a video where 10 people in a row say \"Wow, this is amazing!\", their scam radar goes off. It feels staged. It feels paid.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">But when they see a video that includes a \"Meh\" or a \"No thanks,\" the dynamic flips.</p>\n\n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Credibility Spike</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">By showing the rejection, you are implicitly saying: <em>\"We are so confident in our product that we don't need to hide the people who don't get it.\"</em></p>\n      <p class=\"mb-6 text-xl leading-relaxed\">It proves the other positive reactions are real. You can't have light without shadow. You can't have a 5-star rating without a 1-star review to give it context.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">So next time you get a \"bad\" reaction, don't delete it. Frame it. It might just be the reason your next customer trusts you enough to click \"Buy\".</p>\n    "
+  },
+  {
     slug: "street-interviews-vs-focus-groups",
     title: "WHY 'STREET INTERVIEWS' ARE THE NEW FOCUS GROUPS",
     subtitle: "Focus groups are expensive, slow, and biased. Street interviews are cheap, fast, and brutally honest.",

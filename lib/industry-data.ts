@@ -219,5 +219,15 @@ export const industryPlaybooks: IndustryPlaybook[] = [
     streetConcept: "The 'Jump Test'",
     hookExample: "\"I'm going to jump on this side of the bed. If this wine glass spills, you win ₹5000.\"",
     trustFactor: "High-stakes physical demonstration of motion isolation."
+  },
+  {
+    slug: "fintech",
+    name: "Fintech & Apps",
+    emoji: "💳",
+    painPoint: "Hidden Charges & Scams",
+    whyAdsFail: "Too glossy. People think 'If they spend this much on ads, they will steal my money'. Jargon kills conversion.",
+    streetConcept: "The 'Small Print' Challenge",
+    hookExample: "\"Read this policy. If you can understand it in 1 minute, I'll give you ₹1000.\"",
+    trustFactor: "Radical transparency. Showing regular people understanding the app instantly."
   }
 ];
