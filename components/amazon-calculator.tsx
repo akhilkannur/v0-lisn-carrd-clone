@@ -76,7 +76,7 @@ export function AmazonCalculator() {
             <div className="inline-flex items-center justify-center p-4 bg-orange-50 rounded-full mb-2 ring-1 ring-orange-100">
               <Calculator className="w-8 h-8 text-orange-600" />
             </div>
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900">FBA & Payout Calculator</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">FBA & Payout Calculator</h2>
             <p className="text-gray-500 text-lg">See your actual Amazon India bank settlement for 2025</p>
           </div>
 
@@ -213,7 +213,7 @@ export function AmazonCalculator() {
                   <div className={`p-6 rounded-xl border shadow-sm transition-all duration-300 ${results.netPayout >= 0 ? 'bg-white border-green-200 ring-1 ring-green-100' : 'bg-red-50 border-red-200'}`}>
                     <div className="flex justify-between items-end mb-2">
                       <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">Net Payout / Unit</span>
-                      <span className={`text-4xl font-extrabold tracking-tight ${results.netPayout >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      <span className={`text-3xl md:text-4xl font-extrabold tracking-tight ${results.netPayout >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                         {formatCurrency(results.netPayout)}
                       </span>
                     </div>
@@ -300,7 +300,7 @@ export function AmazonCalculator() {
             
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left space-y-2">
-                    <h3 className="text-2xl md:text-4xl font-heading uppercase tracking-tighter leading-none">
+                    <h3 className="text-xl md:text-4xl font-heading uppercase tracking-tighter leading-none">
                         Unsatisfied with <br/><span className="text-[#FFE500]">these margins?</span>
                     </h3>
                     <p className="text-gray-400 text-lg">
