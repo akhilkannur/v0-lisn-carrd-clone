@@ -254,20 +254,33 @@ export const CLOSING_FEES = {
   ]
 };
 
-export const SHIPPING_RATES = {
+export const EASY_SHIP_RATES = {
   national: {
     first500g: 74,
-    additional500g: 32,
+    additional500g: 25,
   },
   local: {
-    first500g: 40,
-    additional500g: 18,
+    first500g: 44,
+    additional500g: 13,
   },
   regional: {
-    first500g: 51,
+    first500g: 53,
     additional500g: 17,
   }
 };
+
+// FBA Fulfillment Fees (Includes Pick & Pack + Weight Handling) - Standard Size
+export const FBA_FULFILLMENT_FEES = [
+  { maxWeight: 0.15, fee: 33 },
+  { maxWeight: 0.4, fee: 41 },
+  { maxWeight: 0.9, fee: 48 },
+  { maxWeight: 1.5, fee: 66 },
+  { maxWeight: 2.0, fee: 82 },
+  { maxWeight: 3.0, fee: 102 },
+  { maxWeight: 4.0, fee: 130 },
+  { maxWeight: 5.0, fee: 160 },
+  { maxWeight: Infinity, fee: 187, additionalPerKg: 30 } // 5-6kg is 187, assuming +30/kg after
+];
 
 export const calculateAmazonFees = (
   categoryName: string,
@@ -275,7 +288,8 @@ export const calculateAmazonFees = (
   sellingPrice: number,
   weightInKg: number,
   mode: 'easyShip' | 'fba' | 'selfShip' = 'easyShip',
-  location: 'local' | 'regional' | 'national' = 'national'
+  location: 'local' | 'regional' | 'national' = 'national',
+  productGstRate: number = 0.18 // Default 18%
 ) => {
   const category = CATEGORIES.find(c => c.name === categoryName) || CATEGORIES[0];
   const subcategory = category.subcategories.find(s => s.name === subcategoryName) || category.subcategories[0];
@@ -283,7 +297,6 @@ export const calculateAmazonFees = (
   // 1. Referral Fee
   let referralRate = subcategory.referralFeePercentage;
   
-  // Apply tiers if available
   if (subcategory.referralFeeTiers) {
      const sortedTiers = [...subcategory.referralFeeTiers].sort((a, b) => a.threshold - b.threshold);
      for (const tier of sortedTiers) {
@@ -294,10 +307,6 @@ export const calculateAmazonFees = (
      }
   }
 
-  // 2025 Universal Low Price Rule (Simplified Check: if not already covered by specific tiers, force 0 for <300 if applicable)
-  // However, most specific tiers above ALREADY handle this. If a category doesn't have tiers, we might want to check this.
-  // For safety, we trust the specific tiers defined above which incorporate the <300 rule.
-  
   const referralFee = (sellingPrice * referralRate) / 100;
 
   // 2. Closing Fee
@@ -305,35 +314,52 @@ export const calculateAmazonFees = (
   const closingFeeObj = closingFeeList.find(c => sellingPrice <= c.maxPrice) || closingFeeList[closingFeeList.length - 1];
   const closingFee = closingFeeObj.fee;
 
-  // 3. Shipping Fee (Weight Handling)
+  // 3. Shipping Fee
   let shippingFee = 0;
-  if (mode !== 'selfShip') { // FBA or EasyShip charges weight fee
-    // Round up weight to nearest 0.5kg
+  
+  if (mode === 'easyShip') {
+    const rates = EASY_SHIP_RATES[location];
     const weightIn500g = Math.ceil(weightInKg * 2) / 2;
-    
-    const rates = SHIPPING_RATES[location];
     const first500Cost = rates.first500g;
     const additionalWeight = Math.max(0, weightIn500g - 0.5);
     const additional500Units = additionalWeight / 0.5;
     const additionalCost = additional500Units * rates.additional500g;
-    
     shippingFee = first500Cost + additionalCost;
+  } else if (mode === 'fba') {
+    // FBA Fee (Pick, Pack & Ship)
+    const tier = FBA_FULFILLMENT_FEES.find(t => weightInKg <= t.maxWeight);
+    if (tier) {
+      shippingFee = tier.fee;
+    } else {
+      // Logic for heavy items (>5kg or whatever max tier is)
+      const maxDefined = FBA_FULFILLMENT_FEES[FBA_FULFILLMENT_FEES.length - 1];
+      const extraWeight = weightInKg - 5; // Assuming 5 is max defined strictly
+      shippingFee = maxDefined.fee + (Math.ceil(extraWeight) * (maxDefined.additionalPerKg || 30));
+    }
   }
 
-  // 4. GST
+  // 4. Taxes
   const totalServiceFees = referralFee + closingFee + shippingFee;
-  const gst = totalServiceFees * 0.18;
+  const gstOnFees = totalServiceFees * 0.18;
+  const totalAmazonCharges = totalServiceFees + gstOnFees;
 
-  const totalFees = totalServiceFees + gst;
-  const netRevenue = sellingPrice - totalFees;
+  // Product GST (Output Tax)
+  // Selling Price is inclusive of GST.
+  // Base Price = Selling Price / (1 + GST Rate)
+  // Output GST = Selling Price - Base Price
+  const basePrice = sellingPrice / (1 + productGstRate);
+  const outputGst = sellingPrice - basePrice;
+
+  const netRevenue = sellingPrice - totalAmazonCharges - outputGst;
 
   return {
     referralFee,
     closingFee,
     shippingFee,
-    gst,
-    totalFees,
+    gstOnFees,
+    totalAmazonCharges,
     netRevenue,
-    referralRate // Exporting specifically for UI to show active %
+    referralRate,
+    outputGst
   };
 };

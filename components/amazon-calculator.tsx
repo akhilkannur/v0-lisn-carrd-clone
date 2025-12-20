@@ -14,6 +14,7 @@ export function AmazonCalculator() {
     costPrice: 400,
     mode: "easyShip" as "easyShip" | "fba" | "selfShip",
     location: "national" as "local" | "regional" | "national",
+    productGst: 18, // percent
   });
 
   const [results, setResults] = useState<any>(null);
@@ -38,7 +39,8 @@ export function AmazonCalculator() {
       Number(formData.sellingPrice),
       Number(formData.weight),
       formData.mode,
-      formData.location
+      formData.location,
+      Number(formData.productGst) / 100
     );
 
     const netProfit = fees.netRevenue - Number(formData.costPrice);
@@ -142,6 +144,22 @@ export function AmazonCalculator() {
                     />
                   </div>
                 </div>
+
+                 <div className="grid gap-2">
+                  <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Product GST (%)</label>
+                  <select
+                    name="productGst"
+                    value={formData.productGst}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                  >
+                    <option value="0">0% (Exempt)</option>
+                    <option value="5">5%</option>
+                    <option value="12">12%</option>
+                    <option value="18">18% (Standard)</option>
+                    <option value="28">28% (Luxury)</option>
+                  </select>
+                </div>
               </div>
 
               <div className="space-y-5">
@@ -183,11 +201,13 @@ export function AmazonCalculator() {
                     value={formData.location}
                     onChange={handleChange}
                     className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                    disabled={formData.mode === 'fba'}
                   >
                     <option value="local">Local (Same City)</option>
                     <option value="regional">Regional (Same Zone)</option>
                     <option value="national">National (Metro/Rest of India)</option>
                   </select>
+                   {formData.mode === 'fba' && <p className="text-xs text-gray-400 mt-1">FBA fees are based on weight slabs.</p>}
                 </div>
               </div>
             </div>
@@ -240,12 +260,16 @@ export function AmazonCalculator() {
                       <span className="font-semibold text-gray-900">{formatCurrency(results.shippingFee)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-600">GST (18%)</span>
-                      <span className="font-semibold text-gray-900">{formatCurrency(results.gst)}</span>
+                      <span className="text-gray-600">GST on Fees (18%)</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.gstOnFees)}</span>
+                    </div>
+                     <div className="flex justify-between items-center text-sm border-t border-dashed border-gray-200 pt-2">
+                      <span className="text-gray-600">Output GST ({formData.productGst}%)</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.outputGst)}</span>
                     </div>
                     <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-2">
-                      <span className="font-bold text-gray-700">Total Fees</span>
-                      <span className="font-bold text-red-500">-{formatCurrency(results.totalFees)}</span>
+                      <span className="font-bold text-gray-700">Total Deductions</span>
+                      <span className="font-bold text-red-500">-{formatCurrency(results.totalAmazonCharges + results.outputGst)}</span>
                     </div>
                   </div>
                 </div>
@@ -253,8 +277,10 @@ export function AmazonCalculator() {
               
               <div className="bg-blue-50 p-4 rounded-lg flex gap-3 items-start text-xs text-blue-700 border border-blue-100">
                 <Info className="w-5 h-5 shrink-0" />
-                <p className="leading-relaxed">
-                  Calculations based on standard Amazon India 2025 fee schedules (including 0% referral fee for items under ₹300).
+                <p>
+                  Calculations based on standard Amazon India 2025 fee schedules. 
+                  "Output GST" is the tax collected from customer that you pay to govt.
+                  Net Profit = Selling Price - (Amazon Fees + GST on Fees) - Output GST - Cost Price.
                 </p>
               </div>
             </div>
