@@ -151,7 +151,84 @@ export const CATEGORIES: Category[] = [
   {
     name: "Books",
     subcategories: [
-      { name: "Books", referralFeePercentage: 13.0 } // 4% is older/Kindle, physical books usually higher or varied. Keeping safe 13% base or user input.
+      { name: "Books", referralFeePercentage: 13.0 }
+    ]
+  },
+  {
+    name: "Automotive",
+    subcategories: [
+      { name: "Car & Bike Accessories", referralFeePercentage: 15.0 },
+      { name: "Helmets & Gloves", referralFeePercentage: 13.0 },
+      { name: "Tyres & Rims", referralFeePercentage: 10.0 }
+    ]
+  },
+  {
+    name: "Baby Products",
+    subcategories: [
+      { name: "Baby Products (General)", referralFeePercentage: 6.0 },
+      { name: "Diapers", referralFeePercentage: 5.0 }
+    ]
+  },
+  {
+    name: "Beauty & Personal Care",
+    subcategories: [
+      { name: "Beauty (General)", referralFeePercentage: 10.0 },
+      { name: "Personal Care Appliances", referralFeePercentage: 9.0 }
+    ]
+  },
+  {
+    name: "Health & Personal Care",
+    subcategories: [
+      { name: "Health Care (General)", referralFeePercentage: 8.0 },
+      { name: "Nutrition", referralFeePercentage: 9.0 }
+    ]
+  },
+  {
+    name: "Industrial & Scientific",
+    subcategories: [
+      { name: "Industrial Supplies", referralFeePercentage: 10.0 },
+      { name: "Scientific Products", referralFeePercentage: 11.0 }
+    ]
+  },
+  {
+    name: "Jewelry",
+    subcategories: [
+      { name: "Fashion Jewelry", referralFeePercentage: 15.0 },
+      { name: "Silver Jewelry", referralFeePercentage: 10.0 },
+      { name: "Gold & Diamond", referralFeePercentage: 5.0 }
+    ]
+  },
+  {
+    name: "Office Products",
+    subcategories: [
+      { name: "Office Supplies", referralFeePercentage: 13.0 }
+    ]
+  },
+  {
+    name: "Shoes & Footwear",
+    subcategories: [
+      { name: "Shoes (General)", referralFeePercentage: 13.0 },
+      { name: "Sandals & Floaters", referralFeePercentage: 10.0 }
+    ]
+  },
+  {
+    name: "Sports, Fitness & Outdoors",
+    subcategories: [
+      { name: "Sports Equipment", referralFeePercentage: 12.0 },
+      { name: "Fitness Accessories", referralFeePercentage: 13.0 }
+    ]
+  },
+  {
+    name: "Toys & Games",
+    subcategories: [
+      { name: "Toys (General)", referralFeePercentage: 11.0 },
+      { name: "Video Games", referralFeePercentage: 10.0 }
+    ]
+  },
+  {
+    name: "Watches",
+    subcategories: [
+      { name: "Watches (General)", referralFeePercentage: 14.0 }
     ]
   }
 ];
