@@ -91,7 +91,7 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
               EVENT VIDEO <br className="hidden md:block" /><span className="text-[#FFE500]">AGENCY</span>
             </h1>
 
@@ -116,7 +116,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight break-words">
                   REAL PEOPLE,
                   <br />
                   REAL STORIES
@@ -156,7 +156,7 @@ export default function Home() {
               </div>
 
               <div className="text-left order-1 md:order-2">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
                   MOMENTS.
                   <br />
                   CAPTURED.
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight">
+                <h3 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight break-words">
                   MARKETERS,
                   <br />
                   FILMMAKERS,
@@ -223,7 +223,7 @@ export default function Home() {
               </div>
 
               <div className="text-left order-1 md:order-2">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
                   HUMAN
                   <br />
                   CONNECTIONS
@@ -245,7 +245,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
-                <h3 className="font-heading text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
                   VIDEO
                   <br />
                   PACKAGE
@@ -272,7 +272,7 @@ export default function Home() {
         {/* Strategy Session Footer - Black */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
-            <h3 className="font-heading text-4xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
+            <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
               STRATEGY
               <br />
               <span className="text-[#FFE500]">SESSION</span>

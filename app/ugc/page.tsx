@@ -57,7 +57,7 @@ export default function UGCPage() {
             {/* Readability Backdrop */}
             <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
 
-            <h1 className="font-heading text-7xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden break-words w-full">
               UGC THAT
               <br />
               SPEAKS
@@ -108,7 +108,7 @@ export default function UGCPage() {
 
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight break-words">
                   Why Brands
                   <br />
                   Use Us
@@ -130,7 +130,7 @@ export default function UGCPage() {
               </div>
 
               <div>
-                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight break-words">
                   How it
                   <br />
                   Works
@@ -169,13 +169,13 @@ export default function UGCPage() {
         {/* Creative Velocity Methodology Section */}
         <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-5xl mx-auto reveal-hidden">
-            <h2 className="font-heading text-6xl md:text-8xl mb-16 uppercase tracking-tighter text-center">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-8xl mb-16 uppercase tracking-tighter text-center break-words">
               THE CREATIVE <br /><span className="text-[#FFE500]">VELOCITY</span> METHODOLOGY
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div>
-                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500]">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500] break-words">
                   The Old Way
                 </h3>
                 <ul className="space-y-6 text-xl md:text-2xl font-medium">
@@ -199,7 +199,7 @@ export default function UGCPage() {
               </div>
 
               <div>
-                <h3 className="font-heading text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500]">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500] break-words">
                   The Lisn Way
                 </h3>
                 <ul className="space-y-6 text-xl md:text-2xl font-medium">
@@ -232,7 +232,7 @@ export default function UGCPage() {
         {/* Footer */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
-            <h3 className="font-heading text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter">
+            <h3 className="font-heading text-4xl sm:text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter break-words">
               READY TO
               <br />
               <span className="text-[#FFE500]">HIT THE STREETS?</span>
