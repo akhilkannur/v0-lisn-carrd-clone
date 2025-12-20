@@ -27,12 +27,6 @@ export function Header() {
         >
           Insights
         </Link>
-        <Link
-          href="/amazon-calculator"
-          className={`text-lg font-bold transition-colors ${pathname === "/amazon-calculator" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
-        >
-          Calculator
-        </Link>
       </div>
     </header>
   )

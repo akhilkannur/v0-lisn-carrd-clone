@@ -11,7 +11,6 @@ export function AmazonCalculator() {
     subcategory: "Oils (Cooking & Edible)",
     sellingPrice: 1000,
     weight: 0.5, // kg
-    costPrice: 400,
     mode: "easyShip" as "easyShip" | "fba" | "selfShip",
     location: "national" as "local" | "regional" | "national",
     productGst: 18, // percent
@@ -43,11 +42,11 @@ export function AmazonCalculator() {
       Number(formData.productGst) / 100
     );
 
-    const netProfit = fees.netRevenue - Number(formData.costPrice);
-    const margin = (netProfit / Number(formData.sellingPrice)) * 100;
-    const roi = (netProfit / Number(formData.costPrice)) * 100;
+    // Net Payout = Selling Price - Amazon Charges - Output GST
+    const netPayout = fees.netRevenue;
+    const margin = (netPayout / Number(formData.sellingPrice)) * 100;
 
-    setResults({ ...fees, netProfit, margin, roi });
+    setResults({ ...fees, netPayout, margin });
   }, [formData]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -77,8 +76,8 @@ export function AmazonCalculator() {
             <div className="inline-flex items-center justify-center p-4 bg-orange-50 rounded-full mb-2 ring-1 ring-orange-100">
               <Calculator className="w-8 h-8 text-orange-600" />
             </div>
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900">FBA & Profit Calculator</h2>
-            <p className="text-gray-500 text-lg">Accurate Amazon India fee estimation for 2025</p>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900">FBA & Payout Calculator</h2>
+            <p className="text-gray-500 text-lg">See your actual Amazon India bank settlement for 2025</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
@@ -133,19 +132,7 @@ export function AmazonCalculator() {
                       className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium"
                     />
                   </div>
-                  <div className="grid gap-2">
-                    <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Cost Price (₹)</label>
-                    <input
-                      type="number"
-                      name="costPrice"
-                      value={formData.costPrice}
-                      onChange={handleChange}
-                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium"
-                    />
-                  </div>
-                </div>
-
-                 <div className="grid gap-2">
+                   <div className="grid gap-2">
                   <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Product GST (%)</label>
                   <select
                     name="productGst"
@@ -159,6 +146,7 @@ export function AmazonCalculator() {
                     <option value="18">18% (Standard)</option>
                     <option value="28">28% (Luxury)</option>
                   </select>
+                </div>
                 </div>
               </div>
 
@@ -215,31 +203,24 @@ export function AmazonCalculator() {
             {/* Results Section */}
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 md:p-8 space-y-6 border border-gray-200 shadow-inner flex flex-col justify-between h-full">
                <h3 className="text-xl font-bold flex items-center gap-2 text-gray-900 border-b border-gray-200 pb-4">
-                  <IndianRupee className="w-6 h-6 text-green-600" /> Profit Analysis
+                  <IndianRupee className="w-6 h-6 text-green-600" /> Bank Settlement
                 </h3>
 
               {results && (
                 <div className="space-y-6 flex-grow">
-                  {/* Main Profit Card */}
-                  <div className={`p-6 rounded-xl border shadow-sm transition-all duration-300 ${results.netProfit >= 0 ? 'bg-white border-green-200 ring-1 ring-green-100' : 'bg-red-50 border-red-200'}`}>
+                  {/* Main Payout Card */}
+                  <div className={`p-6 rounded-xl border shadow-sm transition-all duration-300 ${results.netPayout >= 0 ? 'bg-white border-green-200 ring-1 ring-green-100' : 'bg-red-50 border-red-200'}`}>
                     <div className="flex justify-between items-end mb-2">
-                      <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">Net Profit / Unit</span>
-                      <span className={`text-4xl font-extrabold tracking-tight ${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                        {formatCurrency(results.netProfit)}
+                      <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">Net Payout / Unit</span>
+                      <span className={`text-4xl font-extrabold tracking-tight ${results.netPayout >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        {formatCurrency(results.netPayout)}
                       </span>
                     </div>
                     <div className="flex items-center gap-4 mt-4 pt-4 border-t border-dashed border-gray-200">
                       <div className="flex flex-col">
-                        <span className="text-xs text-gray-400 font-bold uppercase">Margin</span>
-                        <span className={`text-xl font-bold ${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        <span className="text-xs text-gray-400 font-bold uppercase">Retention %</span>
+                        <span className={`text-xl font-bold ${results.netPayout >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                           {results.margin.toFixed(2)}%
-                        </span>
-                      </div>
-                       <div className="w-px h-8 bg-gray-200"></div>
-                       <div className="flex flex-col">
-                        <span className="text-xs text-gray-400 font-bold uppercase">ROI</span>
-                         <span className="text-xl font-bold text-blue-600">
-                          {results.roi.toFixed(0)}%
                         </span>
                       </div>
                     </div>
@@ -275,13 +256,35 @@ export function AmazonCalculator() {
                 </div>
               )}
               
-              <div className="bg-blue-50 p-4 rounded-lg flex gap-3 items-start text-xs text-blue-700 border border-blue-100">
-                <Info className="w-5 h-5 shrink-0" />
-                <p>
-                  Calculations based on standard Amazon India 2025 fee schedules. 
-                  "Output GST" is the tax collected from customer that you pay to govt.
-                  Net Profit = Selling Price - (Amazon Fees + GST on Fees) - Output GST - Cost Price.
-                </p>
+              <div className="bg-blue-50 p-4 rounded-lg flex flex-col gap-3 text-xs text-blue-800 border border-blue-100">
+                <div className="flex gap-3 items-start">
+                  <Info className="w-5 h-5 shrink-0 text-blue-600" />
+                  <p className="leading-relaxed">
+                    <strong>Estimate Only:</strong> This calculator provides an estimation based on standard Amazon India 2025 schedules. While we strive for accuracy, actual bank settlements may vary.
+                  </p>
+                </div>
+                
+                <div className="pt-2 border-t border-blue-200/50">
+                  <p className="font-bold mb-1 uppercase tracking-wider">Factors that may further decrease margins:</p>
+                  <ul className="list-disc pl-4 space-y-1 opacity-90">
+                    <li><strong>Returns:</strong> Return shipping & non-refundable fees.</li>
+                    <li><strong>Advertising (PPC):</strong> Your daily ad spend on Amazon.</li>
+                    <li><strong>FBA Storage:</strong> Monthly storage and long-term storage fees.</li>
+                    <li><strong>Packaging:</strong> Costs for boxes, tape, and labels.</li>
+                    <li><strong>Inbound Shipping:</strong> Costs to send stock to FBA warehouses.</li>
+                    <li><strong>Damages/Loss:</strong> Inventory shrinkage or transit damage.</li>
+                  </ul>
+                </div>
+
+                <div className="pt-2 border-t border-blue-200/50">
+                  <p className="font-bold mb-1 uppercase tracking-wider text-[10px]">Term Glossary:</p>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] opacity-80 leading-tight">
+                    <p><strong>Referral:</strong> Amazon's commission fee.</p>
+                    <p><strong>Closing:</strong> Fixed fee per unit sold.</p>
+                    <p><strong>Output GST:</strong> Tax collected for the govt.</p>
+                    <p><strong>Net Payout:</strong> Your bank settlement.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
