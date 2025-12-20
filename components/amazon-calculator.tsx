@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { CATEGORIES, calculateAmazonFees } from "@/lib/amazon-fees";
-import { Calculator, DollarSign, Package, Truck, Info, IndianRupee } from "lucide-react";
+import { Calculator, IndianRupee, Package, Truck, Info, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function AmazonCalculator() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ export function AmazonCalculator() {
     weight: 0.5, // kg
     costPrice: 400,
     mode: "easyShip" as "easyShip" | "fba" | "selfShip",
+    location: "national" as "local" | "regional" | "national",
   });
 
   const [results, setResults] = useState<any>(null);
@@ -20,7 +22,8 @@ export function AmazonCalculator() {
       formData.category,
       Number(formData.sellingPrice),
       Number(formData.weight),
-      formData.mode
+      formData.mode,
+      formData.location
     );
 
     const netProfit = fees.netRevenue - Number(formData.costPrice);
@@ -34,7 +37,7 @@ export function AmazonCalculator() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "category" || name === "mode" ? value : Number(value),
+      [name]: name === "category" || name === "mode" || name === "location" ? value : Number(value),
     }));
   };
 
@@ -47,159 +50,206 @@ export function AmazonCalculator() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 md:p-8 space-y-8 bg-white rounded-xl shadow-sm border border-gray-100">
-      <div className="text-center space-y-2">
-        <div className="inline-flex items-center justify-center p-3 bg-orange-100 rounded-full mb-2">
-          <Calculator className="w-6 h-6 text-orange-600" />
+    <div className="w-full max-w-4xl mx-auto space-y-8">
+      {/* Calculator Card */}
+      <div className="bg-white rounded-2xl shadow-xl border-t-8 border-[#FFE500] overflow-hidden">
+        <div className="p-6 md:p-10 space-y-8">
+          <div className="text-center space-y-3">
+            <div className="inline-flex items-center justify-center p-4 bg-orange-50 rounded-full mb-2 ring-1 ring-orange-100">
+              <Calculator className="w-8 h-8 text-orange-600" />
+            </div>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900">FBA & Profit Calculator</h2>
+            <p className="text-gray-500 text-lg">Accurate Amazon India fee estimation for 2025</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Input Section */}
+            <div className="space-y-8">
+              <div className="space-y-5">
+                <h3 className="text-xl font-semibold flex items-center gap-3 text-gray-800 border-b border-gray-100 pb-3">
+                  <IndianRupee className="w-5 h-5 text-gray-400" /> Product Details
+                </h3>
+                
+                <div className="grid gap-2">
+                  <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Category</label>
+                  <select
+                    name="category"
+                    value={formData.category}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                  >
+                    {CATEGORIES.map((cat) => (
+                      <option key={cat.name} value={cat.name}>
+                        {cat.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-2 gap-5">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Selling Price (₹)</label>
+                    <input
+                      type="number"
+                      name="sellingPrice"
+                      value={formData.sellingPrice}
+                      onChange={handleChange}
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium"
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Cost Price (₹)</label>
+                    <input
+                      type="number"
+                      name="costPrice"
+                      value={formData.costPrice}
+                      onChange={handleChange}
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                <h3 className="text-xl font-semibold flex items-center gap-3 text-gray-800 border-b border-gray-100 pb-3">
+                  <Package className="w-5 h-5 text-gray-400" /> Shipping & Logistics
+                </h3>
+
+                <div className="grid grid-cols-2 gap-5">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Weight (kg)</label>
+                    <input
+                      type="number"
+                      step="0.1"
+                      name="weight"
+                      value={formData.weight}
+                      onChange={handleChange}
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium"
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Mode</label>
+                    <select
+                      name="mode"
+                      value={formData.mode}
+                      onChange={handleChange}
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                    >
+                      <option value="easyShip">Easy Ship</option>
+                      <option value="fba">FBA</option>
+                      <option value="selfShip">Self Ship</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Customer Location</label>
+                  <select
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                  >
+                    <option value="local">Local (Same City)</option>
+                    <option value="regional">Regional (Same Zone)</option>
+                    <option value="national">National (Metro/Rest of India)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {/* Results Section */}
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 md:p-8 space-y-6 border border-gray-200 shadow-inner flex flex-col justify-between h-full">
+               <h3 className="text-xl font-bold flex items-center gap-2 text-gray-900 border-b border-gray-200 pb-4">
+                  <IndianRupee className="w-6 h-6 text-green-600" /> Profit Analysis
+                </h3>
+
+              {results && (
+                <div className="space-y-6 flex-grow">
+                  {/* Main Profit Card */}
+                  <div className={`p-6 rounded-xl border shadow-sm transition-all duration-300 ${results.netProfit >= 0 ? 'bg-white border-green-200 ring-1 ring-green-100' : 'bg-red-50 border-red-200'}`}>
+                    <div className="flex justify-between items-end mb-2">
+                      <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">Net Profit / Unit</span>
+                      <span className={`text-4xl font-extrabold tracking-tight ${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        {formatCurrency(results.netProfit)}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-4 mt-4 pt-4 border-t border-dashed border-gray-200">
+                      <div className="flex flex-col">
+                        <span className="text-xs text-gray-400 font-bold uppercase">Margin</span>
+                        <span className={`text-xl font-bold ${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {results.margin.toFixed(2)}%
+                        </span>
+                      </div>
+                       <div className="w-px h-8 bg-gray-200"></div>
+                       <div className="flex flex-col">
+                        <span className="text-xs text-gray-400 font-bold uppercase">ROI</span>
+                         <span className="text-xl font-bold text-blue-600">
+                          {results.roi.toFixed(0)}%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Breakdown */}
+                  <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm space-y-3">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-600">Referral Fee</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.referralFee)}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-600">Closing Fee</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.closingFee)}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-600">Shipping Fee</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.shippingFee)}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-600">GST (18%)</span>
+                      <span className="font-semibold text-gray-900">{formatCurrency(results.gst)}</span>
+                    </div>
+                    <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-2">
+                      <span className="font-bold text-gray-700">Total Fees</span>
+                      <span className="font-bold text-red-500">-{formatCurrency(results.totalFees)}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
+              <div className="bg-blue-50 p-4 rounded-lg flex gap-3 items-start text-xs text-blue-700 border border-blue-100">
+                <Info className="w-5 h-5 shrink-0" />
+                <p className="leading-relaxed">
+                  Calculations based on standard Amazon India 2025 fee structures. 
+                  Actual fees may vary by exact product dimensions and storage time.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900">FBA & Profit Calculator</h2>
-        <p className="text-gray-500">Accurate Amazon India fee estimation for 2024-2025</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* Input Section */}
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold flex items-center gap-2 border-b pb-2">
-              <DollarSign className="w-5 h-5 text-gray-400" /> Product Details
-            </h3>
+      {/* UGC Promo Link */}
+      <Link href="/ugc" className="block group">
+        <div className="bg-black text-white p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-black/20">
+            {/* Abstract bg element */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFE500] rounded-full blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity"></div>
             
-            <div className="grid gap-2">
-              <label className="text-sm font-medium text-gray-700">Category</label>
-              <select
-                name="category"
-                value={formData.category}
-                onChange={handleChange}
-                className="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
-              >
-                {CATEGORIES.map((cat) => (
-                  <option key={cat.name} value={cat.name}>
-                    {cat.name}
-                  </option>
-                ))}
-              </select>
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="text-center md:text-left space-y-2">
+                    <h3 className="text-2xl md:text-4xl font-heading uppercase tracking-tighter leading-none">
+                        Unsatisfied with <br/><span className="text-[#FFE500]">these margins?</span>
+                    </h3>
+                    <p className="text-gray-400 text-lg">
+                        Stop burning cash on ads that don't convert. Switch to high-velocity UGC.
+                    </p>
+                </div>
+                <div className="flex items-center gap-2 bg-[#FFE500] text-black px-6 py-3 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors">
+                    Boost Your Sales <ArrowRight className="w-4 h-4" />
+                </div>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="grid gap-2">
-                <label className="text-sm font-medium text-gray-700">Selling Price (₹)</label>
-                <input
-                  type="number"
-                  name="sellingPrice"
-                  value={formData.sellingPrice}
-                  onChange={handleChange}
-                  className="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
-                />
-              </div>
-              <div className="grid gap-2">
-                <label className="text-sm font-medium text-gray-700">Cost Price (₹)</label>
-                <input
-                  type="number"
-                  name="costPrice"
-                  value={formData.costPrice}
-                  onChange={handleChange}
-                  className="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold flex items-center gap-2 border-b pb-2">
-              <Package className="w-5 h-5 text-gray-400" /> Shipping Details
-            </h3>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="grid gap-2">
-                <label className="text-sm font-medium text-gray-700">Weight (kg)</label>
-                <input
-                  type="number"
-                  step="0.1"
-                  name="weight"
-                  value={formData.weight}
-                  onChange={handleChange}
-                  className="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
-                />
-              </div>
-              <div className="grid gap-2">
-                <label className="text-sm font-medium text-gray-700">Fulfillment Mode</label>
-                <select
-                  name="mode"
-                  value={formData.mode}
-                  onChange={handleChange}
-                  className="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
-                >
-                  <option value="easyShip">Easy Ship</option>
-                  <option value="fba">FBA (Fulfilled by Amazon)</option>
-                  <option value="selfShip">Self Ship</option>
-                </select>
-              </div>
-            </div>
-          </div>
         </div>
-
-        {/* Results Section */}
-        <div className="bg-gray-50 rounded-xl p-6 space-y-6 border border-gray-100">
-           <h3 className="text-lg font-semibold flex items-center gap-2 text-gray-900">
-              <IndianRupee className="w-5 h-5 text-green-600" /> Profit Analysis
-            </h3>
-
-          {results && (
-            <div className="space-y-4">
-              {/* Main Profit Card */}
-              <div className={`p-4 rounded-lg border-l-4 shadow-sm ${results.netProfit >= 0 ? 'bg-green-50 border-green-500' : 'bg-red-50 border-red-500'}`}>
-                <div className="flex justify-between items-end mb-1">
-                  <span className="text-sm text-gray-600 font-medium">Net Profit</span>
-                  <span className={`text-2xl font-bold ${results.netProfit >= 0 ? 'text-green-700' : 'text-red-700'}`}>
-                    {formatCurrency(results.netProfit)}
-                  </span>
-                </div>
-                <div className="flex gap-4 text-sm">
-                  <span className={`${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    Margin: <strong>{results.margin.toFixed(2)}%</strong>
-                  </span>
-                   <span className="text-gray-500">|</span>
-                   <span className="text-blue-600">
-                    ROI: <strong>{results.roi.toFixed(0)}%</strong>
-                  </span>
-                </div>
-              </div>
-
-              {/* Breakdown */}
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Referral Fee</span>
-                  <span className="font-medium text-gray-900">{formatCurrency(results.referralFee)}</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Closing Fee</span>
-                  <span className="font-medium text-gray-900">{formatCurrency(results.closingFee)}</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Shipping Fee</span>
-                  <span className="font-medium text-gray-900">{formatCurrency(results.shippingFee)}</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-200">
-                  <span className="text-gray-600">GST (18%)</span>
-                  <span className="font-medium text-gray-900">{formatCurrency(results.gst)}</span>
-                </div>
-                <div className="flex justify-between py-3 font-semibold text-gray-900 bg-gray-100 px-2 rounded mt-2">
-                  <span>Total Amazon Fees</span>
-                  <span>{formatCurrency(results.totalFees)}</span>
-                </div>
-              </div>
-            </div>
-          )}
-          
-          <div className="bg-blue-50 p-3 rounded-lg flex gap-3 items-start text-xs text-blue-700">
-            <Info className="w-4 h-4 shrink-0 mt-0.5" />
-            <p>
-              Calculations based on standard Amazon India fee schedules (2024-25). 
-              Shipping assumes national delivery. FBA storage fees not included.
-            </p>
-          </div>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 }

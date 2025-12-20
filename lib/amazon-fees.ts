@@ -36,10 +36,10 @@ export const CATEGORIES: CategoryFee[] = [
 
 export const CLOSING_FEES = {
   easyShip: [
-    { maxPrice: 250, fee: 4 },
-    { maxPrice: 500, fee: 9 },
-    { maxPrice: 1000, fee: 30 },
-    { maxPrice: Infinity, fee: 61 },
+    { maxPrice: 250, fee: 3 },
+    { maxPrice: 500, fee: 6 },
+    { maxPrice: 1000, fee: 10 },
+    { maxPrice: Infinity, fee: 50 }, // Safe estimate for high ticket items
   ],
   fba: [
     { maxPrice: 250, fee: 25 },
@@ -57,16 +57,16 @@ export const CLOSING_FEES = {
 
 export const SHIPPING_RATES = {
   national: {
-    first500g: 74, // Average of Easy Ship National rates
+    first500g: 74,
     additional500g: 32,
   },
   local: {
-    first500g: 45,
-    additional500g: 22,
+    first500g: 40,
+    additional500g: 18,
   },
   regional: {
-    first500g: 56,
-    additional500g: 26,
+    first500g: 51,
+    additional500g: 17,
   }
 };
 
