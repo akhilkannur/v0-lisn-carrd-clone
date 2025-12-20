@@ -189,13 +189,14 @@ export function AmazonCalculator() {
                     value={formData.location}
                     onChange={handleChange}
                     className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
-                    disabled={formData.mode === 'fba'}
+                    disabled={formData.mode === 'fba' || formData.mode === 'selfShip'}
                   >
                     <option value="local">Local (Same City)</option>
                     <option value="regional">Regional (Same Zone)</option>
                     <option value="national">National (Metro/Rest of India)</option>
                   </select>
                    {formData.mode === 'fba' && <p className="text-xs text-gray-400 mt-1">FBA fees are based on weight slabs.</p>}
+                   {formData.mode === 'selfShip' && <p className="text-xs text-gray-400 mt-1">Self Ship: You handle shipping directly (0 Amazon Fee).</p>}
                 </div>
               </div>
             </div>
