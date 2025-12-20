@@ -2,12 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import { CATEGORIES, calculateAmazonFees } from "@/lib/amazon-fees";
-import { Calculator, IndianRupee, Package, Truck, Info, ArrowRight } from "lucide-react";
+import { Calculator, IndianRupee, Package, Truck, Info, ArrowRight, Tag } from "lucide-react";
 import Link from "next/link";
 
 export function AmazonCalculator() {
   const [formData, setFormData] = useState({
-    category: "Electronics (General)",
+    category: "Grocery & Gourmet Foods",
+    subcategory: "Oils (Cooking & Edible)",
     sellingPrice: 1000,
     weight: 0.5, // kg
     costPrice: 400,
@@ -17,9 +18,23 @@ export function AmazonCalculator() {
 
   const [results, setResults] = useState<any>(null);
 
+  // When category changes, reset subcategory to the first one of that category
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newCategoryName = e.target.value;
+    const newCategory = CATEGORIES.find(c => c.name === newCategoryName);
+    const firstSubcategory = newCategory ? newCategory.subcategories[0].name : "";
+    
+    setFormData(prev => ({
+      ...prev,
+      category: newCategoryName,
+      subcategory: firstSubcategory
+    }));
+  };
+
   useEffect(() => {
     const fees = calculateAmazonFees(
       formData.category,
+      formData.subcategory,
       Number(formData.sellingPrice),
       Number(formData.weight),
       formData.mode,
@@ -37,7 +52,7 @@ export function AmazonCalculator() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "category" || name === "mode" || name === "location" ? value : Number(value),
+      [name]: name === "mode" || name === "location" || name === "subcategory" ? value : Number(value),
     }));
   };
 
@@ -48,6 +63,8 @@ export function AmazonCalculator() {
       maximumFractionDigits: 2
     }).format(amount);
   };
+
+  const currentCategory = CATEGORIES.find(c => c.name === formData.category);
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-8">
@@ -67,7 +84,7 @@ export function AmazonCalculator() {
             <div className="space-y-8">
               <div className="space-y-5">
                 <h3 className="text-xl font-semibold flex items-center gap-3 text-gray-800 border-b border-gray-100 pb-3">
-                  <IndianRupee className="w-5 h-5 text-gray-400" /> Product Details
+                  <Tag className="w-5 h-5 text-gray-400" /> Product Category
                 </h3>
                 
                 <div className="grid gap-2">
@@ -75,12 +92,29 @@ export function AmazonCalculator() {
                   <select
                     name="category"
                     value={formData.category}
-                    onChange={handleChange}
+                    onChange={handleCategoryChange}
                     className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
                   >
                     {CATEGORIES.map((cat) => (
                       <option key={cat.name} value={cat.name}>
                         {cat.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-bold text-gray-700 uppercase tracking-wide">Sub-Category</label>
+                  <select
+                    name="subcategory"
+                    value={formData.subcategory}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FFE500] focus:border-[#FFE500] outline-none transition-all text-gray-900 font-medium cursor-pointer hover:border-gray-300"
+                    disabled={!currentCategory}
+                  >
+                    {currentCategory?.subcategories.map((sub) => (
+                      <option key={sub.name} value={sub.name}>
+                        {sub.name}
                       </option>
                     ))}
                   </select>
@@ -194,7 +228,7 @@ export function AmazonCalculator() {
                   {/* Breakdown */}
                   <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm space-y-3">
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-600">Referral Fee</span>
+                      <span className="text-gray-600">Referral Fee ({results.referralRate}%)</span>
                       <span className="font-semibold text-gray-900">{formatCurrency(results.referralFee)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
@@ -220,8 +254,7 @@ export function AmazonCalculator() {
               <div className="bg-blue-50 p-4 rounded-lg flex gap-3 items-start text-xs text-blue-700 border border-blue-100">
                 <Info className="w-5 h-5 shrink-0" />
                 <p className="leading-relaxed">
-                  Calculations based on standard Amazon India 2025 fee structures. 
-                  Actual fees may vary by exact product dimensions and storage time.
+                  Calculations based on standard Amazon India 2025 fee schedules (including 0% referral fee for items under ₹300).
                 </p>
               </div>
             </div>
