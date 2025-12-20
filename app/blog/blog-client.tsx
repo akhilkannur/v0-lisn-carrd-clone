@@ -154,6 +154,34 @@ export default function BlogIndex() {
           </div>
         </section>
 
+        {/* Tools Section */}
+        <section className="px-4 py-12 md:py-16 border-b-4 border-white bg-black" id="tools">
+          <div className="max-w-7xl mx-auto">
+            <h3 className="font-heading text-4xl md:text-5xl mb-8 uppercase tracking-tight text-white">
+              Free Seller <span className="text-[#FFE500]">Tools</span>
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Link href="/blog/amazon-calculator" className="block group">
+                <div className="bg-zinc-900 border-2 border-zinc-700 hover:border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                  <h4 className="font-heading text-2xl uppercase text-white mb-2 group-hover:text-[#FFE500] transition-colors">Amazon Profit Calculator</h4>
+                  <p className="text-gray-400 mb-6">Estimate your exact bank settlement after FBA fees, Referral fees, and GST. Updated for 2025.</p>
+                  <span className="inline-block border border-zinc-500 text-zinc-400 px-4 py-2 text-xs font-bold uppercase tracking-widest group-hover:bg-[#FFE500] group-hover:text-black group-hover:border-[#FFE500] transition-all">Launch Tool →</span>
+                </div>
+              </Link>
+
+              <Link href="/blog/amazon-image-validator" className="block group">
+                <div className="bg-zinc-900 border-2 border-zinc-700 hover:border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                  <h4 className="font-heading text-2xl uppercase text-white mb-2 group-hover:text-[#FFE500] transition-colors">Image Validator</h4>
+                  <p className="text-gray-400 mb-6">Check if your listing images meet Amazon India's 2025 technical standards for zoom and quality.</p>
+                  <span className="inline-block border border-zinc-500 text-zinc-400 px-4 py-2 text-xs font-bold uppercase tracking-widest group-hover:bg-[#FFE500] group-hover:text-black group-hover:border-[#FFE500] transition-all">Launch Tool →</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Blog Grid */}
         <section className="px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-7xl mx-auto">
