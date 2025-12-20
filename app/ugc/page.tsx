@@ -257,7 +257,12 @@ export default function UGCPage() {
             </div>
 
             <div className="w-full h-1 bg-zinc-800 mb-12"></div>
-            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+            <div className="space-y-2">
+              <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+              <p className="text-zinc-600 text-[10px] md:text-xs uppercase tracking-widest">
+                Design inspired by <a href="https://carrd.co/build/demo/854639e1d36fad56" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-400 transition-colors underline underline-offset-2">Carrd Demo</a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
