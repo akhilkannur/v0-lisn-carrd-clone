@@ -13,7 +13,6 @@ export default function AmazonCalculatorPage() {
             <h1 className="text-3xl font-bold mb-4 font-heading uppercase tracking-tight">Free Tool: Amazon India Profit Calculator</h1>
             <p className="text-gray-600">
                 This is a free utility for e-commerce sellers to estimate their Amazon FBA fees and bank settlement. 
-                It is <span className="font-bold">not</span> a pricing calculator for our video agency services.
             </p>
         </div>
         <AmazonCalculator />

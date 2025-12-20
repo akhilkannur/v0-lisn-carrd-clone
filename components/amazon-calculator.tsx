@@ -220,7 +220,7 @@ export function AmazonCalculator() {
                     </span>
                   </div>
                   <div className="border-t-2 border-black pt-3 mt-3 flex justify-between items-center">
-                    <span className="text-sm font-bold uppercase">Retention</span>
+                    <span className="text-sm font-bold uppercase">Payout %</span>
                     <span className="text-2xl font-black">
                       {results.margin.toFixed(2)}%
                     </span>
