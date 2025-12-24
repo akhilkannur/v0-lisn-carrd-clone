@@ -10,7 +10,9 @@ export default function sitemap() {
     '',
     '/ugc',
     '/blog',
-    '/hooks', // Added new route
+    '/hooks',
+    '/blog/amazon-calculator',
+    '/blog/amazon-image-validator',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],

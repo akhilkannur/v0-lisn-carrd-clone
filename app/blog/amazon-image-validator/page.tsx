@@ -1,8 +1,18 @@
-"use client";
-
+import { Metadata } from "next";
 import { AmazonImageValidator } from "@/components/amazon-image-validator";
 import { Header } from "@/components/header";
 import { Marquee } from "@/components/marquee";
+
+export const metadata: Metadata = {
+  title: "Amazon India Image Validator 2025 | Check Zoom & Dimensions",
+  description: "Free tool to validate your Amazon listing images against 2025 technical standards. Check zoom capability, aspect ratio (1:1), and file size instantly.",
+  keywords: ["Amazon Image Validator", "Amazon Listing Image Checker", "Amazon Zoom Checker", "E-commerce Image Optimization"],
+  openGraph: {
+    title: "Amazon India Image Validator",
+    description: "Ensure your product images are zoom-ready and meet Amazon's strict guidelines.",
+    type: "website",
+  }
+};
 
 export default function AmazonImageValidatorPage() {
   return (
