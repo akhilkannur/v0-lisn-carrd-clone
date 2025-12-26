@@ -15,15 +15,17 @@ const _dela_gothic_one = Dela_Gothic_One({
 export const metadata: Metadata = {
   title: "LISN - Event Video Agency | Kerala & India",
   description:
-    "Stop boring your audience. LISN is the premier Event Video & UGC Agency in Kerala. We capture real street interviews and authentic moments that go viral.",
+    "The premier Event Video & UGC Agency in Kerala. We help Indian DTC brands crack the Kerala market with authentic street interviews and cinematic event documentation.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
     "Event Video Agency",
     "UGC India",
     "Street Interviews Kerala",
     "Video Production Kerala",
-    "Content Marketing",
-    "Corporate Event Video",
+    "Kerala Market Entry",
+    "DTC Marketing India",
+    "Malayalam Ad Creatives",
+    "South India Marketing Strategy",
     "Viral Marketing India",
   ],
   openGraph: {
@@ -74,6 +76,26 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', 'G-7BXE8S1SJS');
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "LISN Agency",
+              "image": "https://lisnagency.online/lisn-logo.gif",
+              "description": "Video production and UGC agency specializing in street interviews and event coverage for Indian DTC brands targeting the Kerala market.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kerala",
+                "addressCountry": "IN"
+              },
+              "url": "https://lisnagency.online",
+              "telephone": "+918893317488",
+              "priceRange": "$$"
+            })
           }}
         />
         {children}

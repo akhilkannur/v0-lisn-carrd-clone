@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "malayali-filter-ad-conversion",
+    title: "THE 'MALAYALI' FILTER: 5 WORDS THAT KILL YOUR AD CONVERSION IN KERALA",
+    subtitle: "Your Hindi-to-Malayalam translation isn't just awkward. It's offensive. Here is how to speak to the most skeptical audience in India.",
+    date: "December 26, 2025",
+    category: "Localization Strategy",
+    readTime: "5 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">There is a reason why national brands struggle in Kerala. It's not price. It's not product. It's language.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">We don't mean the literal language. We mean the <em>vibe</em>.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Malayalis have a built-in \"B.S. Detector\" that is far more sensitive than the rest of India. When we hear a script that sounds like it was written in Gurgaon and Google Translated into Malayalam, we don't just scroll past. We actively dislike the brand.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Words to Avoid</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">If your ad script contains formal, textbook Malayalam words like <em>'Ulpannam'</em> (Product) or <em>'Upayogikkuka'</em> (Use), you have already lost.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Real people don't talk like that. Real people speak a mix of Manglish (Malayalam + English). They say \"Scene aanu\" instead of \"Prashnam\". They say \"Set aanu\" instead of \"Sheri\".</p>\n\n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Solution: Street Vernacular</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">This is why unscripted street interviews work. You aren't forcing a script into someone's mouth. You are capturing the natural, flowing, slang-filled language that Malayalis actually use.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">When a customer hears their own local dialect—whether it's the sing-song lilt of Thrissur or the rapid-fire slang of Kochi—they stop scrolling. They trust you because you sound like them.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Don't hire a translator. Hire a local.</p>\n    "
+  },
+  {
     slug: "skincare-trust-gap",
     title: "THE SKINCARE SCAM: WHY INDIAN CONSUMERS DON'T TRUST YOUR BEFORE/AFTER PHOTOS ANYMORE",
     subtitle: "Photoshop is easy. A raw street interview with a real user is impossible to fake. Here's why honesty is your best acquisition strategy.",

@@ -58,17 +58,17 @@ export default function UGCClient() {
             <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
 
             <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden break-words w-full">
-              HIGH-PERFORMANCE
+              UGC THAT
               <br />
-              UGC ADS
+              SPEAKS
               <br />
-              FOR INDIAN
+              <span className="text-[#FFE500]">KERALA'S</span>
               <br />
-              <span className="text-[#FFE500]">DTC BRANDS</span>
+              LANGUAGE
             </h1>
 
             <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100">
-              The alternative to expensive agencies and fake influencers. We hit the streets to get you raw, converting creative.
+              Street reaction ad creatives. Because one localised ad can change your brand's trajectory.
             </p>
 
             <a href="#gallery-section" className="inline-block animate-fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
@@ -115,7 +115,6 @@ export default function UGCClient() {
                 </h3>
                 <ul className="space-y-6 text-xl md:text-2xl font-medium">
                   {[
-                    "Market Research & Insights",
                     "Real reactions = instant trust",
                     "Demos that actually demo",
                     "Built for the feed (Meta/IG)",

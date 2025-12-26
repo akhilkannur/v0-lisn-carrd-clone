@@ -6,7 +6,12 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+// Add PageProps interface for Next.js 15+ compatibility
+interface PageProps {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const industry = industryPlaybooks.find((i) => i.slug === slug)
 
@@ -28,18 +33,45 @@ export function generateStaticParams() {
   }))
 }
 
-export default async function PlaybookPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function PlaybookPage({ params }: PageProps) {
   const { slug } = await params
   const industry = industryPlaybooks.find((i) => i.slug === slug)
 
   if (!industry) {
-    console.error(`Playbook not found for slug: ${slug}`)
     notFound()
+  }
+
+  // JSON-LD for the "Article" or "Guide"
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": `${industry.name} Marketing Playbook for India`,
+    "description": `A strategic guide on using street interviews and UGC to market ${industry.name} products in India.`,
+    "author": {
+      "@type": "Organization",
+      "name": "LISN Agency"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LISN Agency",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lisnagency.online/lisn-logo.gif"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://lisnagency.online/playbook/${slug}`
+    }
   }
 
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="overflow-hidden font-sans bg-black text-white">
         {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center justify-center text-center px-4 pt-20 pb-16 border-b-4 border-white">

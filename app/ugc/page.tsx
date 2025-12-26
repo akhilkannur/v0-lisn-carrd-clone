@@ -2,11 +2,11 @@ import { Metadata } from "next"
 import UGCClient from "./ugc-client"
 
 export const metadata: Metadata = {
-  title: "UGC Agency India | High-Performance Video Ads & Street Interviews",
-  description: "Looking for a UGC agency in India? We create high-converting video ads through authentic street interviews. Better than influencers, cheaper than studios.",
+  title: "UGC Ad Creatives for Indian D2C Brands | Street Interviews",
+  description: "Stop running polished ads. Get authentic street interview UGC that converts. We film in Kerala & Bangalore, capturing real reactions to your product.",
   openGraph: {
-    title: "The Best UGC Agency Alternative in India",
-    description: "Stop paying influencers for fake reviews. Get raw, high-performing street interview creatives that actually convert for Indian DTC brands.",
+    title: "High-Converting UGC Ads for Indian Brands",
+    description: "Real people. Real reactions. Zero script. The only ad creative that beats banner blindness.",
     type: "website",
   }
 }
