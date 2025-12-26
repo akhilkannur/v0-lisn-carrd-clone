@@ -158,9 +158,21 @@ export default function BlogIndex() {
         <section className="px-4 py-12 md:py-16 border-b-4 border-white bg-black" id="tools">
           <div className="max-w-7xl mx-auto">
             <h3 className="font-heading text-4xl md:text-5xl mb-8 uppercase tracking-tight text-white">
-              Free Seller <span className="text-[#FFE500]">Tools</span>
+              Free Strategy <span className="text-[#FFE500]">Tools</span>
             </h3>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+              <Link href="/blog/ugc-roi-calculator" className="block group">
+                <div className="bg-zinc-900 border-2 border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-10"></div>
+                  <div className="relative z-10">
+                    <span className="inline-block bg-[#FFE500] text-black text-[10px] font-bold px-2 py-0.5 mb-4 uppercase tracking-widest">Highly Recommended</span>
+                    <h4 className="font-heading text-2xl uppercase text-white mb-2 group-hover:text-[#FFE500] transition-colors">UGC ROI Estimator</h4>
+                    <p className="text-gray-400 mb-6">Compare your current studio ad performance against LISN Street UGC. See your potential CAC reduction.</p>
+                    <span className="inline-block border border-[#FFE500] text-[#FFE500] px-4 py-2 text-xs font-bold uppercase tracking-widest group-hover:bg-[#FFE500] group-hover:text-black transition-all">Launch Tool →</span>
+                  </div>
+                </div>
+              </Link>
+
               <Link href="/blog/amazon-calculator" className="block group">
                 <div className="bg-zinc-900 border-2 border-zinc-700 hover:border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity"></div>

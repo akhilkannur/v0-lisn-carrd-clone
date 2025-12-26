@@ -189,6 +189,47 @@ export default async function PlaybookPage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Long-form Evergreen Content for Kerala Market Entry */}
+        {industry.slug === 'kerala-market-entry' && (
+          <section className="bg-white text-black px-4 py-16 md:py-24 border-b-4 border-black">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-heading text-4xl md:text-6xl mb-12 uppercase tracking-tight border-b-4 border-black pb-4">
+                KERALA MARKET <span className="text-[#FFE500] bg-black px-2">ENTRY CHECKLIST</span>
+              </h2>
+              <div className="space-y-12">
+                <div className="flex gap-6">
+                  <div className="font-heading text-6xl text-gray-200">01</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2 uppercase">The Localization Audit</h3>
+                    <p className="text-gray-600 leading-relaxed">Stop translating. Start localizing. Audit your existing website, packaging, and ads for "Formal Malayalam" (a death sentence). Ensure your copy uses the Manglish vernacular common in Kochi and Bangalore.</p>
+                  </div>
+                </div>
+                <div className="flex gap-6">
+                  <div className="font-heading text-6xl text-gray-200">02</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2 uppercase">Establish "Street" Credibility</h3>
+                    <p className="text-gray-600 leading-relaxed">Kerala is the most literate state in India; it's also the most skeptical. They don't want a celebrity endorsement from Mumbai. They want to see a guy at a tea shop in Kozhikode holding your product and giving a thumbs up.</p>
+                  </div>
+                </div>
+                <div className="flex gap-6">
+                  <div className="font-heading text-6xl text-gray-200">03</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2 uppercase">Remittance-Driven Purchasing Power</h3>
+                    <p className="text-gray-600 leading-relaxed">Target the "Gulf Money" demographic. Don't just target the 3 metros. Target Tier 2 towns like Malappuram, Thrissur, and Kottayam where the highest disposable income resides.</p>
+                  </div>
+                </div>
+                <div className="flex gap-6">
+                  <div className="font-heading text-6xl text-gray-200">04</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2 uppercase">The "Premium-Value" Balance</h3>
+                    <p className="text-gray-600 leading-relaxed">Malayalis will pay a premium, but they hate being "fleeced." Your content needs to emphasize durability, long-term value, and technical specifications over pure "vibe" or aesthetics.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* CTA Section */}
         <section className="bg-black px-4 py-16 md:py-24 relative text-center">
             <h3 className="font-heading text-4xl md:text-6xl text-white mb-10 uppercase tracking-tighter">
