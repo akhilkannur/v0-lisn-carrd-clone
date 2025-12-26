@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "skincare-trust-gap",
+    title: "THE SKINCARE SCAM: WHY INDIAN CONSUMERS DON'T TRUST YOUR BEFORE/AFTER PHOTOS ANYMORE",
+    subtitle: "Photoshop is easy. A raw street interview with a real user is impossible to fake. Here's why honesty is your best acquisition strategy.",
+    date: "December 26, 2025",
+    category: "DTC Insights",
+    readTime: "4 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">If you're running a DTC skincare brand in India, you're fighting a losing battle against skepticism.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">For years, the industry relied on 'Before and After' photos. But in the era of AI filters and 1-click retouching, those photos have lost their currency. The average Indian consumer now views them with a 'seen it all before' shrug.</p>\n      <p class=\"mb-6 text-xl leading-relaxed font-bold\">They don't want to see your results; they want to see your results on someone who wasn't paid to show them.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The Texture Truth</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Skincare is about texture, absorption, and that immediate 'glow'. You can't capture that in a static, edited photo. But you can capture it on a busy street in Bandra or Indiranagar.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">When we hand your serum to a random college student and they feel it on their skin for the first time, their reaction is visceral. The way they touch their face, the surprise in their eyes—that's the data that converts.</p>\n\n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">Breaking the 'Ad' Wall</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Indian Gen Z and Millennials have a high-precision 'Ad Radar'. The moment a video feels like a production, they're gone. Street interviews work because they don't look like ads—they look like social proof in its rawest form.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">One shaky, 15-second clip of a real person saying \"Wait, this isn't sticky at all\" is worth more than a 30-lakh celebrity endorsement. Why? Because it's relatable. It's human. And most importantly, it's believable.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Stop trying to be perfect. Start being real. The street is where your brand finds its soul—and its customers.</p>\n    "
+  },
+  {
     slug: "death-of-unboxing",
     title: "THE 'UNBOXING' IS DEAD. LONG LIVE THE 'STREET TEST'.",
     subtitle: "Why watching a rich influencer open a free box is boring, and watching a stranger struggle with a product is addictive.",
