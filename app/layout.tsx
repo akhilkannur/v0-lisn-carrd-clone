@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "South India Marketing Strategy",
     "Viral Marketing India",
   ],
+  alternates: {
+    canonical: "https://lisnagency.online",
+  },
   openGraph: {
     title: "LISN - Event Video Agency | Real People, Real Stories",
     description:

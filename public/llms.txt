@@ -1,0 +1,27 @@
+# LISN Agency - Event Video & UGC Agency
+
+## About
+LISN Agency is a premier Event Video & UGC Agency based in Kerala, India. We help Indian DTC brands crack the Kerala market with authentic street interviews ("vox pop") and cinematic event documentation.
+
+## Core Services
+- **Event Video Production:** Capturing live events, roadshows, and conferences.
+- **UGC (User Generated Content):** Authentic street interviews and public reaction videos.
+- **Marketing Strategy:** Combining cinematic experience with marketing expertise to create high-performing social content.
+
+## Key Pages
+- **Home:** https://lisnagency.online/ - Main overview and portfolio.
+- **UGC Service:** https://lisnagency.online/ugc - Specifics on User Generated Content and street interviews.
+- **Blog:** https://lisnagency.online/blog - Marketing insights and strategies.
+- **Calculators:**
+  - Amazon Calculator: https://lisnagency.online/blog/amazon-calculator
+  - UGC ROI Calculator: https://lisnagency.online/blog/ugc-roi-calculator
+
+## Content Structure
+The site uses semantic HTML5 tags (main, section, article) to structure content.
+- Blog posts are located at `/blog/[slug]`
+- Industry playbooks are at `/playbook/[slug]`
+
+## Contact
+- **Email:** akhil@lisnagency.online
+- **Phone:** +91 88933 17488
+- **Location:** Kerala, India
