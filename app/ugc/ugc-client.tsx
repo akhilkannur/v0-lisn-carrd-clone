@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { StreetInterviewGraphic } from "@/components/street-interview-graphic"
@@ -83,11 +84,14 @@ export default function UGCClient() {
         <section id="gallery-section" className="bg-black px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="flex justify-center">
-              <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300">
-                <img
+              <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300 w-full max-w-4xl h-auto">
+                <Image
                   src="/images/screenshot-202025-12-04-2023.png"
                   alt="UGC Street Reaction Gallery"
-                  className="w-full max-w-4xl"
+                  width={1000}
+                  height={600}
+                  className="w-full h-auto"
+                  unoptimized
                 />
               </div>
             </div>

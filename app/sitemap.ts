@@ -11,6 +11,7 @@ export default function sitemap() {
     '/ugc',
     '/blog',
     '/hooks',
+    '/blog/ugc-roi-calculator',
     '/blog/amazon-calculator',
     '/blog/amazon-image-validator',
   ].map((route) => ({
