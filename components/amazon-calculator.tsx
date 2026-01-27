@@ -289,24 +289,66 @@ export function AmazonCalculator() {
         </div>
       </div>
 
-      {/* UGC Promo Link */}
-      <Link href="/ugc" className="block group">
-        <div className="bg-black text-white p-8 md:p-12 border-4 border-black shadow-[8px_8px_0px_0px_#FFE500] relative overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_#FFE500]">
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="text-center md:text-left space-y-3">
-                    <h3 className="text-2xl md:text-4xl font-heading uppercase tracking-tighter leading-none">
-                        Unsatisfied with <br/><span className="text-[#FFE500] bg-zinc-900 px-2">these margins?</span>
-                    </h3>
-                    <p className="text-zinc-400 text-lg max-w-xl">
-                        Stop burning cash on ads that don't convert. Switch to high-velocity, authentic UGC.
-                    </p>
-                </div>
-                <div className="flex items-center gap-2 bg-[#FFE500] text-black border-2 border-black px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-colors shadow-[4px_4px_0px_0px_#ffffff]">
-                    Boost Your Sales <ArrowRight className="w-4 h-4" />
-                </div>
+      {/* UGC Upsell Section - The "Money Saver" Hook */}
+      <section className="mt-16 bg-[#FFE500] p-8 md:p-12 border-4 border-black relative overflow-hidden">
+        {/* Background texture/pattern */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+        
+        <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="inline-block bg-black text-white px-4 py-2 text-sm font-bold uppercase tracking-widest mb-4 transform -rotate-2">
+              ⚠️ Profit Warning
             </div>
+            <h3 className="font-heading text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6 text-black">
+              Is Amazon PPC eating <br/>
+              <span className="bg-white px-2">your entire margin?</span>
+            </h3>
+            <p className="text-lg md:text-xl font-bold leading-relaxed mb-6 border-l-4 border-black pl-4">
+              The #1 reason for low net profit isn't fees. It's high CAC (Customer Acquisition Cost).
+            </p>
+            <p className="text-black text-lg mb-8">
+              Polished studio ads have high CPMs and low CTRs. Switching to raw "Street UGC" can lower your ad costs by 40-60%.
+            </p>
+            <Link 
+              href="/ugc" 
+              className="inline-flex items-center bg-black text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-[8px_8px_0px_0px_#ffffff] hover:translate-x-1 hover:-translate-y-1"
+            >
+              Lower My CAC <ArrowRight className="ml-3 w-5 h-5" />
+            </Link>
+          </div>
+          
+          <div className="hidden md:block relative h-full min-h-[300px] border-4 border-black bg-white shadow-[8px_8px_0px_0px_#000000] p-6">
+            {/* Visual comparison of Ad Costs */}
+            <h4 className="font-bold text-center uppercase border-b-2 border-black pb-4 mb-4">Ad Cost Comparison</h4>
+            <div className="space-y-6">
+              <div>
+                <div className="flex justify-between text-sm font-bold mb-1">
+                  <span>Studio Ads (Avg)</span>
+                  <span className="text-red-600">High CAC</span>
+                </div>
+                <div className="w-full bg-gray-200 h-6 border-2 border-black">
+                  <div className="bg-red-500 h-full w-[85%]"></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between text-sm font-bold mb-1">
+                  <span>Street UGC (Lisn)</span>
+                  <span className="text-green-600">Low CAC</span>
+                </div>
+                <div className="w-full bg-gray-200 h-6 border-2 border-black">
+                  <div className="bg-green-500 h-full w-[35%]"></div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-3xl font-heading text-black">SAVE 50%</p>
+              <p className="text-xs uppercase tracking-widest text-gray-500">On Ad Spend</p>
+            </div>
+          </div>
         </div>
-      </Link>
+      </section>
+
+      {/* UGC Promo Link - REMOVED (Replaced by the section above) */}
     </div>
   );
 }

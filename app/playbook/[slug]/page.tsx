@@ -230,6 +230,39 @@ export default async function PlaybookPage({ params }: PageProps) {
           </section>
         )}
 
+        {/* Common FAQ Section for Content Density */}
+        <section className="bg-zinc-100 text-black px-4 py-16 md:py-24 border-b-4 border-black">
+          <div className="max-w-4xl mx-auto">
+             <h2 className="font-heading text-3xl md:text-5xl mb-12 uppercase tracking-tight">
+                Common Questions about <br/>
+                <span className="bg-[#FFE500] px-2">{industry.name} UGC</span>
+             </h2>
+             
+             <div className="space-y-8">
+                <div className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_#000000]">
+                  <h3 className="font-bold text-xl mb-4">Why does street UGC work better for {industry.name.toLowerCase()}?</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {industry.name} is a high-trust category. Consumers are skeptical of polished studio ads because they know they are staged. Street interviews break that skepticism by showing real, unfiltered reactions from everyday people, which acts as powerful social proof.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_#000000]">
+                   <h3 className="font-bold text-xl mb-4">How many videos do I get in a pilot?</h3>
+                   <p className="text-gray-600 leading-relaxed">
+                     In a standard pilot for {industry.name} brands, we deliver 5-10 fully edited ad creatives. This allows you to test different hooks (e.g., {industry.streetConcept}, Price Guessing, Blind Tests) to see which narrative drives the lowest CAC.
+                   </p>
+                </div>
+
+                <div className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_#000000]">
+                   <h3 className="font-bold text-xl mb-4">Do you use paid actors?</h3>
+                   <p className="text-gray-600 leading-relaxed">
+                     Never. The entire point of our agency is authenticity. We approach real strangers on the streets of Bangalore and Kochi. If they don't like the product, we film that too. That honesty is why our ads convert.
+                   </p>
+                </div>
+             </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-black px-4 py-16 md:py-24 relative text-center">
             <h3 className="font-heading text-4xl md:text-6xl text-white mb-10 uppercase tracking-tighter">

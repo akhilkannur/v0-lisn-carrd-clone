@@ -298,6 +298,35 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Industry Links for SEO */}
+            <div className="w-full border-t border-zinc-800 pt-12 pb-12 mb-8 text-left">
+              <h4 className="text-[#FFE500] font-bold uppercase tracking-widest mb-6 text-sm">Industry Playbooks</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm text-zinc-500 font-mono">
+                <a href="/playbook/kerala-market-entry" className="hover:text-white transition-colors">Kerala Market Entry</a>
+                <a href="/playbook/skincare" className="hover:text-white transition-colors">Skincare Marketing</a>
+                <a href="/playbook/coffee" className="hover:text-white transition-colors">Coffee Brands</a>
+                <a href="/playbook/jewellery" className="hover:text-white transition-colors">Jewellery UGC</a>
+                <a href="/playbook/athleisure" className="hover:text-white transition-colors">Athleisure Ads</a>
+                <a href="/playbook/healthy-snacks" className="hover:text-white transition-colors">Healthy Snacks</a>
+                <a href="/playbook/perfume" className="hover:text-white transition-colors">Perfume Marketing</a>
+                <a href="/playbook/haircare" className="hover:text-white transition-colors">Haircare Strategy</a>
+                <a href="/playbook/home-decor" className="hover:text-white transition-colors">Home Decor</a>
+                <a href="/playbook/sneakers" className="hover:text-white transition-colors">Sneaker Brands</a>
+                <a href="/playbook/ayurveda" className="hover:text-white transition-colors">Ayurveda UGC</a>
+                <a href="/playbook/pet-care" className="hover:text-white transition-colors">Pet Care Ads</a>
+                <a href="/playbook/baby-care" className="hover:text-white transition-colors">Baby Care</a>
+                <a href="/playbook/mens-grooming" className="hover:text-white transition-colors">Men's Grooming</a>
+                <a href="/playbook/sustainable-fashion" className="hover:text-white transition-colors">Sustainable Fashion</a>
+                <a href="/playbook/sexual-wellness" className="hover:text-white transition-colors">Sexual Wellness</a>
+                <a href="/playbook/tea" className="hover:text-white transition-colors">Tea (Chai) Brands</a>
+                <a href="/playbook/smartwatches" className="hover:text-white transition-colors">Smartwatch Ads</a>
+                <a href="/playbook/handbags" className="hover:text-white transition-colors">Handbag Marketing</a>
+                <a href="/playbook/eyewear" className="hover:text-white transition-colors">Eyewear Brands</a>
+                <a href="/playbook/mattress" className="hover:text-white transition-colors">Mattress Ads</a>
+                <a href="/playbook/fintech" className="hover:text-white transition-colors">Fintech Marketing</a>
+              </div>
+            </div>
+
             {/* Divider */}
             <div className="w-full h-1 bg-zinc-800 mb-8 md:mb-12"></div>
 

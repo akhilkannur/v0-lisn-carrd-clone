@@ -4,11 +4,11 @@ import { Header } from "@/components/header";
 import { Marquee } from "@/components/marquee";
 
 export const metadata: Metadata = {
-  title: "Amazon India Profit Calculator 2025 | FBA Fee & Margin Estimator",
-  description: "Free Amazon FBA calculator for Indian sellers. Estimate referral fees, closing fees, shipping costs, and GST to calculate your exact net profit margin.",
-  keywords: ["Amazon India Calculator", "FBA Fee Calculator", "Amazon Profit Calculator India", "GST Calculator for Amazon Sellers"],
+  title: "Amazon FBA Calculator India 2025 | Exact Profit & Fee Estimator",
+  description: "Free Amazon FBA calculator for Indian sellers. Calculate exact referral fees, closing fees, shipping, and GST. The most accurate profit estimator for Amazon India.",
+  keywords: ["Amazon FBA Calculator India", "Amazon India Profit Calculator", "Amazon Referral Fee Calculator", "FBA Revenue Calculator India", "GST Calculator for Amazon Sellers"],
   openGraph: {
-    title: "Amazon India Profit Calculator 2025",
+    title: "Amazon FBA Calculator India 2025",
     description: "Stop guessing your margins. Calculate your exact bank settlement from Amazon India.",
     type: "website",
   }

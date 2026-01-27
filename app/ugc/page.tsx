@@ -12,5 +12,41 @@ export const metadata: Metadata = {
 }
 
 export default function UGCPage() {
-  return <UGCClient />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "UGC Video Production",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LISN Agency",
+      "image": "https://lisnagency.online/lisn-logo.gif",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "priceRange": "$$"
+    },
+    "serviceType": "Video Production",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "description": " authentic street interviews and user-generated content (UGC) for Indian DTC brands to improve ad performance and reduce CAC.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://lisnagency.online/ugc"
+    }
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <UGCClient />
+    </>
+  )
 }
