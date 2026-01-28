@@ -324,6 +324,7 @@ export default function Home() {
                 <a href="/playbook/eyewear" className="hover:text-white transition-colors">Eyewear Brands</a>
                 <a href="/playbook/mattress" className="hover:text-white transition-colors">Mattress Ads</a>
                 <a href="/playbook/fintech" className="hover:text-white transition-colors">Fintech Marketing</a>
+                <a href="/playbook/quick-commerce" className="hover:text-white transition-colors">Quick Commerce (Blinkit)</a>
               </div>
             </div>
 

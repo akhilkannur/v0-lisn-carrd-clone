@@ -143,5 +143,23 @@ export const blogPosts: BlogPost[] = [
     category: "Scaling & Growth",
     readTime: "4 min read",
     content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">You have captured the top 1% of India. The English-speaking, credit-card-swiping crowd in Indiranagar and Bandra. Congratulations.</p>\n      <p class=\"mb-6 text-xl leading-relaxed font-bold\">Now, how do you grow?</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Most DTC brands hit a wall here. They try to run the same \"premium\" English ads to audiences in Coimbatore, Indore, or Kochi. And they fail miserably.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">Speak Their Language (Literally)</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Tier 2 India has money. They want quality products. But they don't want to be talked down to in a foreign accent.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Vernacular street content is the bridge. Seeing someone speak Malayalam, Tamil, or Hindi while using your product signals accessibility.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">It says: <em>\"This brand is for you, not just for the elites in the metro cities.\"</em></p>\n      <p class=\"mb-6 text-xl leading-relaxed\">If you want to unlock the next 100 Crore market, you need to leave the English bubble. And the streets are where you find the real voice of India.</p>\n    "
+  },
+  {
+    slug: "de-influencing-trend-2026",
+    title: "WHY 'DE-INFLUENCING' IS YOUR BEST AD STRATEGY IN 2026",
+    subtitle: "Gen Z trusts a creator saying 'Don't buy this' more than 'Buy this'. Here is how to weaponize honest, slightly negative feedback.",
+    date: "January 28, 2026",
+    category: "Trend Report",
+    readTime: "4 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">The most trusted phrase on the internet right now isn't \"I love this product.\" It is: <strong>\"Okay, here is what I hate about it.\"</strong></p>\n      <p class=\"mb-6 text-xl leading-relaxed\">This is the 'De-Influencing' wave. After years of being sold to by perfectly polished influencers, audiences are craving radical honesty. They want to know the flaws.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The 'Damaging' Admission</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">We recently ran a test. In one ad, a user praised a backpack's waterproofing. In another, a user said, <em>\"Honestly, the zipper is a bit stiff at first, but the waterproofing is insane.\"</em></p>\n      <p class=\"mb-6 text-xl leading-relaxed\">The second ad had a 3X higher conversion rate.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Why? Because admitting a flaw proves you aren't hiding anything. It makes the praise that follows feel earned, not bought. Stop trying to look perfect. A little negativity builds a lot of trust.</p>\n    "
+  },
+  {
+    slug: "quick-commerce-blinkit-zepto-ads",
+    title: "BLINKIT & ZEPTO: YOU HAVE 0.4 SECONDS TO WIN",
+    subtitle: "On Quick Commerce apps, nobody reads descriptions. They buy on impulse. Why chaotic street interviews trigger the 'I need this now' dopamine hit.",
+    date: "January 28, 2026",
+    category: "Q-Commerce Strategy",
+    readTime: "3 min read",
+    content: "\n      <p class=\"mb-6 text-xl leading-relaxed\">If you are selling on Blinkit, Zepto, or Instamart, you aren't competing with other brands. You are competing with boredom.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Users open these apps to get something *now*. Their mindset is impulsive, impatient, and hungry for dopamine.</p>\n      \n      <h3 class=\"text-3xl font-bold text-[#FFE500] mb-4 uppercase\">The 'Chaos' Hook</h3>\n      <p class=\"mb-6 text-xl leading-relaxed\">Studio ads are too slow for Q-Comm. By the time your logo fades in, they have scrolled.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">You need chaos. A street interview where someone shouts, drops something, or laughs uncontrollably grabs attention in 0.4 seconds. It mirrors the frantic energy of the platform itself.</p>\n      <p class=\"mb-6 text-xl leading-relaxed\">Don't sell the features. Sell the <em>urgency</em>. Show someone needing your product immediately, and the viewer will feel that need too.</p>\n    "
   }
 ];

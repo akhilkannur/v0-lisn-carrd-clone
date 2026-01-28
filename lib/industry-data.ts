@@ -229,5 +229,15 @@ export const industryPlaybooks: IndustryPlaybook[] = [
     streetConcept: "The 'Small Print' Challenge",
     hookExample: "\"Read this policy. If you can understand it in 1 minute, I'll give you ₹1000.\"",
     trustFactor: "Radical transparency. Showing regular people understanding the app instantly."
+  },
+  {
+    slug: "quick-commerce",
+    name: "Quick Commerce (Blinkit/Zepto)",
+    emoji: "⚡",
+    painPoint: "Impulse & Cart Abandonment",
+    whyAdsFail: "Static images on Q-Comm apps are boring. Users scroll past them in milliseconds. You need to trigger immediate desire.",
+    streetConcept: "The '10-Minute' Challenge",
+    hookExample: "\"I'm ordering this RIGHT NOW. Let's see if it arrives before I finish this coffee.\"",
+    trustFactor: "Proving the speed and instant gratification of the platform in real-time."
   }
 ];
