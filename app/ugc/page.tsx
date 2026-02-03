@@ -8,7 +8,22 @@ export const metadata: Metadata = {
     title: "High-Converting UGC Ads for Indian Brands",
     description: "Real people. Real reactions. Zero script. The only ad creative that beats banner blindness.",
     type: "website",
-  }
+    url: "https://lisnagency.online/ugc",
+    images: [
+      {
+        url: "/images/screenshot-202025-12-04-2023.png",
+        width: 1200,
+        height: 630,
+        alt: "Street Interviews in Kerala - Authentic UGC for DTC Brands",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UGC Ad Creatives for Indian D2C Brands",
+    description: "Authentic street interview UGC that converts. Real reactions, zero script.",
+    images: ["/images/screenshot-202025-12-04-2023.png"],
+  },
 }
 
 export default function UGCPage() {
