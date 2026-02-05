@@ -89,7 +89,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "LISN Agency",
               "image": "https://lisnagency.online/lisn-logo.gif",
-              "description": "Video production and UGC agency specializing in street interviews and event coverage for Indian DTC brands targeting the Kerala market.",
+              "description": "Video production and UGC agency specializing in street interviews and event coverage for Indian DTC brands targeting the Kerala and South Indian markets.",
               "address": {
                 "@type": "PostalAddress",
                 "addressRegion": "Kerala",
@@ -97,7 +97,18 @@ export default function RootLayout({
               },
               "url": "https://lisnagency.online",
               "telephone": "+918893317488",
-              "priceRange": "$$"
+              "priceRange": "$$",
+              "sameAs": [
+                "https://www.instagram.com/yousaypeople/",
+                "https://wa.me/918893317488"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+918893317488",
+                "contactType": "sales",
+                "areaServed": "IN",
+                "availableLanguage": ["en", "ml"]
+              }
             })
           }}
         />

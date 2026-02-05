@@ -233,6 +233,41 @@ export default function UGCClient() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
+          <div className="max-w-4xl mx-auto reveal-hidden">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-16 uppercase tracking-tight text-center break-words">
+              UGC <span className="text-[#FFE500]">FAQ</span>
+            </h2>
+
+            <div className="space-y-12">
+              {[
+                {
+                  q: "What is Street Interview UGC?",
+                  a: "Street Interview UGC involves interviewing real people in public spaces to get their authentic reactions to your product. Unlike scripted ads, these videos build immediate trust and social proof by showing genuine, unprompted responses.",
+                },
+                {
+                  q: "Do you offer UGC in regional Indian languages?",
+                  a: "Yes, we specialize in regional content. We produce street interviews in Malayalam (for Kerala), Tamil, Kannada (for Bangalore), and Hindi/English for pan-India campaigns. Localised language ads often see 2x-3x higher engagement in South India.",
+                },
+                {
+                  q: "How long does it take to deliver the ads?",
+                  a: "Our typical turnaround time is 5-7 days from the time we receive your product. This includes the scouting, street shooting, professional editing, and delivery of multiple high-performing ad variations.",
+                },
+                {
+                  q: "What markets do you cover for street interviews?",
+                  a: "We primarily shoot in high-footfall areas of Kochi (Kerala) and Bangalore. These locations allow us to capture a diverse range of demographics (Gen Z, millennials, families) suitable for most modern Indian DTC brands.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="border-l-4 border-[#FFE500] pl-6 md:pl-10">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight">{item.q}</h3>
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">

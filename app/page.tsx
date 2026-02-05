@@ -122,10 +122,14 @@ export default function Home() {
                   REAL STORIES
                 </h3>
 
-                <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6">
+                <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6 mb-8">
                   We capture the strongest, genuine interactions that make your audience lean in. From Live events,
                   roadshows, conferences to workshops. We find the human story in every frame.
                 </p>
+
+                <a href="/ugc" className="inline-block bg-black text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors border-2 border-black">
+                  Explore UGC Services →
+                </a>
               </div>
 
               <div className="flex justify-center md:justify-end w-full">

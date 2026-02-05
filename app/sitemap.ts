@@ -7,16 +7,18 @@ export default function sitemap() {
   
   // Static routes
   const routes = [
-    '',
-    '/ugc',
-    '/blog',
-    '/hooks',
-    '/blog/ugc-roi-calculator',
-    '/blog/amazon-calculator',
-    '/blog/amazon-image-validator',
+    { path: '', priority: 1, changeFrequency: 'weekly' },
+    { path: '/ugc', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/blog', priority: 0.8, changeFrequency: 'daily' },
+    { path: '/hooks', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/blog/ugc-roi-calculator', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/blog/amazon-calculator', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/blog/amazon-image-validator', priority: 0.7, changeFrequency: 'monthly' },
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.path}`,
     lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: route.changeFrequency as any,
+    priority: route.priority,
   }))
  
   // Dynamic blog routes

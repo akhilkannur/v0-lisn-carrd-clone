@@ -166,9 +166,14 @@ export default async function PlaybookPage({ params }: PageProps) {
                 <p className="text-xl md:text-2xl italic text-gray-300 mb-8">
                   {industry.hookExample}
                 </p>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="text-[#FFE500] w-8 h-8" />
-                  <span className="font-bold text-lg">Authenticity Score: 10/10</span>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="text-[#FFE500] w-8 h-8" />
+                    <span className="font-bold text-lg">Authenticity Score: 10/10</span>
+                  </div>
+                  <Link href="/ugc" className="text-[#FFE500] underline font-bold hover:text-white transition-colors">
+                    See Street Interview Examples →
+                  </Link>
                 </div>
               </div>
 
@@ -259,6 +264,12 @@ export default async function PlaybookPage({ params }: PageProps) {
                      Never. The entire point of our agency is authenticity. We approach real strangers on the streets of Bangalore and Kochi. If they don't like the product, we film that too. That honesty is why our ads convert.
                    </p>
                 </div>
+             </div>
+
+             <div className="mt-12 text-center">
+                <Link href="/ugc" className="inline-block text-xl font-bold border-b-4 border-black hover:bg-[#FFE500] transition-colors px-4 py-2">
+                   View our full UGC Street Interview Gallery →
+                </Link>
              </div>
           </div>
         </section>
