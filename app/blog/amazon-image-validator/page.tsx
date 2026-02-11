@@ -11,7 +11,22 @@ export const metadata: Metadata = {
     title: "Amazon India Image Validator",
     description: "Ensure your product images are zoom-ready and meet Amazon's strict guidelines.",
     type: "website",
-  }
+    url: "https://lisnagency.online/blog/amazon-image-validator",
+    images: [
+      {
+        url: "/images/amazon-validator-og-image.jpg", // Placeholder - will need to create this image
+        width: 1200,
+        height: 630,
+        alt: "Amazon Image Validator - Check Your Listing Images",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon India Image Validator",
+    description: "Ensure your product images are zoom-ready and meet Amazon's strict guidelines.",
+    images: ["/images/amazon-validator-og-image.jpg"], // Placeholder - will need to create this image
+  },
 };
 
 export default function AmazonImageValidatorPage() {

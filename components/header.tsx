@@ -8,7 +8,7 @@ export function Header() {
 
   return (
     <header className="bg-black px-4 py-6 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-center gap-12">
+      <div className="max-w-6xl mx-auto flex items-center justify-center gap-8 md:gap-12 flex-wrap">
         <Link
           href="/"
           className={`text-lg font-bold transition-colors ${pathname === "/" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
@@ -26,6 +26,12 @@ export function Header() {
           className={`text-lg font-bold transition-colors ${pathname.startsWith("/blog") ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >
           Insights
+        </Link>
+        <Link
+          href="/hooks"
+          className={`text-lg font-bold transition-colors ${pathname === "/hooks" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
+        >
+          Hooks
         </Link>
       </div>
     </header>

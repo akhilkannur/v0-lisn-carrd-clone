@@ -28,8 +28,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.subtitle,
       type: "article",
+      url: `https://lisnagency.online/blog/${slug}`,
       publishedTime: post.date,
       authors: ["LISN Agency"],
+      images: [
+        {
+          url: post.image || "/images/blog-post-default.jpg", // Use post's image or fallback to default
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.subtitle,
+      images: [post.image || "/images/blog-post-default.jpg"], // Use post's image or fallback to default
     },
   }
 }

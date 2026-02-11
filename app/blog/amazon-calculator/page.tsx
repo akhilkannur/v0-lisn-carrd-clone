@@ -11,7 +11,22 @@ export const metadata: Metadata = {
     title: "Amazon FBA Calculator India 2025",
     description: "Stop guessing your margins. Calculate your exact bank settlement from Amazon India.",
     type: "website",
-  }
+    url: "https://lisnagency.online/blog/amazon-calculator",
+    images: [
+      {
+        url: "/images/amazon-calculator-og-image.jpg", // Placeholder - will need to create this image
+        width: 1200,
+        height: 630,
+        alt: "Amazon FBA Calculator India - Free Profit Estimator",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon FBA Calculator India 2025",
+    description: "Stop guessing your margins. Calculate your exact bank settlement from Amazon India.",
+    images: ["/images/amazon-calculator-og-image.jpg"], // Placeholder - will need to create this image
+  },
 };
 
 export default function AmazonCalculatorPage() {

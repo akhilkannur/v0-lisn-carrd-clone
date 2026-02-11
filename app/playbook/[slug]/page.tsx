@@ -23,7 +23,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${industry.name} Ad Strategy: Why Studio Shoots Fail`,
       description: `The playbook for scaling ${industry.name} brands in India using Street Interviews.`,
-    }
+      type: "article",
+      url: `https://lisnagency.online/playbook/${slug}`,
+      images: [
+        {
+          url: "/images/playbook-og-image.jpg", // Placeholder - will need to create this image
+          width: 1200,
+          height: 630,
+          alt: `${industry.name} Marketing Playbook for India`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${industry.name} Marketing Strategy India`,
+      description: `How to market ${industry.name.toLowerCase()} brands in India using Street Interviews.`,
+      images: ["/images/playbook-og-image.jpg"], // Placeholder - will need to create this image
+    },
   }
 }
 

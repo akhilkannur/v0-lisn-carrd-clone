@@ -6,6 +6,7 @@ export interface BlogPost {
   category: string;
   content: string; // HTML/Markdown-like content
   readTime: string;
+  image?: string; // Optional image for Open Graph
 }
 
 export const blogPosts: BlogPost[] = [
