@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { Play, Phone, MessageCircle, ArrowDown, MessageSquare } from "lucide-react"
@@ -92,13 +93,14 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
-              EVENT VIDEO <br className="hidden md:block" /><span className="text-[#FFE500]">AGENCY</span>
+              UGC & EVENT <br className="hidden md:block" /><span className="text-[#FFE500]">VIDEO AGENCY</span>
             </h1>
 
             {/* Body Copy */}
             <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-3xl leading-relaxed reveal-hidden delay-100 px-2">
-              We capture your live events and interviews, then transform them into a video series, engaging short-form
-              clips and versatile content assets. Get maximum return from every recording.
+              The only creative partner for Indian DTC brands that delivers <strong>authentic street interviews</strong>, 
+              localised <strong>Malayalam & Tamil ad creatives</strong>, and cinematic event documentation. 
+              Reduce your CAC with content that people actually trust.
             </p>
 
             {/* Call-to-Action */}
@@ -109,7 +111,7 @@ export default function Home() {
         </section>
 
         {/* Marquee Separator */}
-        <Marquee text="EVENT VIDEO AGENCY" />
+        <Marquee text="UGC & EVENT VIDEO AGENCY • AUTHENTIC STREET INTERVIEWS • REGIONAL AD CREATIVES" />
 
         {/* Real People Section - Yellow (Text Left / Video Right) */}
         <section id="real-people-section" className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-24 relative border-b-4 border-black">
@@ -139,6 +141,58 @@ export default function Home() {
                   <style>{`wistia-player[media-id='offv7ybu5r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/offv7ybu5r/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }`}</style>
                   <wistia-player media-id="offv7ybu5r" aspect="0.5625"></wistia-player>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Services Section - Grid Layout */}
+        <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-12 md:mb-20 uppercase tracking-tight text-center reveal-hidden">
+              OUR <span className="text-[#FFE500]">SERVICES</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+              {/* Service 1: UGC */}
+              <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-100">
+                <div>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">UGC AD CREATIVES</h3>
+                  <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
+                    High-converting street interviews that break banner blindness. Authentic reactions, zero scripts, and 
+                    localised content for Kerala & South India.
+                  </p>
+                </div>
+                <Link href="/ugc" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
+                  LEARN MORE →
+                </Link>
+              </div>
+
+              {/* Service 2: Event Video */}
+              <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-200">
+                <div>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">EVENT <br />VIDEO</h3>
+                  <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
+                    Cinematic documentation of brand activations, workshops, and high-impact events. 
+                    We capture the energy that corporate videos usually miss.
+                  </p>
+                </div>
+                <a href="#real-people-section" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
+                  SEE WORK →
+                </a>
+              </div>
+
+              {/* Service 3: Performance Insights */}
+              <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-300">
+                <div>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">DTC INSIGHTS</h3>
+                  <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
+                    Free tools like the Amazon Profit Calculator and UGC ROI Estimator to help you 
+                    make data-driven creative decisions.
+                  </p>
+                </div>
+                <Link href="/blog" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
+                  EXPLORE TOOLS →
+                </Link>
               </div>
             </div>
           </div>
@@ -179,8 +233,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Industry Playbooks Section - Quick Access */}
+        <section className="bg-zinc-100 text-black px-4 py-16 md:py-24 border-b-4 border-black">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+              <div className="max-w-2xl">
+                <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-6 uppercase tracking-tight reveal-hidden">
+                   AD <span className="text-white bg-black px-2">PLAYBOOKS</span>
+                </h2>
+                <p className="text-lg md:text-2xl font-bold leading-tight reveal-hidden delay-100">
+                  We've broken down the winning creative strategies for 20+ industries. 
+                  Find yours and start scaling.
+                </p>
+              </div>
+              <Link href="/blog" className="bg-black text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-[#FFE500] hover:text-black transition-colors border-4 border-black reveal-hidden delay-200">
+                VIEW ALL →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 reveal-hidden delay-300">
+              {[
+                { name: "Skincare", slug: "skincare", emoji: "✨" },
+                { name: "Coffee", slug: "coffee", emoji: "☕" },
+                { name: "Jewellery", slug: "jewellery", emoji: "💎" },
+                { name: "Athleisure", slug: "athleisure", emoji: "🏃" },
+                { name: "Perfume", slug: "perfume", emoji: "👃" },
+                { name: "Haircare", slug: "haircare", emoji: "💇‍♀️" },
+              ].map((industry) => (
+                <Link 
+                  key={industry.slug} 
+                  href={`/playbook/${industry.slug}`}
+                  className="bg-white border-4 border-black p-6 flex flex-col items-center justify-center gap-3 hover:bg-[#FFE500] transition-all transform hover:-translate-y-1 shadow-[4px_4px_0px_0px_#000000]"
+                >
+                  <span className="text-4xl">{industry.emoji}</span>
+                  <span className="font-bold text-sm uppercase tracking-tighter text-center">{industry.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Marquee Separator */}
-        <Marquee text="REAL PEOPLE • REAL STORIES" className="bg-[#151515]" />
+        <Marquee text="UGC AD CREATIVES • STREET INTERVIEWS • PERFORMANCE MARKETING" className="bg-[#151515]" />
 
         {/* Marketers Section - Yellow (Text Left / Video Right) */}
         <section className="bg-[#FFE500] text-[#151515] px-4 py-16 md:py-24 border-b-4 border-black">
@@ -307,8 +401,12 @@ export default function Home() {
             <div className="w-full h-1 bg-zinc-800 mb-8 md:mb-12"></div>
 
             {/* Copyright */}
-            <div className="space-y-2">
+            <div className="space-y-4">
               <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+              <div className="flex justify-center gap-6 text-[10px] md:text-xs text-zinc-600 uppercase tracking-widest">
+                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+              </div>
               <p className="text-zinc-600 text-[10px] md:text-xs uppercase tracking-widest">
                 Design inspired by <a href="https://carrd.co/build/demo/854639e1d36fad56" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-400 transition-colors underline underline-offset-2">Carrd Demo</a>
               </p>

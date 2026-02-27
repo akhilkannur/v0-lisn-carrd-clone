@@ -60,25 +60,52 @@ export default async function PlaybookPage({ params }: PageProps) {
   // JSON-LD for the "Article" or "Guide"
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${industry.name} Marketing Playbook for India`,
-    "description": `A strategic guide on using street interviews and UGC to market ${industry.name} products in India.`,
-    "author": {
-      "@type": "Organization",
-      "name": "LISN Agency"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "LISN Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://lisnagency.online/lisn-logo.gif"
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": `${industry.name} Marketing Playbook for India`,
+        "description": `A strategic guide on using street interviews and UGC to market ${industry.name} products in India.`,
+        "author": {
+          "@type": "Organization",
+          "name": "LISN Agency"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "LISN Agency",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lisnagency.online/lisn-logo.gif"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://lisnagency.online/playbook/${slug}`
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lisnagency.online"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Playbooks",
+            "item": "https://lisnagency.online/blog" // Point to blog where playbooks are listed
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${industry.name} Playbook`,
+            "item": `https://lisnagency.online/playbook/${slug}`
+          }
+        ]
       }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://lisnagency.online/playbook/${slug}`
-    }
+    ]
   }
 
   return (

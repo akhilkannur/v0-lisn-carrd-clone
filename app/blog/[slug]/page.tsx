@@ -62,26 +62,53 @@ export default async function BlogPostPage({ params }: PageProps) {
   // JSON-LD Structured Data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.subtitle,
-    "datePublished": isoDate,
-    "author": {
-      "@type": "Organization",
-      "name": "LISN Agency"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "LISN Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://lisnagency.online/lisn-logo.gif" 
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.subtitle,
+        "datePublished": isoDate,
+        "author": {
+          "@type": "Organization",
+          "name": "LISN Agency"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "LISN Agency",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lisnagency.online/lisn-logo.gif" 
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://lisnagency.online/blog/${slug}`
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lisnagency.online"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Insights",
+            "item": "https://lisnagency.online/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://lisnagency.online/blog/${slug}`
+          }
+        ]
       }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://lisnagency.online/blog/${slug}`
-    }
+    ]
   }
 
   return (

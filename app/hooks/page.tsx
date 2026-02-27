@@ -27,5 +27,36 @@ export const metadata: Metadata = {
 }
 
 export default function HooksPage() {
-  return <HooksClient />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lisnagency.online"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Viral Hooks",
+            "item": "https://lisnagency.online/hooks"
+          }
+        ]
+      }
+    ]
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HooksClient />
+    </>
+  )
 }

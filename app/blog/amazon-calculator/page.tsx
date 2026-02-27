@@ -30,9 +30,54 @@ export const metadata: Metadata = {
 };
 
 export default function AmazonCalculatorPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Amazon India Profit Calculator",
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "description": "Calculate exact Amazon FBA fees and profit margins for Indian sellers."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lisnagency.online"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Insights",
+            "item": "https://lisnagency.online/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Amazon Profit Calculator",
+            "item": "https://lisnagency.online/blog/amazon-calculator"
+          }
+        ]
+      }
+    ]
+  }
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto mb-8 text-center">
             <h1 className="text-3xl font-bold mb-4 font-heading uppercase tracking-tight text-black">Free Tool: Amazon India Profit Calculator</h1>

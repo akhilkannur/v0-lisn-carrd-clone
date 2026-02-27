@@ -14,6 +14,8 @@ export default function sitemap() {
     { path: '/blog/ugc-roi-calculator', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog/amazon-calculator', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog/amazon-image-validator', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/privacy', priority: 0.3, changeFrequency: 'monthly' },
+    { path: '/terms', priority: 0.3, changeFrequency: 'monthly' },
   ].map((route) => ({
     url: `${baseUrl}${route.path}`,
     lastModified: new Date().toISOString().split('T')[0],

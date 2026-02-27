@@ -13,28 +13,28 @@ const _dela_gothic_one = Dela_Gothic_One({
 })
 
 export const metadata: Metadata = {
-  title: "LISN - Event Video Agency | Kerala & India",
+  title: "LISN - UGC & Event Video Agency for Indian DTC Brands",
   description:
-    "The premier Event Video & UGC Agency in Kerala. We help Indian DTC brands crack the Kerala market with authentic street interviews and cinematic event documentation.",
+    "The premier UGC & Event Video Agency in India. We help DTC brands scale with authentic street interviews, regional ad creatives (Malayalam/Tamil), and viral content assets.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
-    "Event Video Agency",
-    "UGC India",
-    "Street Interviews Kerala",
-    "Video Production Kerala",
-    "Kerala Market Entry",
+    "UGC Agency India",
+    "Street Interview Ads",
     "DTC Marketing India",
+    "UGC Video Production Kerala",
     "Malayalam Ad Creatives",
     "South India Marketing Strategy",
-    "Viral Marketing India",
+    "Performance UGC India",
+    "Event Video Agency India",
+    "Authentic Ad Creatives",
   ],
   alternates: {
     canonical: "https://lisnagency.online",
   },
   openGraph: {
-    title: "LISN - Event Video Agency | Real People, Real Stories",
+    title: "LISN - UGC & Event Video Agency for DTC Brands",
     description:
-      "We don't just film events; we capture the energy. From high-impact street interviews to cinematic event documentation, we turn your brand activations into viral content assets.",
+      "Stop running boring ads. We capture real street interviews and authentic moments that convert. Specializing in Kerala & South Indian markets for DTC brands.",
     url: "https://lisnagency.online",
     siteName: "LISN Agency",
     locale: "en_US",
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
         url: "/momentscaptured.jpg",
         width: 1200,
         height: 630,
-        alt: "LISN Agency - Real Moments Captured",
+        alt: "LISN Agency - Authentic UGC & Event Video",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LISN - Event Video Agency",
-    description: "Stop boring your audience. We capture real street interviews and authentic moments that go viral.",
+    title: "LISN - UGC & Event Video Agency India",
+    description: "Real street interviews and authentic UGC that scales DTC brands. Kerala & Bangalore specialists.",
     images: ["/momentscaptured.jpg"],
   },
   icons: {
