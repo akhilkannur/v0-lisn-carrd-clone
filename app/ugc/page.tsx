@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     "User Generated Content Agency",
     "Video Production Bangalore",
     "Malayalam Ads",
-    "Tamil Ad Creatives",
     "South India Marketing",
     "Social Proof Ads",
     "TikTok Style Ads India",
@@ -85,7 +84,7 @@ export default function UGCPage() {
             "name": "Do you offer UGC in regional Indian languages?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we specialize in regional content. We produce street interviews in Malayalam (for Kerala), Tamil, Kannada (for Bangalore), and Hindi/English for pan-India campaigns."
+              "text": "Yes, we specialize in regional content. We produce street interviews in Malayalam (for Kerala), Kannada (for Bangalore), and Hindi/English for pan-India campaigns."
             }
           },
           {

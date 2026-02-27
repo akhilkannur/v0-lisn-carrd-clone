@@ -99,7 +99,7 @@ export default function Home() {
             {/* Body Copy */}
             <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-3xl leading-relaxed reveal-hidden delay-100 px-2">
               The only creative partner for Indian DTC brands that delivers <strong>authentic street interviews</strong>, 
-              localised <strong>Malayalam & Tamil ad creatives</strong>, and cinematic event documentation. 
+              localised <strong>Malayalam ad creatives</strong>, and cinematic event documentation. 
               Reduce your CAC with content that people actually trust.
             </p>
 

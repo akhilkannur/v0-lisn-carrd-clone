@@ -248,7 +248,7 @@ export default function UGCClient() {
                 },
                 {
                   q: "Do you offer UGC in regional Indian languages?",
-                  a: "Yes, we specialize in regional content. We produce street interviews in Malayalam (for Kerala), Tamil, Kannada (for Bangalore), and Hindi/English for pan-India campaigns. Localised language ads often see 2x-3x higher engagement in South India.",
+                  a: "Yes, we specialize in regional content. We produce street interviews in Malayalam (for Kerala), Kannada (for Bangalore), and Hindi/English for pan-India campaigns. Localised language ads often see 2x-3x higher engagement in South India.",
                 },
                 {
                   q: "How long does it take to deliver the ads?",

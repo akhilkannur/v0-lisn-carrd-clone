@@ -15,7 +15,7 @@ const _dela_gothic_one = Dela_Gothic_One({
 export const metadata: Metadata = {
   title: "LISN - UGC & Event Video Agency for Indian DTC Brands",
   description:
-    "The premier UGC & Event Video Agency in India. We help DTC brands scale with authentic street interviews, regional ad creatives (Malayalam/Tamil), and viral content assets.",
+    "The premier UGC & Event Video Agency in India. We help DTC brands scale with authentic street interviews, regional ad creatives (Malayalam), and viral content assets.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
     "UGC Agency India",
