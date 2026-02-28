@@ -9,6 +9,7 @@ export interface BlogPost {
   image?: string; // Optional image for Open Graph
 }
 
+export const blogPosts: BlogPost[] = [
   {
     slug: "top-influencer-marketing-agencies-kerala-2026",
     title: "TOP 7 INFLUENCER MARKETING AGENCIES IN KERALA (2026 RANKED)",
