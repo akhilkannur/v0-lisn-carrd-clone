@@ -33,6 +33,12 @@ export function Header() {
         >
           Hooks
         </Link>
+        <Link
+          href="/audit"
+          className={`text-lg font-bold transition-colors uppercase border-b-2 ${pathname === "/audit" ? "text-[#FFE500] border-[#FFE500]" : "text-zinc-400 border-transparent hover:text-white hover:border-white"}`}
+        >
+          Free Audit
+        </Link>
       </div>
     </header>
   )

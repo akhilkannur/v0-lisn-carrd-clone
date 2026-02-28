@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     "The premier UGC & Event Video Agency in India. We help DTC brands scale with authentic street interviews, regional ad creatives (Malayalam), and viral content assets.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
+    "UGC Marketing Kerala",
+    "Influencer Marketing Kerala",
+    "Influencer Marketing Kochi",
+    "UGC Agency Kochi",
+    "Best Ad Agency Kerala",
     "UGC Agency India",
     "Street Interview Ads",
     "DTC Marketing India",
@@ -26,7 +31,8 @@ export const metadata: Metadata = {
     "South India Marketing Strategy",
     "Performance UGC India",
     "Event Video Agency India",
-    "Authentic Ad Creatives",
+    "Kochi Marketing Company",
+    "Malayalam Social Media Marketing",
   ],
   alternates: {
     canonical: "https://lisnagency.online",

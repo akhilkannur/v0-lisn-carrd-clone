@@ -299,6 +299,24 @@ export default function UGCClient() {
                 <a href="/playbook/quick-commerce" className="hover:text-white transition-colors">Quick Commerce (Blinkit)</a>
               </div>
             </div>
+
+            <div className="w-full border-t border-zinc-800 pt-12 text-left">
+              <h4 className="text-[#FFE500] font-bold uppercase tracking-widest mb-6 text-sm">Service Areas & Solutions</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm text-zinc-500 font-mono">
+                <span className="hover:text-white transition-colors cursor-default">UGC Marketing Kerala</span>
+                <span className="hover:text-white transition-colors cursor-default">Influencer Marketing Kochi</span>
+                <span className="hover:text-white transition-colors cursor-default">Video Production Kerala</span>
+                <span className="hover:text-white transition-colors cursor-default">UGC Agency Bangalore</span>
+                <span className="hover:text-white transition-colors cursor-default">Malayalam Ad Agency</span>
+                <span className="hover:text-white transition-colors cursor-default">Social Media Marketing Kochi</span>
+                <span className="hover:text-white transition-colors cursor-default">D2C Ad Agency India</span>
+                <span className="hover:text-white transition-colors cursor-default">Kochi Marketing Company</span>
+                <span className="hover:text-white transition-colors cursor-default">Authentic Content Kochi</span>
+                <span className="hover:text-white transition-colors cursor-default">Kerala Startup Marketing</span>
+                <span className="hover:text-white transition-colors cursor-default">Performance Ads Kerala</span>
+                <span className="hover:text-white transition-colors cursor-default">Creative Agency Kochi</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -339,6 +357,34 @@ export default function UGCClient() {
           </div>
         </section>
       </main>
+
+      {/* Floating Free UGC Audit Button */}
+      <div className="fixed bottom-8 right-8 z-[100] animate-bounce-slow">
+        <Link 
+          href="/audit" 
+          className="group flex items-center bg-[#FFE500] text-black px-6 py-4 rounded-full font-bold uppercase tracking-widest shadow-[8px_8px_0px_0px_#ffffff] hover:shadow-[4px_4px_0px_0px_#ffffff] hover:translate-x-1 hover:translate-y-1 transition-all duration-300 border-2 border-black"
+        >
+          <span className="mr-3">Free UGC Audit</span>
+          <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </Link>
+      </div>
+
+      <style jsx global>{`
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 3s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Invisible SEO city block for 'Near Me' and local crawling - No impact on UX */}
+      <div className="sr-only" aria-hidden="true">
+        <h2>UGC Marketing & Influencer Agency Service Areas:</h2>
+        <p>UGC Agency Kochi, Influencer Marketing Ernakulam, UGC Marketing Trivandrum, Influencer Marketing Calicut, UGC Agency Thrissur, Influencer Marketing Kottayam, UGC Marketing Malappuram, Influencer Marketing Palakkad, UGC Agency Alappuzha, Influencer Marketing Kollam, UGC Agency Kannur, Influencer Marketing Kasaragod, UGC Marketing Idukki, Influencer Marketing Wayanad, UGC Agency Pathanamthitta.</p>
+        <p>Providing street interviews, Malayalam ad creatives, and South Indian marketing strategy for D2C brands in Kerala and Bangalore.</p>
+      </div>
     </>
   )
 }

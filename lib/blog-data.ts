@@ -9,7 +9,57 @@ export interface BlogPost {
   image?: string; // Optional image for Open Graph
 }
 
-export const blogPosts: BlogPost[] = [
+  {
+    slug: "top-influencer-marketing-agencies-kerala-2026",
+    title: "TOP 7 INFLUENCER MARKETING AGENCIES IN KERALA (2026 RANKED)",
+    subtitle: "Looking for the best agency in Kochi or Kerala? We reviewed the top players based on ROI, regional expertise, and content innovation.",
+    date: "February 28, 2026",
+    category: "Market Report",
+    readTime: "8 min read",
+    content: `
+      <p class="mb-6 text-xl leading-relaxed">The Kerala market is no longer a "side project" for national brands. With the highest literacy rate and a massive NRI-driven economy, it is one of the most skeptical and lucrative markets in India.</p>
+      <p class="mb-6 text-xl leading-relaxed font-bold">But how do you pick an agency that actually understands the 'Malayali Pulse'?</p>
+      <p class="mb-6 text-xl leading-relaxed">We analyzed the top influencer marketing agencies in Kerala based on their ability to drive real sales, not just vanity metrics like 'likes'.</p>
+
+      <h3 class="text-3xl font-bold text-[#FFE500] mb-6 uppercase">1. LISN AGENCY (BEST FOR: UGC & STREET INTERVIEWS)</h3>
+      <p class="mb-6 text-xl leading-relaxed">If you are tired of scripted influencer ads that look like commercials, Lisn Agency is the only choice. Specializing in <strong>Street Interview UGC</strong>, they take your product to the streets of Kochi and Bangalore to capture raw, unscripted reactions.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-xl">
+        <li><strong>Pros:</strong> Highest trust-building format, rapid creative velocity (5-10 ads per session), zero work for the brand.</li>
+        <li><strong>Best For:</strong> D2C brands, Skincare, F&B, and any product that needs 'Social Proof' to convert.</li>
+      </ul>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">2. SPIDERWORKS (BEST FOR: EXPERIENCE & SEO)</h3>
+      <p class="mb-6 text-xl leading-relaxed">One of the oldest players in the Kerala digital space. SpiderWorks has a massive network of influencers and is excellent at long-term SEO-integrated campaigns.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-xl">
+        <li><strong>Pros:</strong> Massive database, reliable processes, great for established corporate brands.</li>
+        <li><strong>Best For:</strong> Real Estate and Education sectors.</li>
+      </ul>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">3. BLUSTEAK MEDIA (BEST FOR: INNOVATION & AR)</h3>
+      <p class="mb-6 text-xl leading-relaxed">Based in Kottayam/Kochi, Blusteak is known for pushing technical boundaries, including AR filters and high-concept storytelling.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-xl">
+        <li><strong>Pros:</strong> Creative-first approach, award-winning campaigns.</li>
+        <li><strong>Best For:</strong> Tech-savvy lifestyle and fashion brands.</li>
+      </ul>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">4. INFLUENCERHAI (BEST FOR: VOLUME & REACH)</h3>
+      <p class="mb-6 text-xl leading-relaxed">A performance-driven agency that focuses on scaling campaigns across a wide range of micro-influencers in Kerala.</p>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">5. TING DIGITAL (BEST FOR: VISUAL AESTHETICS)</h3>
+      <p class="mb-6 text-xl leading-relaxed">If your brand needs a 'Vogue' look in Kochi, Ting is the answer. Their production value is top-notch for high-end lifestyle brands.</p>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">6. MORIS MEDIA (BEST FOR: DATA-DRIVEN STRATEGY)</h3>
+      <p class="mb-6 text-xl leading-relaxed">Moris Media uses an aggressive diagnostic approach to ensure influencer selection is backed by hard data.</p>
+
+      <h3 class="text-3xl font-bold text-white mb-6 uppercase">7. BRANDSTORY (BEST FOR: REGIONAL STORYTELLING)</h3>
+      <p class="mb-6 text-xl leading-relaxed">Excellent at navigating the cultural nuances of Kerala, making them great for local heritage brands.</p>
+
+      <div class="mt-12 p-8 bg-zinc-900 border-l-4 border-[#FFE500]">
+        <h4 class="text-2xl font-bold mb-4">THE VERDICT</h4>
+        <p class="text-xl">For traditional reach and SEO, go with <strong>SpiderWorks</strong>. For beautiful studio-shot campaigns, hire <strong>Ting</strong>. But if your goal is to lower your CAC and build instant trust through authenticity, <strong>Lisn Agency’s Street Interviews</strong> are currently the highest-ROI format in the market.</p>
+      </div>
+    `
+  },
   {
     slug: "malayali-filter-ad-conversion",
     title: "THE 'MALAYALI' FILTER: 5 WORDS THAT KILL YOUR AD CONVERSION IN KERALA",

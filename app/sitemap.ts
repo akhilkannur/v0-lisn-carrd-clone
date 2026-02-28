@@ -9,6 +9,7 @@ export default function sitemap() {
   const routes = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/ugc', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/audit', priority: 0.9, changeFrequency: 'daily' },
     { path: '/blog', priority: 0.8, changeFrequency: 'daily' },
     { path: '/hooks', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog/ugc-roi-calculator', priority: 0.7, changeFrequency: 'monthly' },
