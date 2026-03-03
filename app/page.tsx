@@ -93,7 +93,7 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
-              UGC & EVENT <br className="hidden md:block" /><span className="text-[#FFE500]">VIDEO AGENCY</span>
+              EVENT & <br className="hidden md:block" /><span className="text-[#FFE500]">UGC AGENCY</span>
             </h1>
 
             {/* Body Copy */}
@@ -129,8 +129,8 @@ export default function Home() {
                   roadshows, conferences to workshops. We find the human story in every frame.
                 </p>
 
-                <a href="/ugc" className="inline-block bg-black text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors border-2 border-black">
-                  Explore UGC Services →
+                <a href="#strategy-session" className="inline-block bg-black text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors border-2 border-black">
+                  GET A QUOTE ↓
                 </a>
               </div>
 
@@ -153,22 +153,8 @@ export default function Home() {
               OUR <span className="text-[#FFE500]">SERVICES</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-              {/* Service 1: UGC */}
+              {/* Service 1: Event Video */}
               <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-100">
-                <div>
-                  <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">UGC AD CREATIVES</h3>
-                  <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
-                    High-converting street interviews that break banner blindness. Authentic reactions, zero scripts, and 
-                    localised content for Kerala & South India.
-                  </p>
-                </div>
-                <Link href="/ugc" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
-                  LEARN MORE →
-                </Link>
-              </div>
-
-              {/* Service 2: Event Video */}
-              <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-200">
                 <div>
                   <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">EVENT <br />VIDEO</h3>
                   <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
@@ -179,6 +165,20 @@ export default function Home() {
                 <a href="#real-people-section" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
                   SEE WORK →
                 </a>
+              </div>
+
+              {/* Service 2: UGC */}
+              <div className="border-2 border-white p-8 md:p-10 hover:bg-[#FFE500] hover:text-black transition-all duration-300 group flex flex-col justify-between reveal-hidden delay-200">
+                <div>
+                  <h3 className="font-heading text-3xl md:text-4xl mb-6 uppercase tracking-tight">UGC AD CREATIVES</h3>
+                  <p className="text-lg md:text-xl font-medium leading-relaxed mb-8 opacity-80 group-hover:opacity-100">
+                    High-converting street interviews that break banner blindness. Authentic reactions, zero scripts, and 
+                    localised content for Kerala & South India.
+                  </p>
+                </div>
+                <Link href="/ugc" className="inline-block font-bold uppercase tracking-widest border-b-2 border-current pb-1 self-start hover:border-black transition-all">
+                  LEARN MORE →
+                </Link>
               </div>
 
               {/* Service 3: Performance Insights */}
@@ -368,7 +368,7 @@ export default function Home() {
         </section>
 
         {/* Strategy Session Footer - Black */}
-        <section className="bg-black px-4 py-16 md:py-24 relative">
+        <section id="strategy-session" className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
             <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
               STRATEGY
