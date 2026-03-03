@@ -93,14 +93,14 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden w-full">
-              EVENT & <br className="hidden md:block" /><span className="text-[#FFE500]">UGC AGENCY</span>
+              EVENT VIDEO & <br className="hidden md:block" /><span className="text-[#FFE500]">DOCUMENTATION AGENCY</span>
             </h1>
 
             {/* Body Copy */}
             <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100 px-2">
-              The premier creative partner for Indian DTC brands specializing in <strong>cinematic event documentation</strong>, 
-              high-impact brand activations, and <strong>authentic street interview</strong> ad creatives. 
-              We capture the energy that corporate videos miss and the honesty that converts.
+              The premier creative partner for Indian brands specializing in <strong>cinematic event documentation</strong>, 
+              high-impact brand activations, and immersive storytelling. 
+              We capture the energy, soul, and unscripted moments that standard corporate videos usually miss.
             </p>
 
             {/* Call-to-Action */}
@@ -125,8 +125,8 @@ export default function Home() {
                 </h3>
 
                 <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6 mb-8">
-                  We capture the strongest, genuine interactions that make your audience lean in. From Live events,
-                  roadshows, conferences to workshops. We find the human story in every frame.
+                  We capture the strongest, genuine interactions that define your brand experience. From live events,
+                  roadshows, and conferences to high-impact workshops. We find the human story in every frame.
                 </p>
 
                 <a href="#strategy-session" className="inline-block bg-black text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors border-2 border-black">
