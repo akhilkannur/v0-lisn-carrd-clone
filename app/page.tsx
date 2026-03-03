@@ -92,15 +92,15 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden break-words w-full">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-8xl text-white mb-6 md:mb-8 uppercase tracking-tight leading-[0.9] reveal-hidden w-full">
               EVENT & <br className="hidden md:block" /><span className="text-[#FFE500]">UGC AGENCY</span>
             </h1>
 
             {/* Body Copy */}
-            <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-3xl leading-relaxed reveal-hidden delay-100 px-2">
-              The only creative partner for Indian DTC brands that delivers <strong>authentic street interviews</strong>, 
-              localised <strong>Malayalam ad creatives</strong>, and cinematic event documentation. 
-              Reduce your CAC with content that people actually trust.
+            <p className="font-sans text-lg md:text-2xl text-gray-200 mb-10 md:mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100 px-2">
+              The premier creative partner for Indian DTC brands specializing in <strong>cinematic event documentation</strong>, 
+              high-impact brand activations, and <strong>authentic street interview</strong> ad creatives. 
+              We capture the energy that corporate videos miss and the honesty that converts.
             </p>
 
             {/* Call-to-Action */}
@@ -281,12 +281,12 @@ export default function Home() {
           <div className="max-w-7xl mx-auto reveal-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
               <div className="text-left">
-                <h3 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight break-words">
-                  MARKETERS,
+                <h3 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight">
+                  MARKETERS.
                   <br />
-                  FILMMAKERS,
+                  FILMMAKERS.
                   <br />
-                  STORYTELLERS
+                  STORYTELLERS.
                 </h3>
 
                 <p className="text-lg md:text-2xl font-bold leading-relaxed border-l-4 border-black pl-4 md:pl-6">
@@ -321,7 +321,7 @@ export default function Home() {
               </div>
 
               <div className="text-left order-1 md:order-2">
-                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-10 leading-[0.9] uppercase tracking-tight text-black">
                   HUMAN
                   <br />
                   CONNECTIONS
@@ -370,7 +370,7 @@ export default function Home() {
         {/* Strategy Session Footer - Black */}
         <section id="strategy-session" className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
-            <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter break-words">
+            <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-10 md:mb-16 text-white leading-[0.85] uppercase tracking-tighter">
               STRATEGY
               <br />
               <span className="text-[#FFE500]">SESSION</span>

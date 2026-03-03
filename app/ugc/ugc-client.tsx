@@ -59,7 +59,7 @@ export default function UGCClient() {
             {/* Readability Backdrop */}
             <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
 
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden break-words w-full">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden w-full">
               UGC THAT
               <br />
               SPEAKS
@@ -135,7 +135,7 @@ export default function UGCClient() {
               </div>
 
               <div>
-                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight">
                   How it
                   <br />
                   Works
@@ -174,7 +174,7 @@ export default function UGCClient() {
         {/* Creative Velocity Methodology Section */}
         <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-5xl mx-auto reveal-hidden">
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-8xl mb-16 uppercase tracking-tighter text-center break-words">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-8xl mb-16 uppercase tracking-tighter text-center">
               THE CREATIVE <br /><span className="text-[#FFE500]">VELOCITY</span> METHODOLOGY
             </h2>
 
@@ -204,7 +204,7 @@ export default function UGCClient() {
               </div>
 
               <div>
-                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500] break-words">
+                <h3 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-10 uppercase tracking-tight text-[#FFE500]">
                   The Lisn Way
                 </h3>
                 <ul className="space-y-6 text-xl md:text-2xl font-medium">
@@ -237,7 +237,7 @@ export default function UGCClient() {
         {/* FAQ Section */}
         <section className="bg-black text-white px-4 py-16 md:py-24 border-b-4 border-white">
           <div className="max-w-4xl mx-auto reveal-hidden">
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-16 uppercase tracking-tight text-center break-words">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-16 uppercase tracking-tight text-center">
               UGC <span className="text-[#FFE500]">FAQ</span>
             </h2>
 
@@ -324,7 +324,7 @@ export default function UGCClient() {
         {/* Footer */}
         <section className="bg-black px-4 py-16 md:py-24 relative">
           <div className="max-w-5xl mx-auto text-center reveal-hidden">
-            <h3 className="font-heading text-4xl sm:text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter break-words">
+            <h3 className="font-heading text-4xl sm:text-6xl md:text-8xl mb-16 text-white uppercase tracking-tighter">
               READY TO
               <br />
               <span className="text-[#FFE500]">HIT THE STREETS?</span>
