@@ -13,13 +13,13 @@ export function Header() {
           href="/"
           className={`text-lg font-bold transition-colors ${pathname === "/" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >
-          Home
+          Street UGC
         </Link>
         <Link
-          href="/ugc"
-          className={`text-lg font-bold transition-colors ${pathname === "/ugc" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
+          href="/events"
+          className={`text-lg font-bold transition-colors ${pathname === "/events" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >
-          UGC
+          Event Documentation
         </Link>
         <Link
           href="/blog"

@@ -381,7 +381,7 @@ export default function UGCClient() {
       `}</style>
 
       {/* Invisible SEO city block for 'Near Me' and local crawling - No impact on UX */}
-      <div className="sr-only" aria-hidden="true">
+      <div className="sr-only">
         <h2>UGC Marketing & Influencer Agency Service Areas:</h2>
         <p>UGC Agency Kochi, Influencer Marketing Ernakulam, UGC Marketing Trivandrum, Influencer Marketing Calicut, UGC Agency Thrissur, Influencer Marketing Kottayam, UGC Marketing Malappuram, Influencer Marketing Palakkad, UGC Agency Alappuzha, Influencer Marketing Kollam, UGC Agency Kannur, Influencer Marketing Kasaragod, UGC Marketing Idukki, Influencer Marketing Wayanad, UGC Agency Pathanamthitta.</p>
         <p>Providing street interviews, Malayalam ad creatives, and South Indian marketing strategy for D2C brands in Kerala and Bangalore.</p>
