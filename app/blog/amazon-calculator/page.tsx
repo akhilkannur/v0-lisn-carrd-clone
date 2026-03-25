@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import AmazonCalculator from "@/components/amazon-calculator"
+import { AmazonCalculator } from "@/components/amazon-calculator"
 import { ArrowLeft, MessageSquare, Phone, TrendingUp, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
