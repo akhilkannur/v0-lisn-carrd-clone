@@ -4,8 +4,8 @@ import { Header } from "@/components/header";
 import { Marquee } from "@/components/marquee";
 
 export const metadata: Metadata = {
-  title: "Amazon India Image Validator 2025 | Check Zoom & Dimensions",
-  description: "Free tool to validate your Amazon listing images against 2025 technical standards. Check zoom capability, aspect ratio (1:1), and file size instantly.",
+  title: "Amazon India Image Validator 2026 | Check Zoom & Dimensions",
+  description: "Free tool to validate your Amazon listing images against 2026 technical standards. Check zoom capability, aspect ratio (1:1), and file size instantly.",
   keywords: ["Amazon Image Validator", "Amazon Listing Image Checker", "Amazon Zoom Checker", "E-commerce Image Optimization"],
   openGraph: {
     title: "Amazon India Image Validator",
@@ -39,7 +39,7 @@ export default function AmazonImageValidatorPage() {
               Amazon.in <span className="text-[#FFE500] bg-black px-2">Image Validator</span>
             </h1>
             <p className="text-zinc-600 font-medium text-lg max-w-2xl mx-auto">
-                Stop guessing. Check if your listing images meet Amazon India's 2025 technical standards for zoom, dimensions, and aspect ratio before you upload.
+                Stop guessing. Check if your listing images meet Amazon India's 2026 technical standards for zoom, dimensions, and aspect ratio before you upload.
             </p>
         </div>
         <AmazonImageValidator />

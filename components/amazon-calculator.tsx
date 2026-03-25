@@ -76,7 +76,7 @@ export function AmazonCalculator() {
             <Calculator className="w-8 h-8 text-black" />
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-black uppercase tracking-tighter text-black">FBA & Payout <span className="text-[#FFE500] bg-black px-2">Calculator</span></h2>
-          <p className="text-black font-medium text-lg">See your actual Amazon India bank settlement for 2025</p>
+          <p className="text-black font-medium text-lg">See your actual Amazon India bank settlement for 2026</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -261,7 +261,7 @@ export function AmazonCalculator() {
               <div className="flex gap-2 items-start mb-4">
                 <Info className="w-4 h-4 shrink-0 text-[#FFE500]" />
                 <p>
-                  <strong>Estimate Only:</strong> Calculations based on standard Amazon India 2025 schedules.
+                  <strong>Estimate Only:</strong> Calculations based on standard Amazon India 2026 schedules.
                 </p>
               </div>
               

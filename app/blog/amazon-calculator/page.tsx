@@ -5,8 +5,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Amazon India Profit Calculator 2025 | FBA Fee Estimator",
-  description: "Calculate your exact bank settlement for Amazon India. Updated for 2025 FBA fees, Referral fees, and GST. Optimize your margins for DTC growth.",
+  title: "Amazon India Profit Calculator 2026 | FBA Fee Estimator",
+  description: "Calculate your exact bank settlement for Amazon India. Updated for 2026 FBA fees, Referral fees, and GST. Optimize your margins for DTC growth.",
 }
 
 export default function AmazonCalculatorPage() {
@@ -26,7 +26,7 @@ export default function AmazonCalculatorPage() {
                 <span className="text-[#FFE500]">PROFIT CALCULATOR</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-                Updated for 2025. Calculate your net margin after FBA fees, referral commissions, and GST. Stop guessing your bank settlement.
+                Updated for 2026. Calculate your net margin after FBA fees, referral commissions, and GST. Stop guessing your bank settlement.
               </p>
             </header>
 
@@ -82,7 +82,7 @@ export default function AmazonCalculatorPage() {
                 <p>1. Enter your <strong>Selling Price</strong> (the price the customer pays on Amazon).</p>
                 <p>2. Input your <strong>Product Cost (COGS)</strong> including manufacturing and packaging.</p>
                 <p>3. Select your <strong>Category</strong> for accurate Referral Fee calculation.</p>
-                <p>4. Check your <strong>FBA / Easy Ship</strong> tier. Note that 2025 weights and dimensions apply.</p>
+                <p>4. Check your <strong>FBA / Easy Ship</strong> tier. Note that 2026 weights and dimensions apply.</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function AmazonCalculatorPage() {
 
         {/* Footer */}
         <section className="bg-black px-4 py-16 border-t-4 border-white text-center">
-            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025 • Amazon India Profit Calculator</p>
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()} • Amazon India Profit Calculator</p>
         </section>
       </main>
     </>

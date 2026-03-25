@@ -59,7 +59,7 @@ export default function UGCROIPage() {
 
         {/* Footer */}
         <section className="bg-black px-4 py-16 border-t-4 border-white text-center">
-            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025 • UGC ROI Calculator</p>
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()} • UGC ROI Calculator</p>
         </section>
       </main>
     </>

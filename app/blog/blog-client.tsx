@@ -177,7 +177,7 @@ export default function BlogIndex() {
                 <div className="bg-zinc-900 border-2 border-zinc-700 hover:border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity"></div>
                   <h4 className="font-heading text-2xl uppercase text-white mb-2 group-hover:text-[#FFE500] transition-colors">Amazon Profit Calculator</h4>
-                  <p className="text-gray-400 mb-6">Estimate your exact bank settlement after FBA fees, Referral fees, and GST. Updated for 2025.</p>
+                  <p className="text-gray-400 mb-6">Estimate your exact bank settlement after FBA fees, Referral fees, and GST. Updated for 2026.</p>
                   <span className="inline-block border border-zinc-500 text-zinc-400 px-4 py-2 text-xs font-bold uppercase tracking-widest group-hover:bg-[#FFE500] group-hover:text-black group-hover:border-[#FFE500] transition-all">Launch Tool →</span>
                 </div>
               </Link>
@@ -186,7 +186,7 @@ export default function BlogIndex() {
                 <div className="bg-zinc-900 border-2 border-zinc-700 hover:border-[#FFE500] p-8 h-full transition-all duration-300 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFE500] blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity"></div>
                   <h4 className="font-heading text-2xl uppercase text-white mb-2 group-hover:text-[#FFE500] transition-colors">Image Validator</h4>
-                  <p className="text-gray-400 mb-6">Check if your listing images meet Amazon India's 2025 technical standards for zoom and quality.</p>
+                  <p className="text-gray-400 mb-6">Check if your listing images meet Amazon India's 2026 technical standards for zoom and quality.</p>
                   <span className="inline-block border border-zinc-500 text-zinc-400 px-4 py-2 text-xs font-bold uppercase tracking-widest group-hover:bg-[#FFE500] group-hover:text-black group-hover:border-[#FFE500] transition-all">Launch Tool →</span>
                 </div>
               </Link>
@@ -262,7 +262,7 @@ export default function BlogIndex() {
             </div>
 
             <div className="w-full h-1 bg-zinc-800 mb-12"></div>
-            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()}. All rights reserved.</p>
           </div>
         </section>
       </main>

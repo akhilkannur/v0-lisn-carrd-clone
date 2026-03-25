@@ -201,7 +201,7 @@ export default function UGCClient() {
               </p>
             </div>
 
-            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+            <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()}. All rights reserved.</p>
           </div>
         </section>
       </main>

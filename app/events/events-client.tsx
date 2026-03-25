@@ -211,7 +211,7 @@ export default function EventsClient() {
                 <a href="mailto:akhil@lisnagency.online" className="hover:text-white transition-colors">akhil@lisnagency.online</a>
               </p>
             </div>
-            <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency 2025. All rights reserved.</p>
+            <p className="text-zinc-500 text-xs md:text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()}. All rights reserved.</p>
           </div>
         </section>
       </main>

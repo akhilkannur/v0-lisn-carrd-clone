@@ -82,7 +82,7 @@ export function AmazonImageValidator() {
       {/* Visual Guide Section */}
       <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_#000000] p-6 md:p-10">
         <h3 className="text-3xl font-heading uppercase tracking-tight text-black mb-8 border-b-4 border-black pb-4">
-          Amazon.in Asset Cheat Sheet (2025)
+          Amazon.in Asset Cheat Sheet (2026)
         </h3>
         
         <div className="grid md:grid-cols-2 gap-8">
