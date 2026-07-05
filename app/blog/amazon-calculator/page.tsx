@@ -7,6 +7,17 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Amazon India Profit Calculator 2026 | FBA Fee Estimator",
   description: "Calculate your exact bank settlement for Amazon India. Updated for 2026 FBA fees, Referral fees, and GST. Optimize your margins for DTC growth.",
+  openGraph: {
+    title: "Amazon India Profit Calculator 2026 | FBA Fee Estimator",
+    description: "Calculate your exact bank settlement for Amazon India. Updated for 2026 FBA fees, Referral fees, and GST.",
+    type: "website",
+    url: "https://lisnagency.online/blog/amazon-calculator",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon India Profit Calculator 2026 | FBA Fee Estimator",
+    description: "Calculate your exact bank settlement for Amazon India. Updated for 2026 FBA fees, Referral fees, and GST.",
+  },
 }
 
 export default function AmazonCalculatorPage() {

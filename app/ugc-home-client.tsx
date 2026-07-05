@@ -71,7 +71,7 @@ export default function UGCClient() {
             <div className="flex justify-center">
               <div className="relative border-4 border-white shadow-[16px_16px_0px_0px_#FFE500] transition-transform hover:-translate-y-2 duration-300 w-full max-w-4xl h-auto">
                 <Image
-                  src="/images/screenshot-202025-12-04-2023.png"
+                  src="/images/screenshot-2025-12-04-2023.png"
                   alt="UGC Street Reaction Gallery"
                   width={1000}
                   height={600}
@@ -145,6 +145,7 @@ export default function UGCClient() {
               <h4 className="text-[#FFE500] font-bold uppercase tracking-widest mb-6 text-sm">Industry Playbooks</h4>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-[10px] md:text-xs text-zinc-500 font-mono">
                 <Link href="/playbook/kerala-market-entry" className="hover:text-white transition-colors">Kerala Market Entry</Link>
+                <Link href="/onam-ideas" className="hover:text-white transition-colors">Onam Marketing Angles</Link>
                 <Link href="/playbook/skincare" className="hover:text-white transition-colors">Skincare Marketing</Link>
                 <Link href="/playbook/coffee" className="hover:text-white transition-colors">Coffee Brands</Link>
                 <Link href="/playbook/jewellery" className="hover:text-white transition-colors">Jewellery UGC</Link>

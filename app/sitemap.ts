@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import { industryPlaybooks } from '@/lib/industry-data'
 import { blogPosts } from '@/lib/blog-data'
  
@@ -12,6 +11,7 @@ export default function sitemap() {
     { path: '/audit', priority: 0.9, changeFrequency: 'daily' },
     { path: '/blog', priority: 0.8, changeFrequency: 'daily' },
     { path: '/hooks', priority: 0.7, changeFrequency: 'monthly' },
+    { path: '/onam-ideas', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/blog/ugc-roi-calculator', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog/amazon-calculator', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog/amazon-image-validator', priority: 0.7, changeFrequency: 'monthly' },

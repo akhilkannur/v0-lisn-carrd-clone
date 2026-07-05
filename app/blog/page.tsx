@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: "https://lisnagency.online/blog",
     images: [
       {
-        url: "/images/blog-og-image.jpg", // Placeholder - will need to create this image
+        url: "/images/blog-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "LISN Agency Blog - Marketing Insights & Strategy",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DTC Marketing Insights & Strategy",
     description: "Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India.",
-    images: ["/images/blog-og-image.jpg"], // Placeholder - will need to create this image
+    images: ["/images/blog-og-image.jpg"],
   },
 }
 

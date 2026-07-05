@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://lisnagency.online",
     images: [
       {
-        url: "/images/screenshot-202025-12-04-2023.png",
+        url: "/images/screenshot-2025-12-04-2023.png",
         width: 1200,
         height: 630,
         alt: "UGC Marketing Kerala - Authentic Street Interviews",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "UGC & Street Interview Ad Agency Kerala",
     description: "Real street interviews and authentic UGC that scales DTC brands. Kerala & Bangalore specialists.",
-    images: ["/images/screenshot-202025-12-04-2023.png"],
+    images: ["/images/screenshot-2025-12-04-2023.png"],
   },
 }
 

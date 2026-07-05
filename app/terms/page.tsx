@@ -4,6 +4,17 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Terms of Service | LISN Agency",
   description: "Terms and conditions for using LISN Agency's services and website.",
+  openGraph: {
+    title: "Terms of Service | LISN Agency",
+    description: "Terms and conditions for using LISN Agency's services and website.",
+    type: "website",
+    url: "https://lisnagency.online/terms",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | LISN Agency",
+    description: "Terms and conditions for using LISN Agency's services and website.",
+  },
 }
 
 export default function TermsPage() {
@@ -13,7 +24,7 @@ export default function TermsPage() {
       <main className="min-h-screen bg-black text-white font-sans py-24 px-4">
         <div className="max-w-4xl mx-auto border-4 border-white p-8 md:p-12 bg-zinc-900 shadow-[12px_12px_0px_0px_#FFE500]">
           <h1 className="font-heading text-5xl md:text-7xl mb-12 uppercase tracking-tighter">
-            TERMS <br /> <span className="text-[#FFE500]">SERVICE</span>
+            TERMS <br /> <span className="text-[#FFE500]">OF SERVICE</span>
           </h1>
           
           <div className="prose prose-invert prose-lg max-w-none space-y-8">

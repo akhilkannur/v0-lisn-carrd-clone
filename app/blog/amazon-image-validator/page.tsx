@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://lisnagency.online/blog/amazon-image-validator",
     images: [
       {
-        url: "/images/amazon-validator-og-image.jpg", // Placeholder - will need to create this image
+        url: "/images/amazon-validator-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Amazon Image Validator - Check Your Listing Images",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amazon India Image Validator",
     description: "Ensure your product images are zoom-ready and meet Amazon's strict guidelines.",
-    images: ["/images/amazon-validator-og-image.jpg"], // Placeholder - will need to create this image
+    images: ["/images/amazon-validator-og-image.jpg"],
   },
 };
 

@@ -7,6 +7,17 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "UGC Ad ROI Calculator | Estimate Your CAC Reduction",
   description: "Calculate how much you can reduce your CAC by switching from studio ads to raw street interview UGC. Free tool for Indian DTC brands.",
+  openGraph: {
+    title: "UGC Ad ROI Calculator | Estimate Your CAC Reduction",
+    description: "Calculate how much you can reduce your CAC by switching from studio ads to raw street interview UGC. Free tool for Indian DTC brands.",
+    type: "website",
+    url: "https://lisnagency.online/blog/ugc-roi-calculator",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UGC Ad ROI Calculator | Estimate Your CAC Reduction",
+    description: "Calculate how much you can reduce your CAC by switching from studio ads to raw street interview UGC.",
+  },
 }
 
 export default function UGCROIPage() {

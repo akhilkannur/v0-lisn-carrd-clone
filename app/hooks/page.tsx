@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: "https://lisnagency.online/hooks",
     images: [
       {
-        url: "/images/hooks-og-image.jpg", // Placeholder - will need to create this image
+        url: "/images/hooks-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Viral Hook Library for Indian D2C Brands",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "50+ Viral Ad Hooks for Indian D2C Brands",
     description: "A free library of high-converting opening lines for Instagram Reels and YouTube Shorts ads.",
-    images: ["/images/hooks-og-image.jpg"], // Placeholder - will need to create this image
+    images: ["/images/hooks-og-image.jpg"],
   },
 }
 

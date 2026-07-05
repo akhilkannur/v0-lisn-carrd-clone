@@ -4,6 +4,17 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Privacy Policy | LISN Agency",
   description: "Privacy policy for LISN Agency. We respect your data and privacy.",
+  openGraph: {
+    title: "Privacy Policy | LISN Agency",
+    description: "Privacy policy for LISN Agency. We respect your data and privacy.",
+    type: "website",
+    url: "https://lisnagency.online/privacy",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | LISN Agency",
+    description: "Privacy policy for LISN Agency. We respect your data and privacy.",
+  },
 }
 
 export default function PrivacyPage() {
