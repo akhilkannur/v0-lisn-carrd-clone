@@ -21,18 +21,23 @@ const ideas: Idea[] = [
     angle: "The Spending Mandate",
     tagline: "\"Kaanam vittum Onam unnanam.\" Malayalis will spend. The question is whether they spend on you.",
     description: (
-      "There is an old Malayalam proverb: \"Kaanam vittum Onam unnanam\" — one must celebrate Onam even if it means "
-      + "selling one's property. This is not hyperbole. Onam drives a 20-30% spike in retail consumption across Kerala, "
-      + "fueled by foreign remittances (Kerala receives the highest remittance inflows of any Indian state) and government "
-      + "festive allowances. Total ad spend crosses ₹1,100 crore and grows 15-20% year on year.\n\n"
-      + "The categories: jewellery (₹7,000-8,000 crore in a single season, ≈20% of all festive ad spend), textiles "
-      + "(₹10,000 crore across organised and unorganised), electronics (₹100 crore in Kochi alone), and Bevco "
-      + "(₹826 crore in 12 days). Quick commerce platforms (Blinkit, Zepto, Instamart) are eating traditional retail's "
-      + "lunch — consumers now buy Onam groceries, gifts, and even silver jewellery via 10-minute delivery apps.\n\n"
-      + "The angle: help national FMCG, electronics, and D2C brands capture this spending by creating content that "
-      + "lives inside the Malayali consumer's decision journey — not generic festive branding."
+      "There is an old Malayalam proverb: \"Kaanam vittum Onam unnanam.\" It means you celebrate Onam even if you have to sell "
+      + "your property. The data backs it up. Remittances to Kerala hit \u20B92 lakh crore annually, which is 19.7% of India's "
+      + "total remittance inflow [3]. Per household, that is an average of \u20B92.23 lakh. Remittances now account for 23.2% of "
+      + "Kerala's Net State Domestic Product, up from 13.5% in 2018 [4].\n\n"
+      + "Here is what most brand managers miss: only 12% of Kerala households receive remittances [4]. It is concentrated. "
+      + "The top 12% have the highest disposable income in the state. But 73.3% of households now get these remittances as "
+      + "regular monthly digital transfers, meaning the spending is predictable, not lumpy [4].\n\n"
+      + "Total ad spend crosses \u20B91,100 crore and grows 15-20% year on year [1]. Jewellery alone does \u20B97,000-8,000 crore "
+      + "in a single Onam season [7]. Textiles were revised upward by the Kerala Textile and Garments Association: they now "
+      + "estimate \u20B930,000-40,000 crore in garment sales [8]. Consumer durables do \u20B95,000 crore across July-September [8]. "
+      + "Electronics does \u20B9100 crore in Kochi alone [5]. Bevco (state liquor) did \u20B9826 crore in 12 days [2]. "
+      + "Godrej Appliances saw 40% growth in washing machines and ACs during Onam 2024 [6].\n\n"
+      + "The angle: help national FMCG, electronics, and D2C brands capture this concentrated spending. The brands "
+      + "that treat Onam as a premium-tier buying moment (not a discount-clearance event) win. Kerala's middle class "
+      + "upgrades during Onam: larger TVs, front-load machines, hybrid cars, 18-carat gold."
     ),
-    whyItWorks: "Hard data makes this an easy sell to a brand's leadership. The numbers are public (ET, Hindu BusinessLine, Exchange4Media). This isn't a pitch — it's a market briefing. Every national brand already knows Kerala spends; they just don't know how to capture it without cringe.",
+    whyItWorks: "Hard data makes this an easy sell to a brand's leadership. The numbers are public (RBI, KMS, ET, Hindu BusinessLine). The insight about concentrated spend (top 12% of households) is something most generic Onam blog posts miss.",
     category: "Market Intelligence",
     icon: <TrendingUp className="w-8 h-8" />,
   },
@@ -41,21 +46,29 @@ const ideas: Idea[] = [
     angle: "The 10-Day Calendar",
     tagline: "Uthradam. Thiruvonam. Avittam. Every day has a different consumer behaviour. Your content should too.",
     description: (
-      "Onam is 10 days, but not all days are equal. The three peak days — Uthradam (eve), Thiruvonam (main), and Avittam — "
-      + "drive completely different consumer actions:\n\n"
-      + "• Uthradam (\"Uthrada Pachil\"): Last-minute shopping frenzy. Vegetable markets, textile shops, and electronics "
-      + "stores see peak footfall. Bevco did ₹137 crore in a single Uthradam day in 2025 — 9.23% higher than the previous year. "
-      + "This is urgency-driven purchasing.\n\n"
-      + "• Thiruvonam: The main day. Families gather for Sadya. The catering sector serves ₹250 crore worth of food in a single "
-      + "day. No liquor sales (Bevco closed). Content should be about togetherness, food, ritual — not commerce.\n\n"
-      + "• Avittam / Third Onam: Continued celebrations, travel return begins. Brands that run post-Onam \"extend the festive\" "
-      + "campaigns see lower CPM and higher engagement.\n\n"
-      + "Plus: the month of Chingam is considered auspicious for housewarmings, weddings, and major purchases — this extends "
-      + "the commercial window well beyond the 10-day festival.\n\n"
-      + "The angle: a day-wise content calendar for brands. Different creative for each phase — pre-Onam (urgency/demand gen), "
-      + "Thiruvonam (cultural belonging), post-Onam (extension/loyalty)."
+      "Onam is 10 days, but not all days are equal. The three peak days (Uthradam, Thiruvonam, and Avittam) "
+      + "drive completely different consumer actions. Here is what most brands get wrong: they run one post "
+      + "on Thiruvonam and call it a campaign.\n\n"
+      + "\u2022 Uthradam (\"Uthrada Pachil\"): Last-minute shopping frenzy. Vegetable markets, textile shops, and "
+      + "electronics stores see peak footfall. Bevco did \u20B9137 crore in a single Uthradam day in 2025, "
+      + "9.23% higher than the previous year [2]. Men drive this spending (Onam bonuses hit bank accounts). "
+      + "Your content should tap urgency and last-minute gifting.\n\n"
+      + "\u2022 Thiruvonam: The main day. Families gather for Sadya. The catering sector serves \u20B9250 crore in a "
+      + "single day [9]. Bevco is closed [2]. Content should be about togetherness, food, ritual. "
+      + "Women drive the decisions on this day (what to wear, what to cook, where to order from).\n\n"
+      + "\u2022 Avittam / Third Onam: Continued celebrations, travel return begins. Brands that run post-Onam "
+      + "\"extend the festive\" campaigns see lower CPM and higher engagement because fewer brands are "
+      + "competing. This is the most overlooked day.\n\n"
+      + "Plus: the month of Chingam is considered lucky for housewarmings, weddings, and major purchases [28]. "
+      + "Onam 2025 had an unusually high number of weddings in Chingam, which boosted demand across "
+      + "electronics, textiles, and gold [5]. This extends the buying window well beyond the 10-day festival.\n\n"
+      + "There is also a weather angle most people ignore. \"Atham Veluthal Onam Karukkum\" is a Malayalam "
+      + "proverb: if Atham day is clear, expect rain during Onam [8]. Rains in 2025 hurt AC sales (down 30-40%) "
+      + "and brick-and-mortar footfall [10]. Digital content is weather-proof in a way physical retail isn't.\n\n"
+      + "The angle: a day-wise content calendar for brands. Different creative for each phase. Pre-Onam "
+      + "(urgency and demand gen), Thiruvonam (cultural belonging), post-Onam (extension and loyalty)."
     ),
-    whyItWorks: "Most national brands run one Onam post on the main day and call it done. This angle gives them a 10-day content architecture that mirrors actual consumer behaviour. It's a strategic upgrade, not a tactical add-on. Brand managers can present this as a complete campaign framework.",
+    whyItWorks: "Most national brands run one Onam post on the main day and call it done. This gives them a 10-day content plan that mirrors actual consumer behaviour, recognises gender-differentiated spending patterns, and accounts for weather risk.",
     category: "Content Strategy",
     icon: <Sparkles className="w-8 h-8" />,
   },
@@ -64,20 +77,25 @@ const ideas: Idea[] = [
     angle: "The Long-Form Advantage",
     tagline: "Malayalis don't just scroll. They watch 12-minute reviews during Onam. This changes how you brief content.",
     description: (
-      "The most under-appreciated fact for national brands entering Kerala: the Malayalam internet over-indexes heavily on "
-      + "long-form video. YouTube vlog channels, podcast-style interviews, and 8-15 minute deep-dive reviews drive a "
-      + "disproportionate share of consideration and conversion. Reels work for awareness, but the purchase decision happens "
-      + "in long-form.\n\n"
-      + "During Onam, screen time spikes across devices (families at home, office holidays, extended breaks). This is when "
-      + "Malayali viewers actually watch content — not just skim it. Food creators, beauty reviewers, tech unboxers, and "
-      + "lifestyle vloggers all see their highest engagement of the year.\n\n"
-      + "For D2C brands: a single 12-minute product review in Malayalam during Onam week typically outperforms a swarm "
-      + "of 30-second Reels for consideration metrics. The behavioural read: Kerala's audience has high media literacy, "
-      + "strong cultural preference for considered reviews, and the bandwidth (literal — they're on holiday) to engage.\n\n"
-      + "The angle: creators are the bridge. Instead of brands producing their own Onam ads, fund 3-4 Malayalam YouTube "
-      + "creators to make Onam-themed review/content pieces. The format does the targeting work for you."
+      "The most under-appreciated fact for national brands entering Kerala: the Malayalam internet runs on "
+      + "long-form video. YouTube channels like Karikku (sketch comedy, massive following), Sujith Bhakthan's "
+      + "Tech Travel Eat (2.19M subs in 4 years) [25], and Jayaraj G Nath (tech journalism in Malayalam) "
+      + "drive serious viewership and serious purchases. These are not 30-second Reels. These are 8-15 minute "
+      + "deep dives that people actually watch.\n\n"
+      + "During Onam, screen time spikes because families are at home. Malayalam audiences over-index on "
+      + "long-form YouTube for consideration and conversion, while Reels work for awareness [26].\n\n"
+      + "Croma proved this works. They ran an \"Electro Onam Sale\" campaign with two Malayalam tech creators: "
+      + "Gadgets One (1.5M subs) and ADOPIX (850K subs). Both posted YouTube Shorts showcasing Onam tech "
+      + "deals. Each got 100K+ reach. But the real result: Croma stores reported a noticeable increase in "
+      + "footfall during the sale period [16].\n\n"
+      + "For D2C brands: a single 12-minute product review in Malayalam during Onam week beats a bunch "
+      + "of 30-second Reels for consideration metrics [26]. The reason: Malayali audiences have high media literacy. "
+      + "They prefer in-depth reviews. And they have the time (they are on holiday). National D2C brands "
+      + "that ship the same Reels-only brief into Malayalam creator sets under-perform [26].\n\n"
+      + "The angle: fund 3-4 Malayalam YouTube creators to make Onam-themed review or content pieces. "
+      + "The format does the targeting work for you. Pair it with short-form for awareness."
     ),
-    whyItWorks: "This counter-programmes the standard Reels-only brief that most national agencies default to. It positions Lisn as someone who actually understands digital behaviour in Kerala, not someone who just speaks Malayalam. The insight is specific, defensible, and backed by platform data.",
+    whyItWorks: "This breaks from the standard Reels-only brief that most national agencies default to. It positions Lisn as someone who understands how the Malayalam internet works. The Croma case study proves this is not theory. The long-form insight is backed by platform-level data on Malayalam content consumption [26].",
     category: "Creator Strategy",
     icon: <Target className="w-8 h-8" />,
   },
@@ -88,16 +106,24 @@ const ideas: Idea[] = [
     description: (
       "The most common mistake: a marketing manager in Mumbai or Gurgaon briefs a creative team to \"do something for Onam.\" "
       + "The result is a graphic with a Kathakali face, a generic 'Happy Onam' line, and a product photoshopped next to a "
-      + "pookalam. It gets 47 likes. The brand feels good about 'showing up.' The Malayali audience scrolls past.\n\n"
-      + "This isn't a diversity checkbox problem. It's a authenticity problem. Kerala's audiences are among India's most "
-      + "media-literate — they can smell a translated brief from a distance. Dialect matters. Cultural context matters. "
-      + "The difference between a post that says \"Onam festival is harvest festival we celebrate\" (translated English) "
-      + "vs. \"Ente Chingam month celebration begin cheythu\" (how a Malayali actually talks) is the difference between "
-      + "being ignored and being shared.\n\n"
-      + "The angle: audit the brand's existing Onam content, show them the gap, and produce a single replacement piece "
-      + "that actually sounds native. One piece of proof is worth a hundred proposals."
+      + "pookalam. It gets 47 likes. The Malayali audience scrolls past.\n\n"
+      + "Here are two specific things that make content feel fake:\n\n"
+      + "1. Using formal, written Malayalam instead of the natural Manglish mix that people actually speak. "
+      + "A post that reads \"Onam festival is harvest festival we celebrate\" (translated from English) vs. "
+      + "\"Ente Chingam month celebration begin cheythu\" (natural Manglish) is the difference between being ignored "
+      + "and being shared.\n\n"
+      + "2. Ignoring that Kerala has the highest literacy rate in India at 96.2%. Malayalis consume more news, "
+      + "more YouTube, and more OTT than most other regional language audiences. They notice when a 'Kerala house' "
+      + "in your ad has the wrong architecture. They spot a Madurai accent pretending to be Malayalam in seconds.\n\n"
+      + "The fix is not 'hire a Malayali translator.' The fix is to create content that references real, specific "
+      + "Onam details: the exact price of banana chips this year (\u20B9480/kg, up from \u20B9320 last year because "
+      + "coconut oil went from \u20B9320 to \u20B9382) [11][12], the fact that marigold prices doubled because of crop damage "
+      + "in Gundlupet [13], or that Volkswagen launched black-edition cars specifically for Kerala because "
+      + "Malayalis prefer black cars more than any other regional market [19][20].\n\n"
+      + "The angle: audit the brand's existing Onam content. Show them the gap. Then produce a single replacement "
+      + "piece that references current-year specifics. One piece of proof is worth a hundred proposals."
     ),
-    whyItWorks: "Every brand manager has seen their Onam post flop. Naming this openly makes them feel understood, not attacked. The '47 likes' detail is memorable and shareable internally. Low commitment entry — just an audit of their last Onam post — builds trust before any retainer conversation.",
+    whyItWorks: "Every brand manager has seen their Onam post flop. Naming this openly makes them feel understood, not attacked. The specific cultural details (chips prices, car colour preferences) show genuine knowledge, not a Google search. Low commitment entry point: just an audit of their last Onam post.",
     category: "Positioning",
     icon: <Lightbulb className="w-8 h-8" />,
   },
@@ -106,21 +132,33 @@ const ideas: Idea[] = [
     angle: "The Diaspora Double",
     tagline: "4M Malayalis live outside Kerala. Onam is the one week they all become your target audience at once.",
     description: (
-      "The Malayali diaspora in Bangalore alone is estimated at 1.5M+. Add Mumbai, Delhi, Dubai (3.5M Malayalis in the GCC), "
-      + "and the US/UK/Canada, and you have a population bigger than Kerala's own major cities spending Onam away from home.\n\n"
-      + "This group over-indexes on:\n"
-      + "• Nostalgia-driven content (they miss home — Onam content hits harder)\n"
-      + "• Online ordering of Sadya kits, banana chips, traditional wear\n"
-      + "• Watching Malayalam YouTube/Instagram to \"feel close to home\"\n"
-      + "• Higher disposable income (diaspora professionals)\n\n"
-      + "National brands like Zomato have already cracked this — their 2024 Onam campaign showed a young Malayali "
-      + "professional traveling home, capturing regional nuances, with Zomato seamlessly delivering the feast. "
-      + "Similarly, Linen Club's \"Ona Vakdhanam\" campaign leveraged nostalgia and the promise-keeping theme to "
-      + "connect with Malayalis globally.\n\n"
-      + "The angle: shoot in Malayali pockets of Bangalore/Mumbai — not in Kerala. The content then serves dual purpose: "
-      + "it reaches the diaspora in those cities AND feels aspirational to consumers back in Kerala. One shoot, two audiences."
+      "The Malayali diaspora in Bangalore alone is estimated at 1.5M+. Add Mumbai, Delhi, Dubai (3.5M Malayalis "
+      + "in the GCC), and the US/UK/Canada. That is a population bigger than Kerala's own major cities, all "
+      + "spending Onam away from home.\n\n"
+      + "Here is the non-obvious part: the diaspora is changing. The Kerala Migration Survey 2023 found that "
+      + "GCC migration dropped from 89.2% to 80.5% of total outbound [4]. The US, UK, Canada, Australia share "
+      + "is growing because of student migration and skilled tech workers. These are higher-income earners. "
+      + "Per capita remittances rose to \u20B961,118 [4]. The average remittance per household more than doubled "
+      + "from \u20B996,185 in 2018 to \u20B92,23,729 in 2023 [4]. And for the first time, Kerala recorded outward "
+      + "remittances of \u20B943,378 crore (nearly 20% of its inflow) [4].\n\n"
+      + "This group responds to:\n"
+      + "\u2022 Nostalgia-driven content (they miss home, Onam content hits harder)\n"
+      + "\u2022 Online ordering of Sadya kits, banana chips, traditional wear\n"
+      + "\u2022 Watching Malayalam YouTube and Instagram to feel close to home\n"
+      + "\u2022 Higher disposable income (diaspora professionals in tech/finance)\n\n"
+      + "The practical takeaway: any Malayalam-language content you produce for Kerala will also reach this "
+      + "Western diaspora. Students in the UK, Canada, and Australia actively seek out Malayalam social media "
+      + "during Onam because it is their strongest connection to home. That makes Malayalam-language Onam "
+      + "campaigns effectively multi-market by default — same production cost, larger addressable audience.\n\n"
+      + "National brands like Zomato already figured this out. Their 2024 campaign showed a young Malayali "
+      + "professional traveling home, with Zomato delivering the sadya [17]. Linen Club's \"Ona Vakdhanam\" "
+      + "campaign used the promise-keeping theme to connect with Malayalis globally [18]. Even CarDekho launched "
+      + "an \"Onam Auto Fest\" microsite targeting diaspora Malayalis shopping for cars via mobile [22][27].\n\n"
+      + "The angle: shoot in Malayali pockets of Bangalore or Mumbai, not in Kerala. The content serves dual "
+      + "purpose: it reaches the diaspora in those cities AND feels aspirational to consumers back in Kerala. "
+      + "One shoot, two audiences."
     ),
-    whyItWorks: "This massively expands the addressable brands list — you don't need to be 'entering the Kerala market' to use this. Any brand with Malayali customers in metros (D2C, food delivery, fintech, co-working, real estate) qualifies. The 'shoot in your city' angle also removes the logistics objection ('we'd have to fly a crew to Kochi').",
+    whyItWorks: "This expands the list of brands who could use this. You don't need to be 'entering the Kerala market.' Any brand with Malayali customers in metros (D2C, food delivery, fintech, co-working, real estate) qualifies. The 'shoot in your city' angle removes the logistics objection. The migration shift data (GCC declining, West growing) is new to most brand teams.",
     category: "Audience",
     icon: <MapPin className="w-8 h-8" />,
   },
@@ -129,23 +167,63 @@ const ideas: Idea[] = [
     angle: "The Quick Commerce Shift",
     tagline: "Onam used to mean crowded markets. Now it means 10-minute delivery. Your content strategy needs to match the new retail reality.",
     description: (
-      "This is the most important structural shift in the 2025 Onam market: quick commerce is rewriting retail. "
-      + "Blinkit, Zepto, and Swiggy Instamart hit 4M+ daily orders nationally in March 2025 — more than double "
-      + "YoY. During Raksha Bandhan alone, Zepto sold 820 rakhis per minute at peak.\n\n"
-      + "In Kerala, traditional vegetable and textile merchants are flagging a \"significant dip\" as shoppers move online. "
-      + "Malls report 80%+ conversion rates while traditional Broadway/MG Road shops see stagnant or declining footfall. "
-      + "Buyers come with Instagram-sourced designs that traditional shops can't stock.\n\n"
-      + "For brands selling packaged food, home care, personal care, electronics, or gifts: your Onam sale now happens "
-      + "on a mobile screen, not a store shelf. The creative that wins isn't a billboard — it's a Reel that gets someone "
-      + "to open Blinkit and search your brand. Social proof, unboxing, and 'what's in my Onam hamper' content is the new "
-      + "point-of-purchase display.\n\n"
-      + "The angle: create shoppable content specifically designed for the quick-commerce decision window. Short, punchy, "
-      + "product-first — optimised for the 14-second window between 'I need this' and 'add to cart.'"
+      "This is the biggest structural shift in the 2025 Onam market: quick commerce is rewriting retail, "
+      + "and the traditional supply chain is struggling to adapt.\n\n"
+      + "Blinkit, Zepto, and Swiggy Instamart hit 4M+ daily orders nationally in March 2025, more than double "
+      + "YoY [23]. During Raksha Bandhan, Zepto sold 820 rakhis per minute at peak [24]. For Onam, quick commerce "
+      + "platforms went beyond groceries: they sold silver rakhis, electronics, traditional wear, and "
+      + "Onam gift hampers [24].\n\n"
+      + "In Kerala, traditional merchants are feeling the squeeze. Vegetable and textile sellers in Kochi "
+      + "flagged a \"significant dip\" as shoppers moved online [14]. The Kerala Merchants Chamber of Commerce "
+      + "confirmed that conventional shops are struggling while malls report 80%+ conversion rates [5]. "
+      + "Malls have adapted by turning spaces into festive zones with Mahabali mascots and cultural performances [5]. "
+      + "Traditional Broadway and MG Road shops have not [5].\n\n"
+      + "Buyers now come with Instagram-sourced designs that traditional textile shops cannot stock [14]. "
+      + "This is a content-to-commerce pipeline that works only if your brand is discoverable on social media. "
+      + "A Kudumbashree group sold 5,400 Onam gift hampers at \u20B9799 each via a mobile app (PocketMart) in two weeks [15].\n\n"
+      + "And there is a pricing tension worth watching: the 2025 GST reform announcement actually hurt "
+      + "Onam sales in the short term. Consumers deferred TV purchases (down 8%), AC purchases (down 30-40%), "
+      + "expecting price drops [10]. This created a gap that brands with content strategies could exploit "
+      + "by explaining why Onam prices and extended warranty were still the better deal.\n\n"
+      + "The angle: create shoppable content designed for the quick-commerce decision window. Short, punchy, "
+      + "product-first. And if you are a D2C brand, your entire Onam strategy should assume the transaction "
+      + "happens on a mobile screen, not a store shelf."
     ),
-    whyItWorks: "This is where the market is going, not where it's been. Most Onam content strategies still assume a retail/print/TV funnel. This angle positions Lisn as forward-looking. D2C brands especially need this — their entire business model depends on being discovered in the quick-commerce search, not on a shelf.",
+    whyItWorks: "This is where the market is going, not where it's been. Most Onam content strategies still assume a retail, print, or TV funnel. The Kudumbashree example proves that even non-tech groups are using mobile commerce. The GST tension angle gives brands a specific conversation starter with consumers.",
     category: "Retail Strategy",
     icon: <ShoppingCart className="w-8 h-8" />,
   },
+]
+
+const citations = [
+  { id: 1, source: "Exchange4Media", title: "Onam 2025 ad spends in Kerala to cross Rs 1,100 crore", date: "Aug 2025" },
+  { id: 2, source: "New Indian Express", title: "Kerala's Bevco sees 6.38% rise in Onam sales, earning Rs 826 crore", date: "Sep 2025" },
+  { id: 3, source: "Onmanorama", title: "Kerala sees record-breaking inflow from NRIs", date: "May 2025" },
+  { id: 4, source: "The Wire / RBI Bulletin / Kerala Migration Survey 2023", title: "Gulf Dreams to Global Pathways", date: "Mar 2025" },
+  { id: 5, source: "Times of India", title: "Brisk Onam business: Kochi traders eyeing a windfall", date: "Sep 2025" },
+  { id: 6, source: "Hindu BusinessLine", title: "Consumer durables players see strong double-digit growth during Onam", date: "Sep 2024" },
+  { id: 7, source: "Mathrubhumi", title: "Gold sales set to peak during Onam; expected to hit Rs 7,000-8,000 crore", date: "Sep 2024" },
+  { id: 8, source: "Hindu BusinessLine", title: "Rains play spoilsport on Onam festive mood", date: "Aug 2025" },
+  { id: 9, source: "Mathrubhumi", title: "Onam Shopping Spree: Malayalis spend crores on clothes, flowers and food", date: "Aug 2023" },
+  { id: 10, source: "The Hindu", title: "GST irony plays out in Onam market as consumers postpone purchase plans", date: "Sep 2025" },
+  { id: 11, source: "Mathrubhumi", title: "Onam specials hit markets: Upperi and Sharkaravaratti in high demand", date: "Aug 2025" },
+  { id: 12, source: "Hindu BusinessLine", title: "Sales of chips hit in Kerala as Nendran banana turns cheap and coconut oil pricey", date: "Aug 2025" },
+  { id: 13, source: "Onmanorama", title: "Soaring flower prices in Karnataka push up pookalam costs in Kerala this Onam", date: "Aug 2025" },
+  { id: 14, source: "The Hindu", title: "Traditional players in Onam market struggle to find their feet as e-commerce gains currency", date: "Aug 2025" },
+  { id: 15, source: "Times of India", title: "Onam gift hampers: Kudumbashree entrepreneurs pocket 48L", date: "Aug 2025" },
+  { id: 16, source: "Regional Influencers", title: "Case Study: Leveraging Regional Influencer Marketing for Croma's Electro Onam Sale", date: "Oct 2023" },
+  { id: 17, source: "Campaign India", title: "Brands ride Onam wave with creative festive flair", date: "Sep 2024" },
+  { id: 18, source: "Indian Textile Journal / ImagesBOF", title: "Linen Club launches 'Ona Vakdhanam' campaign for Onam 2024", date: "Sep 2024" },
+  { id: 19, source: "Onmanorama", title: "White goods or vehicles, why Kerala's Onam season is crucial for industry giants", date: "Sep 2024" },
+  { id: 20, source: "ET Auto", title: "Volkswagen delivers 101 cars in Kerala on Chingam, Malayalam New Year", date: "Aug 2024" },
+  { id: 21, source: "Economic Times", title: "Discounts, offers drive car, electronics sales in Onam, Ganesh Chaturthi", date: "Sep 2024" },
+  { id: 22, source: "Business News This Week", title: "CarDekho Launches Onam Auto Fest 2025 in Kerala", date: "Aug 2025" },
+  { id: 23, source: "Moneycontrol", title: "Blinkit, Zepto and Swiggy Instamart scale to over 4 million daily orders", date: "May 2025" },
+  { id: 24, source: "Business Standard", title: "Raksha Bandhan rush: Quick commerce platforms face demand overload", date: "Aug 2025" },
+  { id: 25, source: "The Reelstars", title: "Spotlight On Kerala Influencers Creating Malayalam Content This Onam Season", date: "Sep 2024" },
+  { id: 26, source: "Zapplr Media", title: "Malayalam Influencer Marketing 2026 Guide", date: "May 2026" },
+  { id: 27, source: "CarDekho", title: "Onam Auto Fest 2025 press release", date: "Aug 2025" },
+  { id: 28, source: "Onmanorama", title: "Onam shoppers swarm stores in Kerala even as proposed GST rate rejig promises 'Diwali gift'", date: "Aug 2025" },
 ]
 
 const categories = ["All", ...Array.from(new Set(ideas.map((i) => i.category)))]
@@ -175,7 +253,7 @@ export default function IdeasClient() {
               <span className="text-[#FFE500]">ANGLES</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
-              Onam drives ₹1,100+ crore in ad spend and a 20-30% retail consumption spike.
+              Onam drives \u20B91,100+ crore in ad spend and a 20-30% retail consumption spike.
               Here are six research-backed angles for brands that want a real share of it.
             </p>
             <p className="text-zinc-500 font-mono text-sm">
@@ -253,6 +331,29 @@ export default function IdeasClient() {
           </div>
         </section>
 
+        {/* Sources Section */}
+        <section className="bg-zinc-900 border-t-4 border-zinc-700 px-4 py-16">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="font-heading text-3xl md:text-5xl mb-10 uppercase tracking-tight text-white">
+              SOURCES
+            </h3>
+            <p className="text-zinc-500 font-mono text-xs mb-8 uppercase tracking-wider">
+              Every data point on this page is sourced. Here is the full list.
+            </p>
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-3">
+              {citations.map((c) => (
+                <div key={c.id} className="flex gap-3 text-sm">
+                  <span className="text-[#FFE500] font-mono shrink-0 mt-0.5">[{c.id}]</span>
+                  <div>
+                    <span className="text-gray-300">{c.title}</span>
+                    <span className="text-zinc-600 block font-mono text-xs">{c.source} &middot; {c.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Footer */}
         <section className="bg-white text-black px-4 py-16 text-center border-t-4 border-black">
           <div className="max-w-3xl mx-auto">
@@ -260,7 +361,7 @@ export default function IdeasClient() {
               Not sure which angle fits?
             </h3>
             <p className="text-xl font-bold mb-4">
-              Tell us about your brand. We'll pick the right Onam angle and brief it out in 10 minutes.
+              Tell us about your brand. We will pick the right Onam angle and brief it out in 10 minutes.
             </p>
             <p className="text-zinc-500 font-mono text-sm mb-8">
               No pitch. No obligation. Just strategy.
@@ -293,8 +394,18 @@ export default function IdeasClient() {
             </div>
             <div className="text-white mb-16">
               <p className="mb-4 text-2xl font-bold font-mono">
-                <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a> /{" "}
-                <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
+                <span className="inline-flex items-center gap-2">
+                  <a href="https://wa.me/919747832393" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFE500] transition-colors">
+                    <MessageSquare className="w-4 h-4" />
+                  </a>
+                  <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a>
+                </span> /{" "}
+                <span className="inline-flex items-center gap-2">
+                  <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFE500] transition-colors">
+                    <MessageSquare className="w-4 h-4" />
+                  </a>
+                  <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
+                </span>
               </p>
               <p className="text-2xl font-bold font-mono text-[#FFE500]">
                 <a href="mailto:akhil@lisnagency.online" className="hover:text-white transition-colors">akhil@lisnagency.online</a>

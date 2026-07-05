@@ -205,7 +205,18 @@ export default function EventsClient() {
             </div>
             <div className="text-white mb-10 md:mb-16">
               <p className="mb-2 md:mb-4 text-lg md:text-2xl font-bold font-mono">
-                <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a> / <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
+                <span className="inline-flex items-center gap-2">
+                  <a href="https://wa.me/919747832393" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFE500] transition-colors">
+                    <MessageSquare className="w-4 h-4" />
+                  </a>
+                  <a href="tel:+919747832393" className="hover:text-[#FFE500] transition-colors">9747832393</a>
+                </span> /{" "}
+                <span className="inline-flex items-center gap-2">
+                  <a href="https://wa.me/918893317488" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFE500] transition-colors">
+                    <MessageSquare className="w-4 h-4" />
+                  </a>
+                  <a href="tel:+918893317488" className="hover:text-[#FFE500] transition-colors">8893317488</a>
+                </span>
               </p>
               <p className="text-lg md:text-2xl font-bold font-mono text-[#FFE500]">
                 <a href="mailto:akhil@lisnagency.online" className="hover:text-white transition-colors">akhil@lisnagency.online</a>
