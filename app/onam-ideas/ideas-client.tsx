@@ -9,7 +9,7 @@ type Idea = {
   id: string
   angle: string
   tagline: string
-  description: string
+  description: React.ReactNode
   whyItWorks: string
   category: string
   icon: React.ReactNode
@@ -21,23 +21,18 @@ const ideas: Idea[] = [
     angle: "The Spending Mandate",
     tagline: "\"Kaanam vittum Onam unnanam.\" Malayalis will spend. The question is whether they spend on you.",
     description: (
-      "There is an old Malayalam proverb: \"Kaanam vittum Onam unnanam.\" It means you celebrate Onam even if you have to sell "
-      + "your property. The data backs it up. Remittances to Kerala hit \u20B92 lakh crore annually, which is 19.7% of India's "
-      + "total remittance inflow [3]. Per household, that is an average of \u20B92.23 lakh. Remittances now account for 23.2% of "
-      + "Kerala's Net State Domestic Product, up from 13.5% in 2018 [4].\n\n"
-      + "Here is what most brand managers miss: only 12% of Kerala households receive remittances [4]. It is concentrated. "
-      + "The top 12% have the highest disposable income in the state. But 73.3% of households now get these remittances as "
-      + "regular monthly digital transfers, meaning the spending is predictable, not lumpy [4].\n\n"
-      + "Total ad spend crosses \u20B91,100 crore and grows 15-20% year on year [1]. Jewellery alone does \u20B97,000-8,000 crore "
-      + "in a single Onam season [7]. Textiles were revised upward by the Kerala Textile and Garments Association: they now "
-      + "estimate \u20B930,000-40,000 crore in garment sales [8]. Consumer durables do \u20B95,000 crore across July-September [8]. "
-      + "Electronics does \u20B9100 crore in Kochi alone [5]. Bevco (state liquor) did \u20B9826 crore in 12 days [2]. "
-      + "Godrej Appliances saw 40% growth in washing machines and ACs during Onam 2024 [6].\n\n"
-      + "The angle: help national FMCG, electronics, and D2C brands capture this concentrated spending. The brands "
-      + "that treat Onam as a premium-tier buying moment (not a discount-clearance event) win. Kerala's middle class "
-      + "upgrades during Onam: larger TVs, front-load machines, hybrid cars, 18-carat gold."
+      <>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE PROVERB</strong></p>
+        <p className="mb-3">There is an old Malayalam proverb: "Kaanam vittum Onam unnanam." It means you celebrate Onam even if you have to sell your property. The data backs it up. Remittances to Kerala hit ₹2 lakh crore annually, which is 19.7% of India's total remittance inflow [3]. Per household, that is an average of ₹2.23 lakh. Remittances now account for 23.2% of Kerala's Net State Domestic Product, up from 13.5% in 2018 [4].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE CONCENTRATION</strong></p>
+        <p className="mb-3">Here is what most brand managers miss: only 12% of Kerala households receive remittances [4]. It is concentrated. The top 12% have the highest disposable income in the state. But 73.3% of households now get these remittances as regular monthly digital transfers, meaning the spending is predictable, not lumpy [4].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE AD SPEND</strong></p>
+        <p className="mb-3">Total ad spend crosses ₹1,100 crore and grows 15-20% year on year [1]. Jewellery alone does ₹7,000-8,000 crore in a single Onam season [7]. Textiles were revised upward by the Kerala Textile and Garments Association: they now estimate ₹30,000-40,000 crore in garment sales [8]. Consumer durables do ₹5,000 crore across July-September [8]. Electronics does ₹100 crore in Kochi alone [5]. Bevco (state liquor) did ₹826 crore in 12 days [2]. Godrej Appliances saw 40% growth in washing machines and ACs during Onam 2024 [6].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">If you are an FMCG, electronics, or D2C brand: this concentrated spending is yours to capture. The brands that treat Onam as a premium-tier buying moment (not a discount-clearance event) win. Kerala's middle class upgrades during Onam: larger TVs, front-load machines, hybrid cars, 18-carat gold.</p>
+      </>
     ),
-    whyItWorks: "Hard data makes this an easy sell to a brand's leadership. The numbers are public (RBI, KMS, ET, Hindu BusinessLine). The insight about concentrated spend (top 12% of households) is something most generic Onam blog posts miss.",
+    whyItWorks: "Hard data makes this easy to take to your leadership. The numbers are public (RBI, KMS, ET, Hindu BusinessLine). The insight about concentrated spend (top 12% of households) is something most generic Onam blog posts miss.",
     category: "Market Intelligence",
     icon: <TrendingUp className="w-8 h-8" />,
   },
@@ -46,29 +41,23 @@ const ideas: Idea[] = [
     angle: "The 10-Day Calendar",
     tagline: "Uthradam. Thiruvonam. Avittam. Every day has a different consumer behaviour. Your content should too.",
     description: (
-      "Onam is 10 days, but not all days are equal. The three peak days (Uthradam, Thiruvonam, and Avittam) "
-      + "drive completely different consumer actions. Here is what most brands get wrong: they run one post "
-      + "on Thiruvonam and call it a campaign.\n\n"
-      + "\u2022 Uthradam (\"Uthrada Pachil\"): Last-minute shopping frenzy. Vegetable markets, textile shops, and "
-      + "electronics stores see peak footfall. Bevco did \u20B9137 crore in a single Uthradam day in 2025, "
-      + "9.23% higher than the previous year [2]. Men drive this spending (Onam bonuses hit bank accounts). "
-      + "Your content should tap urgency and last-minute gifting.\n\n"
-      + "\u2022 Thiruvonam: The main day. Families gather for Sadya. The catering sector serves \u20B9250 crore in a "
-      + "single day [9]. Bevco is closed [2]. Content should be about togetherness, food, ritual. "
-      + "Women drive the decisions on this day (what to wear, what to cook, where to order from).\n\n"
-      + "\u2022 Avittam / Third Onam: Continued celebrations, travel return begins. Brands that run post-Onam "
-      + "\"extend the festive\" campaigns see lower CPM and higher engagement because fewer brands are "
-      + "competing. This is the most overlooked day.\n\n"
-      + "Plus: the month of Chingam is considered lucky for housewarmings, weddings, and major purchases [28]. "
-      + "Onam 2025 had an unusually high number of weddings in Chingam, which boosted demand across "
-      + "electronics, textiles, and gold [5]. This extends the buying window well beyond the 10-day festival.\n\n"
-      + "There is also a weather angle most people ignore. \"Atham Veluthal Onam Karukkum\" is a Malayalam "
-      + "proverb: if Atham day is clear, expect rain during Onam [8]. Rains in 2025 hurt AC sales (down 30-40%) "
-      + "and brick-and-mortar footfall [10]. Digital content is weather-proof in a way physical retail isn't.\n\n"
-      + "The angle: a day-wise content calendar for brands. Different creative for each phase. Pre-Onam "
-      + "(urgency and demand gen), Thiruvonam (cultural belonging), post-Onam (extension and loyalty)."
+      <>
+        <p className="mb-3">Onam is 10 days, but not all days are equal. The three peak days (Uthradam, Thiruvonam, and Avittam) drive completely different consumer actions. Here is what most brands get wrong: they run one post on Thiruvonam and call it a campaign.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">UTHIRADAM</strong></p>
+        <p className="mb-3">Last-minute shopping frenzy. Vegetable markets, textile shops, and electronics stores see peak footfall. Bevco did ₹137 crore in a single Uthradam day in 2025, 9.23% higher than the previous year [2]. Men drive this spending (Onam bonuses hit bank accounts). Content should tap urgency and last-minute gifting.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THIRUVONAM</strong></p>
+        <p className="mb-3">The main day. Families gather for Sadya. The catering sector serves ₹250 crore in a single day [9]. Bevco is closed [2]. Content should be about togetherness, food, ritual. Women drive the decisions on this day (what to wear, what to cook, where to order from).</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">AVITTAM</strong></p>
+        <p className="mb-3">Continued celebrations, travel return begins. Brands that run post-Onam "extend the festive" campaigns see lower CPM and higher engagement because fewer brands are competing. This is the most overlooked day.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">EXTENDED WINDOW</strong></p>
+        <p className="mb-3">The month of Chingam is considered lucky for housewarmings, weddings, and major purchases [28]. Onam 2025 had an unusually high number of weddings in Chingam, which boosted demand across electronics, textiles, and gold [5]. This extends the buying window well beyond the 10-day festival.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">WEATHER RISK</strong></p>
+        <p className="mb-3">There is also a weather angle most people ignore. "Atham Veluthal Onam Karukkum" is a Malayalam proverb: if Atham day is clear, expect rain during Onam [8]. Rains in 2025 hurt AC sales (down 30-40%) and brick-and-mortar footfall [10]. Digital content is weather-proof in a way physical retail isn't.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">Build a day-wise content calendar. Different creative for each phase. Pre-Onam (urgency and demand gen), Thiruvonam (cultural belonging), post-Onam (extension and loyalty).</p>
+      </>
     ),
-    whyItWorks: "Most national brands run one Onam post on the main day and call it done. This gives them a 10-day content plan that mirrors actual consumer behaviour, recognises gender-differentiated spending patterns, and accounts for weather risk.",
+    whyItWorks: "Most brands run one Onam post on the main day and call it done. This gives you a 10-day content plan that mirrors actual consumer behaviour, recognises gender-differentiated spending patterns, and accounts for weather risk.",
     category: "Content Strategy",
     icon: <Sparkles className="w-8 h-8" />,
   },
@@ -77,25 +66,19 @@ const ideas: Idea[] = [
     angle: "The Long-Form Advantage",
     tagline: "Malayalis don't just scroll. They watch 12-minute reviews during Onam. This changes how you brief content.",
     description: (
-      "The most under-appreciated fact for national brands entering Kerala: the Malayalam internet runs on "
-      + "long-form video. YouTube channels like Karikku (sketch comedy, massive following), Sujith Bhakthan's "
-      + "Tech Travel Eat (2.19M subs in 4 years) [25], and Jayaraj G Nath (tech journalism in Malayalam) "
-      + "drive serious viewership and serious purchases. These are not 30-second Reels. These are 8-15 minute "
-      + "deep dives that people actually watch.\n\n"
-      + "During Onam, screen time spikes because families are at home. Malayalam audiences over-index on "
-      + "long-form YouTube for consideration and conversion, while Reels work for awareness [26].\n\n"
-      + "Croma proved this works. They ran an \"Electro Onam Sale\" campaign with two Malayalam tech creators: "
-      + "Gadgets One (1.5M subs) and ADOPIX (850K subs). Both posted YouTube Shorts showcasing Onam tech "
-      + "deals. Each got 100K+ reach. But the real result: Croma stores reported a noticeable increase in "
-      + "footfall during the sale period [16].\n\n"
-      + "For D2C brands: a single 12-minute product review in Malayalam during Onam week beats a bunch "
-      + "of 30-second Reels for consideration metrics [26]. The reason: Malayali audiences have high media literacy. "
-      + "They prefer in-depth reviews. And they have the time (they are on holiday). National D2C brands "
-      + "that ship the same Reels-only brief into Malayalam creator sets under-perform [26].\n\n"
-      + "The angle: fund 3-4 Malayalam YouTube creators to make Onam-themed review or content pieces. "
-      + "The format does the targeting work for you. Pair it with short-form for awareness."
+      <>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE PLATFORM</strong></p>
+        <p className="mb-3">The most under-appreciated fact for national brands entering Kerala: the Malayalam internet runs on long-form video. YouTube channels like Karikku, Sujith Bhakthan's Tech Travel Eat (2.19M subs in 4 years) [25], and Jayaraj G Nath (tech journalism in Malayalam) drive serious viewership and serious purchases. These are not 30-second Reels. These are 8-15 minute deep dives that people actually watch.</p>
+        <p className="mb-3">During Onam, screen time spikes because families are at home. Malayalam audiences over-index on long-form YouTube for consideration and conversion, while Reels work for awareness [26].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE CASE STUDY</strong></p>
+        <p className="mb-3">Croma proved this works. They ran an "Electro Onam Sale" campaign with two Malayalam tech creators: Gadgets One (1.5M subs) and ADOPIX (850K subs). Both posted YouTube Shorts showcasing Onam tech deals. Each got 100K+ reach. But the real result: Croma stores reported a noticeable increase in footfall during the sale period [16].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE D2C INSIGHT</strong></p>
+        <p className="mb-3">A single 12-minute product review in Malayalam during Onam week beats a bunch of 30-second Reels for consideration metrics [26]. The reason: Malayali audiences have high media literacy. They prefer in-depth reviews. And they have the time (they are on holiday). National D2C brands that ship the same Reels-only brief into Malayalam creator sets under-perform [26].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">Fund 3-4 Malayalam YouTube creators to make Onam-themed review or content pieces. The format does the targeting work for you. Pair it with short-form for awareness.</p>
+      </>
     ),
-    whyItWorks: "This breaks from the standard Reels-only brief that most national agencies default to. It positions Lisn as someone who understands how the Malayalam internet works. The Croma case study proves this is not theory. The long-form insight is backed by platform-level data on Malayalam content consumption [26].",
+    whyItWorks: "This breaks from the standard Reels-only brief most brands default to. You get first-mover advantage on a format your competitors are ignoring. The Croma case study proves this is not theory. The long-form insight is backed by platform-level data on Malayalam content consumption [26].",
     category: "Creator Strategy",
     icon: <Target className="w-8 h-8" />,
   },
@@ -104,26 +87,18 @@ const ideas: Idea[] = [
     angle: "The Cringe Barrier",
     tagline: "Why do national brands' Onam posts get 47 likes? Because they sound like they Googled 'Onam traditions' that morning.",
     description: (
-      "The most common mistake: a marketing manager in Mumbai or Gurgaon briefs a creative team to \"do something for Onam.\" "
-      + "The result is a graphic with a Kathakali face, a generic 'Happy Onam' line, and a product photoshopped next to a "
-      + "pookalam. It gets 47 likes. The Malayali audience scrolls past.\n\n"
-      + "Here are two specific things that make content feel fake:\n\n"
-      + "1. Using formal, written Malayalam instead of the natural Manglish mix that people actually speak. "
-      + "A post that reads \"Onam festival is harvest festival we celebrate\" (translated from English) vs. "
-      + "\"Ente Chingam month celebration begin cheythu\" (natural Manglish) is the difference between being ignored "
-      + "and being shared.\n\n"
-      + "2. Ignoring that Kerala has the highest literacy rate in India at 96.2%. Malayalis consume more news, "
-      + "more YouTube, and more OTT than most other regional language audiences. They notice when a 'Kerala house' "
-      + "in your ad has the wrong architecture. They spot a Madurai accent pretending to be Malayalam in seconds.\n\n"
-      + "The fix is not 'hire a Malayali translator.' The fix is to create content that references real, specific "
-      + "Onam details: the exact price of banana chips this year (\u20B9480/kg, up from \u20B9320 last year because "
-      + "coconut oil went from \u20B9320 to \u20B9382) [11][12], the fact that marigold prices doubled because of crop damage "
-      + "in Gundlupet [13], or that Volkswagen launched black-edition cars specifically for Kerala because "
-      + "Malayalis prefer black cars more than any other regional market [19][20].\n\n"
-      + "The angle: audit the brand's existing Onam content. Show them the gap. Then produce a single replacement "
-      + "piece that references current-year specifics. One piece of proof is worth a hundred proposals."
+      <>
+        <p className="mb-3">A marketing manager in Mumbai or Gurgaon briefs a creative team to "do something for Onam." The result is a graphic with a Kathakali face, a generic 'Happy Onam' line, and a product photoshopped next to a pookalam. It gets 47 likes. The Malayali audience scrolls past.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">WHY IT FEELS FAKE</strong></p>
+        <p className="mb-3"><strong className="text-gray-300">1.</strong> Using formal, written Malayalam instead of the natural Manglish mix people actually speak. "Onam festival is harvest festival we celebrate" (translated English) vs. "Ente Chingam month celebration begin cheythu" (natural Manglish) is the difference between being ignored and being shared.</p>
+        <p className="mb-3"><strong className="text-gray-300">2.</strong> Ignoring that Kerala has the highest literacy rate in India at 96.2%. Malayalis consume more news, more YouTube, and more OTT than most other regional language audiences. They notice when a 'Kerala house' in your ad has the wrong architecture. They spot a Madurai accent pretending to be Malayalam in seconds.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE FIX</strong></p>
+        <p className="mb-3">Not 'hire a Malayali translator.' Create content that references real, specific Onam details: the exact price of banana chips this year (₹480/kg, up from ₹320 because coconut oil went from ₹320 to ₹382) [11][12], that marigold prices doubled because of crop damage in Gundlupet [13], or that Volkswagen launched black-edition cars specifically for Kerala because Malayalis prefer black cars more than any other regional market [19][20].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">Audit your existing Onam content. Find the gap. Then produce a single replacement piece that references current-year specifics. One piece of proof is worth a hundred proposals.</p>
+      </>
     ),
-    whyItWorks: "Every brand manager has seen their Onam post flop. Naming this openly makes them feel understood, not attacked. The specific cultural details (chips prices, car colour preferences) show genuine knowledge, not a Google search. Low commitment entry point: just an audit of their last Onam post.",
+    whyItWorks: "You have probably seen your own Onam post flop. Naming this openly makes you feel understood, not attacked. The specific cultural details (chips prices, car colour preferences) show genuine knowledge, not a Google search. Low commitment entry point: just an audit of your last Onam post.",
     category: "Positioning",
     icon: <Lightbulb className="w-8 h-8" />,
   },
@@ -132,33 +107,22 @@ const ideas: Idea[] = [
     angle: "The Diaspora Double",
     tagline: "4M Malayalis live outside Kerala. Onam is the one week they all become your target audience at once.",
     description: (
-      "The Malayali diaspora in Bangalore alone is estimated at 1.5M+. Add Mumbai, Delhi, Dubai (3.5M Malayalis "
-      + "in the GCC), and the US/UK/Canada. That is a population bigger than Kerala's own major cities, all "
-      + "spending Onam away from home.\n\n"
-      + "Here is the non-obvious part: the diaspora is changing. The Kerala Migration Survey 2023 found that "
-      + "GCC migration dropped from 89.2% to 80.5% of total outbound [4]. The US, UK, Canada, Australia share "
-      + "is growing because of student migration and skilled tech workers. These are higher-income earners. "
-      + "Per capita remittances rose to \u20B961,118 [4]. The average remittance per household more than doubled "
-      + "from \u20B996,185 in 2018 to \u20B92,23,729 in 2023 [4]. And for the first time, Kerala recorded outward "
-      + "remittances of \u20B943,378 crore (nearly 20% of its inflow) [4].\n\n"
-      + "This group responds to:\n"
-      + "\u2022 Nostalgia-driven content (they miss home, Onam content hits harder)\n"
-      + "\u2022 Online ordering of Sadya kits, banana chips, traditional wear\n"
-      + "\u2022 Watching Malayalam YouTube and Instagram to feel close to home\n"
-      + "\u2022 Higher disposable income (diaspora professionals in tech/finance)\n\n"
-      + "The practical takeaway: any Malayalam-language content you produce for Kerala will also reach this "
-      + "Western diaspora. Students in the UK, Canada, and Australia actively seek out Malayalam social media "
-      + "during Onam because it is their strongest connection to home. That makes Malayalam-language Onam "
-      + "campaigns effectively multi-market by default — same production cost, larger addressable audience.\n\n"
-      + "National brands like Zomato already figured this out. Their 2024 campaign showed a young Malayali "
-      + "professional traveling home, with Zomato delivering the sadya [17]. Linen Club's \"Ona Vakdhanam\" "
-      + "campaign used the promise-keeping theme to connect with Malayalis globally [18]. Even CarDekho launched "
-      + "an \"Onam Auto Fest\" microsite targeting diaspora Malayalis shopping for cars via mobile [22][27].\n\n"
-      + "The angle: shoot in Malayali pockets of Bangalore or Mumbai, not in Kerala. The content serves dual "
-      + "purpose: it reaches the diaspora in those cities AND feels aspirational to consumers back in Kerala. "
-      + "One shoot, two audiences."
+      <>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE SIZE</strong></p>
+        <p className="mb-3">The Malayali diaspora in Bangalore alone is estimated at 1.5M+. Add Mumbai, Delhi, Dubai (3.5M Malayalis in the GCC), and the US/UK/Canada. That is a population bigger than Kerala's own major cities, all spending Onam away from home.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE SHIFT</strong></p>
+        <p className="mb-3">The diaspora is changing. The Kerala Migration Survey 2023 found that GCC migration dropped from 89.2% to 80.5% of total outbound [4]. The US, UK, Canada, Australia share is growing because of student migration and skilled tech workers. These are higher-income earners. Per capita remittances rose to ₹61,118 [4]. The average remittance per household more than doubled from ₹96,185 in 2018 to ₹2,23,729 in 2023 [4]. And for the first time, Kerala recorded outward remittances of ₹43,378 crore (nearly 20% of its inflow) [4].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">WHAT THEY WANT</strong></p>
+        <p className="mb-3">Nostalgia-driven content (they miss home, Onam content hits harder). Online ordering of Sadya kits, banana chips, traditional wear. Watching Malayalam YouTube and Instagram to feel close to home. Higher disposable income (diaspora professionals in tech/finance).</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE MULTI-MARKET ANGLE</strong></p>
+        <p className="mb-3">Any Malayalam-language content you produce for Kerala will also reach the Western diaspora. Students in the UK, Canada, and Australia actively seek out Malayalam social media during Onam because it is their strongest connection to home. That makes Malayalam-language Onam campaigns effectively multi-market by default — same production cost, larger addressable audience.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">PROOF IT WORKS</strong></p>
+        <p className="mb-3">Zomato's 2024 campaign showed a young Malayali professional traveling home, with Zomato delivering the sadya [17]. Linen Club's "Ona Vakdhanam" campaign used the promise-keeping theme to connect with Malayalis globally [18]. CarDekho launched an "Onam Auto Fest" microsite targeting diaspora Malayalis shopping for cars via mobile [22][27].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">Shoot in Malayali pockets of Bangalore or Mumbai, not in Kerala. The content serves dual purpose: it reaches the diaspora in those cities AND feels aspirational to consumers back in Kerala. One shoot, two audiences.</p>
+      </>
     ),
-    whyItWorks: "This expands the list of brands who could use this. You don't need to be 'entering the Kerala market.' Any brand with Malayali customers in metros (D2C, food delivery, fintech, co-working, real estate) qualifies. The 'shoot in your city' angle removes the logistics objection. The migration shift data (GCC declining, West growing) is new to most brand teams.",
+    whyItWorks: "This expands the number of teams who can use this. You don't need to be 'entering the Kerala market.' If your brand has Malayali customers in metros (D2C, food delivery, fintech, co-working, real estate), this applies. The 'shoot in your city' move removes the logistics objection. The migration shift data (GCC declining, West growing) is new to most marketing teams.",
     category: "Audience",
     icon: <MapPin className="w-8 h-8" />,
   },
@@ -167,29 +131,18 @@ const ideas: Idea[] = [
     angle: "The Quick Commerce Shift",
     tagline: "Onam used to mean crowded markets. Now it means 10-minute delivery. Your content strategy needs to match the new retail reality.",
     description: (
-      "This is the biggest structural shift in the 2025 Onam market: quick commerce is rewriting retail, "
-      + "and the traditional supply chain is struggling to adapt.\n\n"
-      + "Blinkit, Zepto, and Swiggy Instamart hit 4M+ daily orders nationally in March 2025, more than double "
-      + "YoY [23]. During Raksha Bandhan, Zepto sold 820 rakhis per minute at peak [24]. For Onam, quick commerce "
-      + "platforms went beyond groceries: they sold silver rakhis, electronics, traditional wear, and "
-      + "Onam gift hampers [24].\n\n"
-      + "In Kerala, traditional merchants are feeling the squeeze. Vegetable and textile sellers in Kochi "
-      + "flagged a \"significant dip\" as shoppers moved online [14]. The Kerala Merchants Chamber of Commerce "
-      + "confirmed that conventional shops are struggling while malls report 80%+ conversion rates [5]. "
-      + "Malls have adapted by turning spaces into festive zones with Mahabali mascots and cultural performances [5]. "
-      + "Traditional Broadway and MG Road shops have not [5].\n\n"
-      + "Buyers now come with Instagram-sourced designs that traditional textile shops cannot stock [14]. "
-      + "This is a content-to-commerce pipeline that works only if your brand is discoverable on social media. "
-      + "A Kudumbashree group sold 5,400 Onam gift hampers at \u20B9799 each via a mobile app (PocketMart) in two weeks [15].\n\n"
-      + "And there is a pricing tension worth watching: the 2025 GST reform announcement actually hurt "
-      + "Onam sales in the short term. Consumers deferred TV purchases (down 8%), AC purchases (down 30-40%), "
-      + "expecting price drops [10]. This created a gap that brands with content strategies could exploit "
-      + "by explaining why Onam prices and extended warranty were still the better deal.\n\n"
-      + "The angle: create shoppable content designed for the quick-commerce decision window. Short, punchy, "
-      + "product-first. And if you are a D2C brand, your entire Onam strategy should assume the transaction "
-      + "happens on a mobile screen, not a store shelf."
+      <>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE SHIFT</strong></p>
+        <p className="mb-3">This is the biggest structural shift in the 2025 Onam market: quick commerce is rewriting retail, and the traditional supply chain is struggling to adapt. Blinkit, Zepto, and Swiggy Instamart hit 4M+ daily orders nationally in March 2025, more than double YoY [23]. During Raksha Bandhan, Zepto sold 820 rakhis per minute at peak [24]. For Onam, quick commerce platforms went beyond groceries: they sold silver rakhis, electronics, traditional wear, and Onam gift hampers [24].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE GAP</strong></p>
+        <p className="mb-3">In Kerala, traditional merchants are feeling the squeeze. Vegetable and textile sellers in Kochi flagged a "significant dip" as shoppers moved online [14]. The Kerala Merchants Chamber of Commerce confirmed that conventional shops are struggling while malls report 80%+ conversion rates [5]. Malls have adapted with festive zones and Mahabali mascots [5]. Traditional Broadway and MG Road shops have not [5]. Buyers now come with Instagram-sourced designs that traditional textile shops cannot stock [14]. This is a content-to-commerce pipeline that works only if your brand is discoverable on social media. A Kudumbashree group sold 5,400 Onam gift hampers at ₹799 each via a mobile app (PocketMart) in two weeks [15].</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">THE GST ANGLE</strong></p>
+        <p className="mb-3">There is a pricing tension worth watching: the 2025 GST reform announcement actually hurt Onam sales in the short term. Consumers deferred TV purchases (down 8%), AC purchases (down 30-40%), expecting price drops [10]. This created a gap that brands with content strategies could exploit by explaining why Onam prices and extended warranty were still the better deal.</p>
+        <p className="mb-2"><strong className="text-white uppercase tracking-wider text-xs">YOUR MOVE</strong></p>
+        <p className="mb-3">Create shoppable content designed for the quick-commerce decision window. Short, punchy, product-first. And if you are a D2C brand, your entire Onam strategy should assume the transaction happens on a mobile screen, not a store shelf.</p>
+      </>
     ),
-    whyItWorks: "This is where the market is going, not where it's been. Most Onam content strategies still assume a retail, print, or TV funnel. The Kudumbashree example proves that even non-tech groups are using mobile commerce. The GST tension angle gives brands a specific conversation starter with consumers.",
+    whyItWorks: "This is where the market is going, not where it's been. Most Onam content strategies still assume a retail, print, or TV funnel. The Kudumbashree example proves that even non-tech groups are using mobile commerce. The GST tension angle gives you a specific conversation starter with consumers.",
     category: "Retail Strategy",
     icon: <ShoppingCart className="w-8 h-8" />,
   },
@@ -253,8 +206,8 @@ export default function IdeasClient() {
               <span className="text-[#FFE500]">ANGLES</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
-              Onam drives \u20B91,100+ crore in ad spend and a 20-30% retail consumption spike.
-              Here are six research-backed angles for brands that want a real share of it.
+              Onam drives ₹1,100+ crore in ad spend and a 20-30% retail consumption spike.
+              Here are six research-backed angles if you want a real share of it.
             </p>
             <p className="text-zinc-500 font-mono text-sm">
               Based on 2025 market data. Pick an angle. Steal the thinking. Or let us execute it.
@@ -306,7 +259,7 @@ export default function IdeasClient() {
                   {idea.tagline}
                 </p>
 
-                <div className="text-gray-400 text-sm leading-relaxed mb-6 flex-1 space-y-2 whitespace-pre-line">
+                <div className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
                   {idea.description}
                 </div>
 
