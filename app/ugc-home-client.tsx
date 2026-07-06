@@ -106,7 +106,7 @@ export default function UGCClient() {
               </div>
               <div className="bg-zinc-100 p-8 border-l-4 border-[#FFE500]">
                 <p className="text-xl leading-relaxed">
-                  We take your product straight to real people on the streets of <strong>Kochi, Bangalore, and Mumbai.</strong> What you get back is a library of ad creatives that feel raw, relatable, and built to convert.
+                  We take your product straight to real people on the streets of <strong>Kochi and Bangalore.</strong> What you get back is a library of ad creatives that feel raw, relatable, and built to convert.
                 </p>
                 <a href="https://www.instagram.com/yousaypeople/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#FFE500] transition-colors block mt-4 font-bold">
                   See real examples on Instagram →
@@ -213,6 +213,10 @@ export default function UGCClient() {
               </p>
             </div>
 
+            <div className="flex items-center justify-center gap-6 mb-6 text-sm text-zinc-500">
+              <Link href="/events" className="hover:text-white transition-colors uppercase tracking-widest">Event Documentation</Link>
+              <Link href="/blog" className="hover:text-white transition-colors uppercase tracking-widest">Insights</Link>
+            </div>
             <p className="text-zinc-500 text-sm uppercase tracking-widest">© LISN Agency {new Date().getFullYear()}. All rights reserved.</p>
           </div>
         </section>

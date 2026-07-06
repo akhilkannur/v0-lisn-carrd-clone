@@ -16,22 +16,16 @@ export function Header() {
           Street UGC
         </Link>
         <Link
-          href="/events"
-          className={`text-lg font-bold transition-colors ${pathname === "/events" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
-        >
-          Event Documentation
-        </Link>
-        <Link
-          href="/blog"
-          className={`text-lg font-bold transition-colors ${pathname.startsWith("/blog") ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
-        >
-          Insights
-        </Link>
-        <Link
           href="/hooks"
           className={`text-lg font-bold transition-colors ${pathname === "/hooks" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >
           Hooks
+        </Link>
+        <Link
+          href="/onam-ideas"
+          className={`text-lg font-bold transition-colors ${pathname === "/onam-ideas" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
+        >
+          Onam Campaign Ideas
         </Link>
         <Link
           href="/audit"
