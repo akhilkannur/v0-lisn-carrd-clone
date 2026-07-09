@@ -16,6 +16,12 @@ export function Header() {
           Street UGC
         </Link>
         <Link
+          href="/ugc-pricing"
+          className={`text-lg font-bold transition-colors ${pathname === "/ugc-pricing" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
+        >
+          Pricing
+        </Link>
+        <Link
           href="/hooks"
           className={`text-lg font-bold transition-colors ${pathname === "/hooks" ? "text-yellow-400" : "text-white hover:text-yellow-400"}`}
         >

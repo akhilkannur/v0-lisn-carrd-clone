@@ -13,34 +13,33 @@ const _dela_gothic_one = Dela_Gothic_One({
 })
 
 export const metadata: Metadata = {
-  title: "LISN - UGC & Event Video Agency for Indian DTC Brands",
+  title: "LISN - UGC & Street Interview Ad Agency India | Bangalore & Kochi",
   description:
-    "The premier UGC & Event Video Agency in India. We help DTC brands scale with authentic street interviews, regional ad creatives (Malayalam), and viral content assets.",
+    "LISN is a UGC & street interview ad agency for Indian DTC brands — based in Bangalore with a Kochi studio. We produce authentic street interviews and regional (Malayalam) ad creatives that lower CAC.",
   metadataBase: new URL("https://lisnagency.online"),
   keywords: [
-    "UGC Marketing Kerala",
-    "Influencer Marketing Kerala",
-    "Influencer Marketing Kochi",
-    "UGC Agency Kochi",
-    "Best Ad Agency Kerala",
     "UGC Agency India",
-    "Street Interview Ads",
-    "DTC Marketing India",
-    "UGC Video Production Kerala",
+    "UGC Agency Bangalore",
+    "UGC Agency Kochi",
+    "Street Interview Ads India",
+    "UGC Video Production India",
+    "UGC Marketing Agency Bangalore",
+    "Best UGC Agency India",
+    "D2C Ad Agency India",
+    "Vox Pop Ad Agency",
     "Malayalam Ad Creatives",
-    "South India Marketing Strategy",
     "Performance UGC India",
+    "Video Ad Agency Bangalore",
     "Event Video Agency India",
-    "Kochi Marketing Company",
-    "Malayalam Social Media Marketing",
+    "UGC agency for DTC brands",
   ],
   alternates: {
     canonical: "https://lisnagency.online",
   },
   openGraph: {
-    title: "LISN - UGC & Event Video Agency for DTC Brands",
+    title: "LISN - UGC & Street Interview Ad Agency | Bangalore & Kochi",
     description:
-      "Stop running boring ads. We capture real street interviews and authentic moments that convert. Specializing in Kerala & South Indian markets for DTC brands.",
+      "Stop running boring ads. We capture real street interviews and authentic moments that convert. UGC agency for Indian DTC brands — Bangalore & Kochi.",
     url: "https://lisnagency.online",
     siteName: "LISN Agency",
     locale: "en_US",
@@ -50,14 +49,14 @@ export const metadata: Metadata = {
         url: "/momentscaptured.jpg",
         width: 1200,
         height: 630,
-        alt: "LISN Agency - Authentic UGC & Event Video",
+        alt: "LISN Agency - Authentic UGC & Street Interview Ads",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LISN - UGC & Event Video Agency India",
-    description: "Real street interviews and authentic UGC that scales DTC brands. Kerala & Bangalore specialists.",
+    title: "LISN - UGC & Street Interview Ad Agency India",
+    description: "Real street interviews and authentic UGC that scales DTC brands. Bangalore & Kochi specialists.",
     images: ["/momentscaptured.jpg"],
   },
   icons: {
@@ -95,12 +94,21 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "LISN Agency",
               "image": "https://lisnagency.online/lisn-logo.gif",
-              "description": "Video production and UGC agency specializing in street interviews and event coverage for Indian DTC brands targeting the Kerala and South Indian markets.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressRegion": "Kerala",
-                "addressCountry": "IN"
-              },
+              "description": "UGC and street interview ad agency for Indian DTC brands. Based in Bangalore with a production base in Kochi, Kerala.",
+              "address": [
+                {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Bangalore",
+                  "addressRegion": "Karnataka",
+                  "addressCountry": "IN"
+                },
+                {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Kochi",
+                  "addressRegion": "Kerala",
+                  "addressCountry": "IN"
+                }
+              ],
               "url": "https://lisnagency.online",
               "telephone": "+918893317488",
               "priceRange": "$$",

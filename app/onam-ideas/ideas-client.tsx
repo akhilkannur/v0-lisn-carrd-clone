@@ -1,9 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Marquee } from "@/components/marquee"
 import { MessageSquare, Target, TrendingUp, Users, ShoppingCart, Lightbulb, MapPin, Sparkles } from "lucide-react"
+
+type Faq = { q: string; a: string }
 
 type Idea = {
   id: string
@@ -181,7 +184,7 @@ const citations = [
 
 const categories = ["All", ...Array.from(new Set(ideas.map((i) => i.category)))]
 
-export default function IdeasClient() {
+export default function IdeasClient({ faqs = [] }: { faqs?: Faq[] }) {
   const [activeCategory, setActiveCategory] = useState("All")
 
   const filteredIdeas = activeCategory === "All" ? ideas : ideas.filter((i) => i.category === activeCategory)
@@ -196,10 +199,10 @@ export default function IdeasClient() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,229,0,0.08)_0%,transparent_70%)] pointer-events-none" />
           <div className="max-w-4xl mx-auto relative z-10">
             <span className="text-[#FFE500] font-mono text-sm uppercase tracking-widest border border-[#FFE500] px-3 py-1 inline-block mb-8">
-              Idea Repository
+              Onam 2026 Playbook
             </span>
             <h1 className="font-heading text-5xl md:text-8xl mb-8 uppercase tracking-tighter leading-[0.85]">
-              ONAM
+              ONAM 2026
               <br />
               MARKETING
               <br />
@@ -207,10 +210,12 @@ export default function IdeasClient() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
               Onam drives ₹1,100+ crore in ad spend and a 20-30% retail consumption spike.
-              Here are six research-backed angles if you want a real share of it.
+              Here are six research-backed <strong className="text-white">Onam marketing angles &amp; Malayalam ad
+              strategies</strong> for national brands that want a real share of it.
             </p>
             <p className="text-zinc-500 font-mono text-sm">
-              Based on 2025 market data. Pick an angle. Steal the thinking. Or let us execute it.
+              Thiruvonam 2026: 26 August. Based on the latest 2025 season data. Pick an angle. Steal the thinking. Or let
+              us execute it.
             </p>
           </div>
         </section>
@@ -281,6 +286,48 @@ export default function IdeasClient() {
                 </a>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* FAQ Section - captures Onam People Also Ask queries */}
+        {faqs.length > 0 && (
+          <section className="bg-white text-black px-4 py-16 md:py-24 border-t-4 border-black">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-heading text-3xl md:text-6xl mb-12 uppercase tracking-tight">
+                Onam Marketing <span className="bg-[#FFE500] px-2">FAQs</span>
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="bg-zinc-100 p-6 md:p-8 border-l-4 border-[#FFE500]">
+                    <h3 className="font-bold text-xl md:text-2xl mb-3">{faq.q}</h3>
+                    <p className="text-base md:text-lg leading-relaxed text-zinc-700">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Related resources - internal linking */}
+        <section className="bg-black border-t-4 border-zinc-800 px-4 py-16">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-heading text-2xl md:text-4xl mb-8 uppercase tracking-tight text-white">
+              Plan your <span className="text-[#FFE500]">Onam campaign</span>
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm font-mono">
+              <Link href="/ugc-pricing" className="border border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-colors p-4 text-zinc-300">
+                UGC &amp; ad pricing in India →
+              </Link>
+              <Link href="/playbook/jewellery" className="border border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-colors p-4 text-zinc-300">
+                Jewellery ad playbook →
+              </Link>
+              <Link href="/playbook/kerala-market-entry" className="border border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-colors p-4 text-zinc-300">
+                Kerala market entry guide →
+              </Link>
+              <Link href="/" className="border border-zinc-700 hover:border-[#FFE500] hover:text-[#FFE500] transition-colors p-4 text-zinc-300">
+                Street interview UGC →
+              </Link>
+            </div>
           </div>
         </section>
 

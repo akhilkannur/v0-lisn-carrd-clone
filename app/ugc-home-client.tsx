@@ -8,7 +8,12 @@ import { Marquee } from "@/components/marquee"
 import { StreetInterviewGraphic } from "@/components/street-interview-graphic"
 import { Phone, MessageCircle, MessageSquare, ArrowDown, TrendingUp, AlertTriangle } from "lucide-react"
 
-export default function UGCClient() {
+interface Faq {
+  q: string
+  a: string
+}
+
+export default function UGCClient({ faqs = [] }: { faqs?: Faq[] }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,15 +50,19 @@ export default function UGCClient() {
           </div>
           <div className="z-10 max-w-7xl mx-auto flex flex-col items-center justify-center relative">
             <div className="absolute inset-0 bg-black/70 blur-3xl -z-10 scale-110"></div>
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-12 uppercase tracking-tighter leading-[0.85] reveal-hidden w-full">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-9xl mb-8 uppercase tracking-tighter leading-[0.85] reveal-hidden w-full">
               UGC THAT
               <br />
               SPEAKS
               <br />
-              <span className="text-[#FFE500]">KERALA'S</span>
+              <span className="text-[#FFE500]">INDIA'S</span>
               <br />
               LANGUAGE
             </h1>
+            <p className="text-white/90 font-bold text-base md:text-xl mb-6 max-w-3xl leading-relaxed reveal-hidden delay-100">
+              LISN is a <strong>UGC &amp; street interview ad agency</strong> for Indian DTC brands — based in{" "}
+              <strong>Bangalore</strong> with a studio in <strong>Kochi</strong>.
+            </p>
             <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100">
               Street reaction ad creatives. Because one localised ad can change your brand's trajectory.
             </p>
@@ -106,7 +115,7 @@ export default function UGCClient() {
               </div>
               <div className="bg-zinc-100 p-8 border-l-4 border-[#FFE500]">
                 <p className="text-xl leading-relaxed">
-                  We take your product straight to real people on the streets of <strong>Kochi and Bangalore.</strong> What you get back is a library of ad creatives that feel raw, relatable, and built to convert.
+                  We take your product straight to real people on the streets of <strong>Bangalore and Kochi.</strong> What you get back is a library of ad creatives that feel raw, relatable, and built to convert.
                 </p>
                 <a href="https://www.instagram.com/yousaypeople/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#FFE500] transition-colors block mt-4 font-bold">
                   See real examples on Instagram →
@@ -163,18 +172,42 @@ export default function UGCClient() {
             <div className="w-full border-t border-zinc-800 pt-12 text-left">
               <h4 className="text-[#FFE500] font-bold uppercase tracking-widest mb-6 text-sm">Service Areas & Solutions</h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] md:text-xs text-zinc-500 font-mono">
-                <span className="hover:text-white transition-colors cursor-default">UGC Marketing Kerala</span>
-                <span className="hover:text-white transition-colors cursor-default">Influencer Marketing Kochi</span>
-                <span className="hover:text-white transition-colors cursor-default">Video Production Kerala</span>
-                <span className="hover:text-white transition-colors cursor-default">UGC Agency Bangalore</span>
-                <span className="hover:text-white transition-colors cursor-default">Malayalam Ad Agency</span>
-                <span className="hover:text-white transition-colors cursor-default">Kochi Marketing Near Me</span>
-                <span className="hover:text-white transition-colors cursor-default">D2C Ad Agency India</span>
-                <span className="hover:text-white transition-colors cursor-default">Authentic Content Kochi</span>
+                <Link href="/ugc-pricing" className="hover:text-white transition-colors">UGC Pricing India</Link>
+                <span className="cursor-default">UGC Agency Bangalore</span>
+                <span className="cursor-default">UGC Agency Kochi</span>
+                <span className="cursor-default">Street Interview Ads India</span>
+                <span className="cursor-default">Video Production Bangalore</span>
+                <span className="cursor-default">D2C Ad Agency India</span>
+                <span className="cursor-default">Malayalam Ad Creatives</span>
+                <Link href="/playbook/kerala-market-entry" className="hover:text-white transition-colors">Kerala Market Entry</Link>
               </div>
             </div>
           </div>
         </section>
+
+        {/* FAQ Section - captures People Also Ask queries */}
+        {faqs.length > 0 && (
+          <section className="bg-white text-black px-4 py-16 md:py-24 border-b-4 border-black">
+            <div className="max-w-4xl mx-auto reveal-hidden">
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl mb-12 uppercase tracking-tighter leading-none">
+                UGC & STREET INTERVIEW <span className="bg-[#FFE500] px-2">FAQS</span>
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="bg-zinc-100 p-6 md:p-8 border-l-4 border-[#FFE500]">
+                    <h3 className="font-bold text-xl md:text-2xl mb-3">{faq.q}</h3>
+                    <p className="text-base md:text-lg leading-relaxed text-zinc-700">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-10">
+                <Link href="/ugc-pricing" className="inline-block text-lg font-bold border-b-4 border-black hover:bg-[#FFE500] transition-colors px-2 py-1">
+                  See our full UGC pricing guide for India →
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Footer */}
         <section className="bg-black px-4 py-16 md:py-24 relative">

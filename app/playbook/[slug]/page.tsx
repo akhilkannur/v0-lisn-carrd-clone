@@ -104,6 +104,35 @@ export default async function PlaybookPage({ params }: PageProps) {
             "item": `https://lisnagency.online/playbook/${slug}`
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": `Why does street UGC work better for ${industry.name.toLowerCase()}?`,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `${industry.name} is a high-trust category. Consumers are skeptical of polished studio ads because they know they are staged. Street interviews break that skepticism by showing real, unfiltered reactions from everyday people, which acts as powerful social proof.`
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many videos do I get in a pilot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `In a standard pilot for ${industry.name} brands, we deliver 5-10 fully edited ad creatives so you can test different hooks and find the narrative that drives the lowest CAC.`
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use paid actors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never. We approach real strangers on the streets of Bangalore and Kochi. If they don't like the product, we film that too. That honesty is why our ads convert."
+            }
+          }
+        ]
       }
     ]
   }

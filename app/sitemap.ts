@@ -9,6 +9,7 @@ export default function sitemap() {
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/events', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/audit', priority: 0.9, changeFrequency: 'daily' },
+    { path: '/ugc-pricing', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/blog', priority: 0.8, changeFrequency: 'daily' },
     { path: '/hooks', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/onam-ideas', priority: 0.7, changeFrequency: 'weekly' },
