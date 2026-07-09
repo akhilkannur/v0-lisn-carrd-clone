@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | LISN Agency Blog`,
     description: post.subtitle,
+    alternates: {
+      canonical: `https://lisnagency.online/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.subtitle,

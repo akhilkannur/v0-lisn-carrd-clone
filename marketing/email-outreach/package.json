@@ -1,0 +1,9 @@
+{
+  "name": "email-outreach",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "connect": "node scripts/connect-gsuite.mjs",
+    "send": "node scripts/send-email.mjs"
+  }
+}

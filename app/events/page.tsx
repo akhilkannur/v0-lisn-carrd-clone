@@ -4,6 +4,9 @@ import EventsClient from "./events-client"
 export const metadata: Metadata = {
   title: "Event Video & Documentation Agency India | Lisn Agency",
   description: "Cinematic documentation of brand activations, workshops, and high-impact corporate events across India. We capture the energy and soul of your brand events.",
+  alternates: {
+    canonical: "https://lisnagency.online/events",
+  },
   openGraph: {
     title: "Event Video & Documentation Agency India | Lisn Agency",
     description: "Capturing the authentic human moments in every event. Professional video documentation for brands in Kochi, Bangalore, and beyond.",
