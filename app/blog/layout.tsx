@@ -2,13 +2,13 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Marketing Insights & Strategy | LISN Agency Blog",
-  description: "Unfiltered insights on UGC, Street Interviews, and the changing landscape of digital marketing in India. Read our latest thoughts.",
+  description: "Unfiltered insights on UGC, Street Interviews, and how digital marketing is changing in India. Read our latest thoughts.",
   alternates: {
     canonical: "https://lisnagency.online/blog",
   },
   openGraph: {
     title: "Marketing Insights & Strategy | LISN Agency Blog",
-    description: "Unfiltered insights on UGC, Street Interviews, and the changing landscape of digital marketing in India.",
+    description: "Unfiltered insights on UGC, Street Interviews, and how digital marketing is changing in India.",
     type: "website",
     url: "https://lisnagency.online/blog",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Marketing Insights & Strategy | LISN Agency Blog",
-    description: "Unfiltered insights on UGC, Street Interviews, and the changing landscape of digital marketing in India.",
+    description: "Unfiltered insights on UGC, Street Interviews, and how digital marketing is changing in India.",
     images: ["/images/blog-og-image.jpg"],
   },
 }

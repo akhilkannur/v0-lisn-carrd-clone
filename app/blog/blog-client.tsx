@@ -40,7 +40,7 @@ export default function BlogIndex() {
               <span className="text-[#FFE500]">& STRATEGY</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl text-gray-300">
-              Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India.
+              Unfiltered thoughts on marketing, UGC, and how attention works in India.
             </p>
           </div>
         </section>

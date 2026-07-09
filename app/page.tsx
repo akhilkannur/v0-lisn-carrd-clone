@@ -3,7 +3,7 @@ import UGCClient from "./ugc-home-client"
 
 export const metadata: Metadata = {
   title: "UGC Agency India | Street Interview Ads | Bangalore & Kochi | LISN",
-  description: "LISN is a UGC agency for Indian DTC brands, based in Bangalore with a Kochi studio. We produce authentic street interview ads and vernacular (Malayalam) creatives that lower CAC and build trust.",
+  description: "LISN is a UGC agency for Indian DTC brands, based in Bangalore with roots in Kochi. We produce authentic street interview ads and vernacular (Malayalam) creatives that lower CAC and build trust.",
   keywords: [
     "UGC Agency India",
     "UGC Agency Bangalore",

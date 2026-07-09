@@ -61,7 +61,7 @@ export default function UGCClient({ faqs = [] }: { faqs?: Faq[] }) {
             </h1>
             <p className="text-white/90 font-bold text-base md:text-xl mb-6 max-w-3xl leading-relaxed reveal-hidden delay-100">
               LISN is a <strong>UGC &amp; street interview ad agency</strong> for Indian DTC brands — based in{" "}
-              <strong>Bangalore</strong> with a studio in <strong>Kochi</strong>.
+              <strong>Bangalore</strong> with roots in <strong>Kochi</strong>.
             </p>
             <p className="text-[#FFE500] font-bold text-xl md:text-3xl uppercase tracking-widest mb-12 max-w-4xl leading-relaxed reveal-hidden delay-100">
               Street reaction ad creatives. Because one localised ad can change your brand's trajectory.

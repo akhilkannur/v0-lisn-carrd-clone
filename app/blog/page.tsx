@@ -3,13 +3,13 @@ import BlogClient from "./blog-client"
 
 export const metadata: Metadata = {
   title: "DTC Marketing Insights & Strategy | LISN Agency",
-  description: "Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India. Featuring industry-specific ad playbooks.",
+  description: "Unfiltered thoughts on marketing, UGC, and how attention works in India. Featuring industry-specific ad playbooks.",
   alternates: {
     canonical: "https://lisnagency.online/blog",
   },
   openGraph: {
     title: "DTC Marketing Insights & Strategy | LISN Agency",
-    description: "Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India.",
+    description: "Unfiltered thoughts on marketing, UGC, and how attention works in India.",
     type: "website",
     url: "https://lisnagency.online/blog",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "DTC Marketing Insights & Strategy",
-    description: "Unfiltered thoughts on marketing, UGC, and the changing landscape of attention in India.",
+    description: "Unfiltered thoughts on marketing, UGC, and how attention works in India.",
     images: ["/images/blog-og-image.jpg"],
   },
 }
